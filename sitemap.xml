@@ -26,6 +26,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://webutilitydesk.com/blog/common-json-errors-and-how-to-fix-them/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://webutilitydesk.com/blog/json-vs-xml-vs-yaml/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://webutilitydesk.com/blog/sha256-explained/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://webutilitydesk.com/blog/md5-vs-sha1-vs-sha256/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://webutilitydesk.com/blog/best-free-browser-tools-for-developers/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://webutilitydesk.com/blog/essential-text-utilities-for-daily-work/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://webutilitydesk.com/guides/</loc>
     <lastmod>2026-06-19</lastmod>
     <priority>0.8</priority>
@@ -37,6 +67,31 @@
   </url>
   <url>
     <loc>https://webutilitydesk.com/guides/uuid-explained-for-beginners/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://webutilitydesk.com/guides/what-is-base64-encoding/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://webutilitydesk.com/guides/url-encoding-vs-url-decoding/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://webutilitydesk.com/guides/what-is-a-uuid-and-why-developers-use-it/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://webutilitydesk.com/guides/what-is-a-url-slug/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://webutilitydesk.com/guides/how-to-create-seo-friendly-urls/</loc>
     <lastmod>2026-06-19</lastmod>
     <priority>0.7</priority>
   </url>
