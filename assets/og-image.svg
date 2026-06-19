@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Web Utility Desk</title>
+  <desc id="desc">Browser-based utility tools for developers, students, and teams.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f7f6"/>
+      <stop offset="100%" stop-color="#e5f4ef"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#0b5d58"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1030" cy="120" r="170" fill="#dff7f1"/>
+  <circle cx="1090" cy="520" r="220" fill="#fff2df"/>
+  <rect x="74" y="78" width="115" height="115" rx="28" fill="url(#accent)"/>
+  <rect x="100" y="108" width="65" height="18" rx="9" fill="#ffffff"/>
+  <rect x="100" y="135" width="26" height="33" rx="7" fill="#dcf7f1"/>
+  <rect x="139" y="135" width="26" height="33" rx="7" fill="#ffd9a8"/>
+  <path d="M114 116h36" stroke="#0f766e" stroke-width="6" stroke-linecap="round"/>
+  <text x="74" y="292" fill="#17211f" font-family="Inter, Arial, sans-serif" font-size="74" font-weight="800">Web Utility Desk</text>
+  <text x="74" y="360" fill="#0f766e" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Fast browser tools for JSON, text, links, and QR workflows.</text>
+  <g fill="#17211f" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700">
+    <text x="74" y="468">JSON • Base64 • URL • UUID • Password • Hash</text>
+    <text x="74" y="510">JWT • Timestamp • Slug • Diff • Case • QR</text>
+  </g>
+</svg>

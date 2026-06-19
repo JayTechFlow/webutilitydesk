@@ -18,7 +18,12 @@ Web Utility Desk is a static starter for a long-term tools website focused on or
 - JWT decoder
 - QR code generator
 - Slug generator
+- Lorem Ipsum generator
+- Case converter
+- Text diff checker
+- QR scanner
 - Responsive layout for desktop and mobile
+- GA4 and Microsoft Clarity support via opt-in head meta tags
 
 ## Run Locally
 

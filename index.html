@@ -3,40 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Utility Desk - Free Web Utility Tools for Developers, Students, and Teams</title>
+    <title>Web Utility Desk - Fast Browser Tools for Developers, Students, and Teams</title>
     <meta
       name="description"
-      content="Web Utility Desk is a practical collection of fast browser-based tools for JSON formatting, Base64 conversion, URL encoding, UUID generation, timestamps, password generation, hashing, JWT decoding, and QR codes."
+      content="Web Utility Desk is a practical collection of fast browser-based tools for JSON formatting, text conversion, URL encoding, UUID generation, timestamps, password generation, hashing, JWT decoding, QR codes, slug generation, text diffing, and more."
     />
     <meta
       name="keywords"
-      content="web utility tools, json formatter, base64 encoder, url encoder, uuid generator, timestamp converter, password generator, hash generator, jwt decoder, qr code generator"
+      content="web utility tools, json formatter, base64 encoder, url encoder, uuid generator, timestamp converter, password generator, hash generator, jwt decoder, qr code generator, slug generator, case converter, text diff checker, lorem ipsum generator, qr scanner"
     />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://webutilitydesk.com/" />
-    <meta property="og:title" content="Web Utility Desk" />
+    <meta property="og:title" content="Web Utility Desk - Fast Browser Tools" />
     <meta
       property="og:description"
-      content="Free web utility tools for everyday technical tasks."
+      content="Fast browser tools for JSON, text, links, IDs, and QR workflows."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://webutilitydesk.com/" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Web Utility Desk" />
+    <meta property="og:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Web Utility Desk - Fast Browser Tools" />
     <meta
       name="twitter:description"
-      content="Web Utility Desk is a practical collection of fast browser-based tools for JSON formatting, Base64 conversion, URL encoding, UUID generation, timestamps, password generation, hashing, JWT decoding, and QR codes."
+      content="Fast browser tools for JSON, text, links, IDs, and QR workflows."
     />
+    <meta name="twitter:image" content="https://webutilitydesk.com/assets/og-image.svg" />
     <meta name="theme-color" content="#0f766e" />
-    <link rel="icon" href="./assets/brand-mark.svg" type="image/svg+xml" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.svg" />
+    <link rel="manifest" href="./assets/site.webmanifest" />
     <link rel="stylesheet" href="./assets/styles.css" />
+    <meta name="wud-ga4-id" content="" />
+    <meta name="wud-clarity-id" content="" />
+    <script src="./assets/analytics.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Web Utility Desk",
         "url": "https://webutilitydesk.com/",
-        "description": "Free browser-based utility tools for JSON, text, encoding, timestamps, security, QR codes, and everyday web tasks."
+        "description": "Fast browser-based utility tools for JSON, text, encoding, timestamps, security, QR codes, and everyday web tasks."
       }
     </script>
   </head>
@@ -60,16 +67,16 @@
       <section class="workspace" aria-labelledby="workspace-title">
         <div class="workspace-copy">
           <p class="eyebrow">Fast browser tools</p>
-          <h1 id="workspace-title">Simple utilities for daily web work.</h1>
+          <h1 id="workspace-title">Fast browser tools for JSON, text, links, and developer workflows.</h1>
           <p class="summary">
-            Format data, convert text, generate IDs, and handle common web tasks without sign-up.
+            Format data, convert text, compare drafts, generate IDs, and handle common web tasks locally without sign-up.
           </p>
           <div class="search-wrap">
             <label for="tool-search">Find a tool</label>
             <input
               id="tool-search"
               type="search"
-              placeholder="Search JSON, Base64, password, hash, JWT, QR..."
+              placeholder="Search JSON, Base64, password, hash, JWT, QR, slug..."
               autocomplete="off"
             />
           </div>
@@ -134,10 +141,52 @@
         </section>
       </section>
 
+      <section class="section-block featured-tools" id="featured-tools" aria-labelledby="featured-tools-title">
+        <div class="section-heading">
+          <div>
+            <span class="feature-badge">Featured tools</span>
+            <p class="eyebrow">Launch growth pass</p>
+          </div>
+          <h2 id="featured-tools-title">Five new search-friendly utilities for high-intent traffic.</h2>
+        </div>
+        <div class="tool-grid">
+          <a class="tool-card" href="./lorem-ipsum-generator/" data-keywords="lorem ipsum generator placeholder text filler">
+            <span class="tool-icon">LI</span>
+            <h3>Lorem Ipsum Generator</h3>
+            <p>Generate realistic placeholder paragraphs, sentences, and words for layouts and mocks.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./case-converter/" data-keywords="case converter uppercase lowercase camel snake kebab title">
+            <span class="tool-icon">Aa</span>
+            <h3>Case Converter</h3>
+            <p>Switch text between uppercase, lowercase, title case, camel case, and slug formats.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./text-diff-checker/" data-keywords="text diff checker compare lines changes">
+            <span class="tool-icon">DI</span>
+            <h3>Text Diff Checker</h3>
+            <p>Compare two drafts side by side and highlight line-level additions and removals.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./slug-generator/" data-keywords="slug generator seo title url">
+            <span class="tool-icon">SL</span>
+            <h3>Slug Generator</h3>
+            <p>Turn titles into clean lowercase URL slugs for articles, docs, and landing pages.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./qr-scanner/" data-keywords="qr scanner camera barcode image scan">
+            <span class="tool-icon">QS</span>
+            <h3>QR Scanner</h3>
+            <p>Scan QR codes from your camera or uploaded image when the browser supports it.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+        </div>
+      </section>
+
       <section class="section-block" id="categories" aria-labelledby="categories-title">
         <div class="section-heading">
-          <p class="eyebrow">Launch categories</p>
-          <h2 id="categories-title">Built to grow into a complete utility library.</h2>
+          <p class="eyebrow">All tools</p>
+          <h2 id="categories-title">Built as a focused library for everyday web tasks.</h2>
         </div>
         <div class="tool-grid" id="tool-grid">
           <a class="tool-card" href="./json-formatter/" data-keywords="json formatter prettify minify beautify">
@@ -200,11 +249,108 @@
             <p>Create SVG QR codes for URLs, text, and quick mobile testing.</p>
             <span class="tool-link-text">Open tool</span>
           </a>
-          <article class="tool-card" data-keywords="slug generator seo title url">
+          <a class="tool-card" href="./slug-generator/" data-keywords="slug generator seo title url">
             <span class="tool-icon">Aa</span>
             <h3>Slug Generator</h3>
             <p>Create readable URL slugs for articles, docs, and landing pages.</p>
-          </article>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./lorem-ipsum-generator/" data-keywords="lorem ipsum generator placeholder filler text">
+            <span class="tool-icon">LI</span>
+            <h3>Lorem Ipsum Generator</h3>
+            <p>Create placeholder paragraphs and sentences for wireframes, mocks, and layouts.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./case-converter/" data-keywords="case converter uppercase lowercase camel snake kebab">
+            <span class="tool-icon">Cc</span>
+            <h3>Case Converter</h3>
+            <p>Rewrite text into common case styles for code, titles, notes, and labels.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./text-diff-checker/" data-keywords="text diff checker compare changes lines">
+            <span class="tool-icon">DI</span>
+            <h3>Text Diff Checker</h3>
+            <p>Compare two text versions and inspect the exact lines that changed.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./qr-scanner/" data-keywords="qr scanner camera barcode scan image">
+            <span class="tool-icon">QS</span>
+            <h3>QR Scanner</h3>
+            <p>Scan QR codes from a camera stream or image upload when supported by the browser.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section-block featured-tools" id="more-tools" aria-labelledby="more-tools-title">
+        <div class="section-heading">
+          <div>
+            <span class="feature-badge">New releases</span>
+            <p class="eyebrow">Traffic growth pass</p>
+          </div>
+          <h2 id="more-tools-title">Ten additional utility pages built for high-intent search traffic.</h2>
+        </div>
+        <div class="tool-grid">
+          <a class="tool-card" href="./md5-generator/" data-keywords="md5 generator checksum hash">
+            <span class="tool-icon">MD5</span>
+            <h3>MD5 Generator</h3>
+            <p>Generate MD5 checksums locally for quick validation and legacy workflows.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./sha256-generator/" data-keywords="sha256 generator hash checksum">
+            <span class="tool-icon">S26</span>
+            <h3>SHA256 Generator</h3>
+            <p>Create SHA-256 digests in the browser for modern hash and verification tasks.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./word-counter/" data-keywords="word counter count words text stats">
+            <span class="tool-icon">WC</span>
+            <h3>Word Counter</h3>
+            <p>Count words, characters, sentences, paragraphs, and lines in text.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./character-counter/" data-keywords="character counter text stats bytes">
+            <span class="tool-icon">CC</span>
+            <h3>Character Counter</h3>
+            <p>Measure characters, characters without spaces, bytes, and lines instantly.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./text-reverser/" data-keywords="text reverser reverse words lines characters">
+            <span class="tool-icon">RV</span>
+            <h3>Text Reverser</h3>
+            <p>Reverse characters, words, or lines for quick text experiments.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./random-number-generator/" data-keywords="random number generator range integer decimal">
+            <span class="tool-icon">RN</span>
+            <h3>Random Number Generator</h3>
+            <p>Create random integers or decimals within any range you choose.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./qr-generator-advanced/" data-keywords="qr generator advanced custom svg colors">
+            <span class="tool-icon">QA</span>
+            <h3>QR Generator Advanced</h3>
+            <p>Generate branded QR code SVGs with custom colors and export sizing.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./html-encoder-decoder/" data-keywords="html encoder decoder entities">
+            <span class="tool-icon">HT</span>
+            <h3>HTML Encoder Decoder</h3>
+            <p>Convert HTML into entities or decode entity text back to plain content.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./color-converter/" data-keywords="color converter hex rgb hsl">
+            <span class="tool-icon">CL</span>
+            <h3>Color Converter</h3>
+            <p>Switch between hex, RGB, RGBA, and HSL values with a live preview.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./url-parser/" data-keywords="url parser query params pathname host">
+            <span class="tool-icon">UP</span>
+            <h3>URL Parser</h3>
+            <p>Inspect protocol, host, pathname, query parameters, and fragments.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
         </div>
       </section>
 
@@ -248,6 +394,21 @@
           <a href="./jwt-decoder/">JWT Decoder</a>
           <a href="./unix-timestamp-converter/">Unix Timestamp Converter</a>
           <a href="./qr-code-generator/">QR Code Generator</a>
+          <a href="./lorem-ipsum-generator/">Lorem Ipsum Generator</a>
+          <a href="./case-converter/">Case Converter</a>
+          <a href="./text-diff-checker/">Text Diff Checker</a>
+          <a href="./slug-generator/">Slug Generator</a>
+          <a href="./qr-scanner/">QR Scanner</a>
+          <a href="./md5-generator/">MD5 Generator</a>
+          <a href="./sha256-generator/">SHA256 Generator</a>
+          <a href="./word-counter/">Word Counter</a>
+          <a href="./character-counter/">Character Counter</a>
+          <a href="./text-reverser/">Text Reverser</a>
+          <a href="./random-number-generator/">Random Number Generator</a>
+          <a href="./qr-generator-advanced/">QR Generator Advanced</a>
+          <a href="./html-encoder-decoder/">HTML Encoder Decoder</a>
+          <a href="./color-converter/">Color Converter</a>
+          <a href="./url-parser/">URL Parser</a>
         </div>
         <div>
           <strong>Site</strong>

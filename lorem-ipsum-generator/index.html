@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Lorem Ipsum Generator Online | Web Utility Desk</title>
+    <meta
+      name="description"
+      content="Generate lorem ipsum paragraphs, sentences, and words online with a fast browser-based placeholder text generator."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://webutilitydesk.com/lorem-ipsum-generator/" />
+    <meta property="og:title" content="Free Lorem Ipsum Generator Online" />
+    <meta
+      property="og:description"
+      content="Generate lorem ipsum placeholder text in your browser."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webutilitydesk.com/lorem-ipsum-generator/" />
+    <meta property="og:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free Lorem Ipsum Generator Online" />
+    <meta
+      name="twitter:description"
+      content="Generate lorem ipsum paragraphs, sentences, and words online."
+    />
+    <meta name="twitter:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.svg" />
+    <link rel="manifest" href="../assets/site.webmanifest" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <meta name="wud-ga4-id" content="" />
+    <meta name="wud-clarity-id" content="" />
+    <script src="../assets/analytics.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "Lorem Ipsum Generator",
+            "url": "https://webutilitydesk.com/lorem-ipsum-generator/",
+            "applicationCategory": "DesignApplication",
+            "operatingSystem": "Any",
+            "isAccessibleForFree": true,
+            "description": "Generate lorem ipsum paragraphs, sentences, and words online with a fast browser-based placeholder text generator.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://webutilitydesk.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Lorem Ipsum Generator",
+                "item": "https://webutilitydesk.com/lorem-ipsum-generator/"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is lorem ipsum used for?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It is used as placeholder text in mockups, prototypes, layouts, and design reviews."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I generate multiple paragraphs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Choose the paragraph mode and select how many paragraphs you want."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this tool work offline?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The generator runs in the browser, so it does not need a server-side API."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Web Utility Desk home">
+        <img src="../assets/brand-mark.svg" alt="" width="34" height="34" />
+        <span>Web Utility Desk</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="../case-converter/">Case</a>
+        <a href="../text-diff-checker/">Diff</a>
+        <a href="../slug-generator/">Slug</a>
+        <a href="../qr-scanner/">QR Scan</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="tool-page">
+        <div class="tool-hero">
+          <p class="eyebrow">Placeholder tool</p>
+          <h1>Lorem Ipsum Generator</h1>
+          <p class="summary">
+            Generate realistic placeholder text for layouts, wireframes, landing page drafts, and design mockups.
+          </p>
+        </div>
+
+        <section class="tool-panel standalone-tool" aria-label="Lorem Ipsum generator workspace">
+          <div class="tool-body">
+            <div class="tool-controls">
+              <div class="control-row">
+                <div>
+                  <label for="mode">Generate</label>
+                  <select id="mode" class="tool-select">
+                    <option value="paragraphs">Paragraphs</option>
+                    <option value="sentences">Sentences</option>
+                    <option value="words">Words</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="count">Count</label>
+                  <input id="count" class="tool-select" type="number" min="1" max="24" value="3" />
+                </div>
+              </div>
+              <div class="field-group">
+                <label for="tool-input">Seed text</label>
+                <textarea id="tool-input" class="tool-input" spellcheck="false" rows="6" placeholder="Use the built-in lorem ipsum vocabulary if left empty."></textarea>
+              </div>
+            </div>
+            <div class="action-row" aria-label="Lorem Ipsum generator actions">
+              <button class="primary-action" id="run-tool" type="button">Generate</button>
+              <button class="secondary-action" id="secondary-tool" type="button">Generate Sample</button>
+              <button class="secondary-action" id="copy-output" type="button">Copy</button>
+              <button class="ghost-action" id="clear-tool" type="button">Clear</button>
+            </div>
+            <div class="field-group output-group">
+              <div class="output-header">
+                <label for="tool-output">Generated text</label>
+                <span id="tool-status" role="status" aria-live="polite">Ready</span>
+              </div>
+              <textarea id="tool-output" class="tool-output" spellcheck="false" rows="12" readonly></textarea>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="section-block tool-content" aria-labelledby="lorem-details">
+        <div class="section-heading">
+          <p class="eyebrow">Use cases</p>
+          <h2 id="lorem-details">Placeholder copy that helps you ship layouts faster.</h2>
+        </div>
+        <div class="content-grid">
+          <article>
+            <h3>Wireframes</h3>
+            <p>Drop in paragraph and sentence blocks while you test spacing, rhythm, and card layouts.</p>
+          </article>
+          <article>
+            <h3>Mockups</h3>
+            <p>Fill empty text regions with believable copy so design reviews look closer to production.</p>
+          </article>
+          <article>
+            <h3>Content drafts</h3>
+            <p>Generate temporary copy for staging pages before the final editorial content is ready.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block related-section" aria-labelledby="related-tools">
+        <div class="section-heading">
+          <p class="eyebrow">Related tools</p>
+          <h2 id="related-tools">Continue with another developer utility.</h2>
+        </div>
+        <div class="related-links">
+          <a href="../case-converter/">Case Converter</a>
+          <a href="../text-diff-checker/">Text Diff Checker</a>
+          <a href="../slug-generator/">Slug Generator</a>
+          <a href="../qr-scanner/">QR Scanner</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <span>Web Utility Desk</span>
+        <p>Free web utility tools for everyday technical work.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div>
+          <strong>Tools</strong>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../json-validator/">JSON Validator</a>
+          <a href="../base64-encoder-decoder/">Base64 Encoder/Decoder</a>
+          <a href="../uuid-generator/">UUID Generator</a>
+          <a href="../url-encoder-decoder/">URL Encoder/Decoder</a>
+          <a href="../password-generator/">Password Generator</a>
+          <a href="../hash-generator/">Hash Generator</a>
+          <a href="../jwt-decoder/">JWT Decoder</a>
+          <a href="../unix-timestamp-converter/">Unix Timestamp Converter</a>
+          <a href="../qr-code-generator/">QR Code Generator</a>
+          <a href="../lorem-ipsum-generator/">Lorem Ipsum Generator</a>
+          <a href="../case-converter/">Case Converter</a>
+          <a href="../text-diff-checker/">Text Diff Checker</a>
+          <a href="../slug-generator/">Slug Generator</a>
+          <a href="../qr-scanner/">QR Scanner</a>
+        </div>
+        <div>
+          <strong>Site</strong>
+          <a href="../about/">About</a>
+          <a href="../contact/">Contact</a>
+          <a href="../privacy-policy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+          <a href="../disclaimer/">Disclaimer</a>
+        </div>
+      </nav>
+    </footer>
+
+    <script>
+      const words = [
+        "lorem",
+        "ipsum",
+        "dolor",
+        "sit",
+        "amet",
+        "consectetur",
+        "adipiscing",
+        "elit",
+        "sed",
+        "do",
+        "eiusmod",
+        "tempor",
+        "incididunt",
+        "ut",
+        "labore",
+        "et",
+        "dolore",
+        "magna",
+        "aliqua",
+        "ut",
+        "enim",
+        "ad",
+        "minim",
+        "veniam",
+      ];
+
+      const modeEl = document.querySelector("#mode");
+      const countEl = document.querySelector("#count");
+      const inputEl = document.querySelector("#tool-input");
+      const outputEl = document.querySelector("#tool-output");
+      const statusEl = document.querySelector("#tool-status");
+      const runButton = document.querySelector("#run-tool");
+      const sampleButton = document.querySelector("#secondary-tool");
+      const copyButton = document.querySelector("#copy-output");
+      const clearButton = document.querySelector("#clear-tool");
+
+      function wordPool() {
+        const seed = inputEl.value
+          .trim()
+          .split(/\s+/)
+          .filter(Boolean);
+        return seed.length ? seed : words;
+      }
+
+      function randomInt(max) {
+        return Math.floor(Math.random() * max);
+      }
+
+      function capitalize(text) {
+        return text.charAt(0).toUpperCase() + text.slice(1);
+      }
+
+      function pickWord(pool) {
+        return pool[randomInt(pool.length)];
+      }
+
+      function buildSentence(pool) {
+        const length = 8 + randomInt(8);
+        const sentence = [];
+
+        for (let index = 0; index < length; index += 1) {
+          sentence.push(pickWord(pool));
+        }
+
+        return `${capitalize(sentence.join(" "))}.`;
+      }
+
+      function buildParagraph(pool) {
+        const sentenceCount = 3 + randomInt(3);
+        return Array.from({ length: sentenceCount }, () => buildSentence(pool)).join(" ");
+      }
+
+      function generateValue(mode, count) {
+        const pool = wordPool();
+
+        if (mode === "words") {
+          return Array.from({ length: count }, () => pickWord(pool)).join(" ");
+        }
+
+        if (mode === "sentences") {
+          return Array.from({ length: count }, () => buildSentence(pool)).join(" ");
+        }
+
+        return Array.from({ length: count }, () => buildParagraph(pool)).join("\n\n");
+      }
+
+      function setStatus(message, isError = false) {
+        statusEl.textContent = message;
+        statusEl.classList.toggle("is-error", isError);
+      }
+
+      function run() {
+        const mode = modeEl.value;
+        const count = Math.min(Math.max(Number.parseInt(countEl.value, 10) || 1, 1), 24);
+        countEl.value = String(count);
+        outputEl.value = generateValue(mode, count);
+        setStatus("Generated");
+      }
+
+      async function copyOutput() {
+        await navigator.clipboard.writeText(outputEl.value);
+        setStatus("Copied to clipboard");
+      }
+
+      function clearAll() {
+        inputEl.value = "";
+        outputEl.value = "";
+        countEl.value = "3";
+        modeEl.value = "paragraphs";
+        setStatus("Ready");
+      }
+
+      runButton.addEventListener("click", run);
+      sampleButton.addEventListener("click", () => {
+        modeEl.value = "paragraphs";
+        countEl.value = "2";
+        run();
+      });
+      copyButton.addEventListener("click", copyOutput);
+      clearButton.addEventListener("click", clearAll);
+      run();
+    </script>
+  </body>
+</html>

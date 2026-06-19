@@ -344,6 +344,10 @@ textarea:focus {
   border-radius: 8px;
 }
 
+.featured-tools .tool-card {
+  min-height: 172px;
+}
+
 .tool-card[href]:hover,
 .tool-card[href]:focus-visible {
   border-color: rgba(15, 118, 110, 0.5);
@@ -511,6 +515,114 @@ textarea:focus {
   font-weight: 800;
 }
 
+.featured-tools {
+  background: linear-gradient(180deg, #f8fbfa 0%, #eef7f4 100%);
+}
+
+.feature-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 28px;
+  padding: 0 10px;
+  margin-bottom: 14px;
+  color: #0b5d58;
+  background: #dff7f1;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.not-found-page {
+  display: block;
+  min-height: calc(100vh - 80px);
+}
+
+.not-found-page .legal-copy a {
+  color: var(--brand);
+  font-weight: 800;
+}
+
+.tool-controls {
+  display: grid;
+  gap: 14px;
+}
+
+.control-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+.tool-select,
+.tool-input,
+.tool-output {
+  width: 100%;
+  min-width: 0;
+  padding: 14px;
+  color: #18211f;
+  background: #fbfdfc;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  outline: none;
+}
+
+.tool-select {
+  min-height: 52px;
+}
+
+.tool-output {
+  min-height: 240px;
+  white-space: pre-wrap;
+}
+
+.tool-preview {
+  padding: 18px;
+  background: #fbfdfc;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.tool-preview:empty {
+  display: none;
+}
+
+.diff-lines {
+  display: grid;
+  gap: 6px;
+}
+
+.diff-line {
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: #f8fbfa;
+  border: 1px solid transparent;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.diff-line.is-added {
+  background: #eaf8f4;
+  border-color: #b8e8d6;
+}
+
+.diff-line.is-removed {
+  background: #fff1eb;
+  border-color: #f5c4b0;
+}
+
+.scan-status {
+  padding: 14px 16px;
+  background: #fbfdfc;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+}
+
 .related-links a:hover,
 .related-links a:focus-visible {
   border-color: rgba(15, 118, 110, 0.5);
@@ -605,6 +717,10 @@ textarea:focus {
   .tool-hero {
     position: static;
     max-width: 760px;
+  }
+
+  .control-row {
+    grid-template-columns: 1fr;
   }
 }
 

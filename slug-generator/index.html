@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Slug Generator Online | Web Utility Desk</title>
+    <meta
+      name="description"
+      content="Generate clean lowercase URL slugs from titles and phrases with a browser-based slug generator."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://webutilitydesk.com/slug-generator/" />
+    <meta property="og:title" content="Free Slug Generator Online" />
+    <meta
+      property="og:description"
+      content="Generate clean URL slugs from titles and phrases in your browser."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webutilitydesk.com/slug-generator/" />
+    <meta property="og:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free Slug Generator Online" />
+    <meta
+      name="twitter:description"
+      content="Generate clean lowercase URL slugs from titles and phrases."
+    />
+    <meta name="twitter:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.svg" />
+    <link rel="manifest" href="../assets/site.webmanifest" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <meta name="wud-ga4-id" content="" />
+    <meta name="wud-clarity-id" content="" />
+    <script src="../assets/analytics.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "Slug Generator",
+            "url": "https://webutilitydesk.com/slug-generator/",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Any",
+            "isAccessibleForFree": true,
+            "description": "Generate clean lowercase URL slugs from titles and phrases with a browser-based slug generator.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://webutilitydesk.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Slug Generator",
+                "item": "https://webutilitydesk.com/slug-generator/"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Web Utility Desk home">
+        <img src="../assets/brand-mark.svg" alt="" width="34" height="34" />
+        <span>Web Utility Desk</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="../case-converter/">Case</a>
+        <a href="../text-diff-checker/">Diff</a>
+        <a href="../lorem-ipsum-generator/">Lorem</a>
+        <a href="../qr-scanner/">QR Scan</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="tool-page">
+        <div class="tool-hero">
+          <p class="eyebrow">SEO tool</p>
+          <h1>Slug Generator</h1>
+          <p class="summary">
+            Turn titles and phrases into clean, readable URL slugs for articles, documentation, and landing pages.
+          </p>
+        </div>
+
+        <section class="tool-panel standalone-tool" aria-label="Slug generator workspace">
+          <div class="tool-body">
+            <div class="tool-controls">
+              <div class="field-group">
+                <label for="tool-input">Title or phrase</label>
+                <textarea id="tool-input" class="tool-input" rows="7">Fast browser tools for developers</textarea>
+              </div>
+              <div class="control-row">
+                <div>
+                  <label for="separator">Separator</label>
+                  <select id="separator" class="tool-select">
+                    <option value="-">Hyphen</option>
+                    <option value="_">Underscore</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="limit">Max length</label>
+                  <input id="limit" class="tool-select" type="number" min="10" max="120" value="70" />
+                </div>
+              </div>
+              <div class="field-group output-group">
+                <div class="output-header">
+                  <label for="tool-output">Slug</label>
+                  <span id="tool-status" role="status" aria-live="polite">Ready</span>
+                </div>
+                <textarea id="tool-output" class="tool-output" rows="5" readonly></textarea>
+              </div>
+            </div>
+            <div class="action-row" aria-label="Slug generator actions">
+              <button class="primary-action" id="run-tool" type="button">Generate Slug</button>
+              <button class="secondary-action" id="secondary-tool" type="button">Use Sample</button>
+              <button class="secondary-action" id="copy-output" type="button">Copy</button>
+              <button class="ghost-action" id="clear-tool" type="button">Clear</button>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="section-block tool-content" aria-labelledby="slug-details">
+        <div class="section-heading">
+          <p class="eyebrow">Use cases</p>
+          <h2 id="slug-details">Convert titles into consistent URL-friendly slugs.</h2>
+        </div>
+        <div class="content-grid">
+          <article>
+            <h3>Blog posts</h3>
+            <p>Create readable post slugs from headlines and article titles.</p>
+          </article>
+          <article>
+            <h3>Documentation</h3>
+            <p>Keep section anchors and guide URLs short, stable, and easy to share.</p>
+          </article>
+          <article>
+            <h3>Landing pages</h3>
+            <p>Generate SEO-friendly URLs before publishing new pages or campaign drafts.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <span>Web Utility Desk</span>
+        <p>Free web utility tools for everyday technical work.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div>
+          <strong>Tools</strong>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../json-validator/">JSON Validator</a>
+          <a href="../base64-encoder-decoder/">Base64 Encoder/Decoder</a>
+          <a href="../uuid-generator/">UUID Generator</a>
+          <a href="../url-encoder-decoder/">URL Encoder/Decoder</a>
+          <a href="../password-generator/">Password Generator</a>
+          <a href="../hash-generator/">Hash Generator</a>
+          <a href="../jwt-decoder/">JWT Decoder</a>
+          <a href="../unix-timestamp-converter/">Unix Timestamp Converter</a>
+          <a href="../qr-code-generator/">QR Code Generator</a>
+          <a href="../lorem-ipsum-generator/">Lorem Ipsum Generator</a>
+          <a href="../case-converter/">Case Converter</a>
+          <a href="../text-diff-checker/">Text Diff Checker</a>
+          <a href="../slug-generator/">Slug Generator</a>
+          <a href="../qr-scanner/">QR Scanner</a>
+        </div>
+        <div>
+          <strong>Site</strong>
+          <a href="../about/">About</a>
+          <a href="../contact/">Contact</a>
+          <a href="../privacy-policy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+          <a href="../disclaimer/">Disclaimer</a>
+        </div>
+      </nav>
+    </footer>
+
+    <script>
+      const inputEl = document.querySelector("#tool-input");
+      const outputEl = document.querySelector("#tool-output");
+      const separatorEl = document.querySelector("#separator");
+      const limitEl = document.querySelector("#limit");
+      const statusEl = document.querySelector("#tool-status");
+      const runButton = document.querySelector("#run-tool");
+      const sampleButton = document.querySelector("#secondary-tool");
+      const copyButton = document.querySelector("#copy-output");
+      const clearButton = document.querySelector("#clear-tool");
+
+      function setStatus(message, isError = false) {
+        statusEl.textContent = message;
+        statusEl.classList.toggle("is-error", isError);
+      }
+
+      function slugify(value, separator, limit) {
+        const slug = value
+          .normalize("NFKD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase()
+          .trim()
+          .replace(/[^a-z0-9]+/g, separator)
+          .replace(new RegExp(`^${separator}+|${separator}+$`, "g"), "")
+          .replace(new RegExp(`${separator}{2,}`, "g"), separator);
+
+        return slug.slice(0, limit).replace(new RegExp(`^${separator}+|${separator}+$`, "g"), "");
+      }
+
+      function run() {
+        const limit = Math.min(Math.max(Number.parseInt(limitEl.value, 10) || 70, 10), 120);
+        limitEl.value = String(limit);
+        outputEl.value = slugify(inputEl.value, separatorEl.value, limit);
+        setStatus("Generated");
+      }
+
+      async function copyOutput() {
+        await navigator.clipboard.writeText(outputEl.value);
+        setStatus("Copied to clipboard");
+      }
+
+      function clearAll() {
+        inputEl.value = "";
+        outputEl.value = "";
+        setStatus("Ready");
+      }
+
+      runButton.addEventListener("click", run);
+      sampleButton.addEventListener("click", () => {
+        inputEl.value = "Open Graph image for launch growth pass";
+        separatorEl.value = "-";
+        limitEl.value = "60";
+        run();
+      });
+      copyButton.addEventListener("click", copyOutput);
+      clearButton.addEventListener("click", clearAll);
+      inputEl.addEventListener("input", run);
+      separatorEl.addEventListener("change", run);
+      limitEl.addEventListener("input", run);
+      run();
+    </script>
+  </body>
+</html>

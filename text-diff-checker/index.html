@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Text Diff Checker Online | Web Utility Desk</title>
+    <meta
+      name="description"
+      content="Compare two text blocks online and highlight added or removed lines with a fast browser-based text diff checker."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://webutilitydesk.com/text-diff-checker/" />
+    <meta property="og:title" content="Free Text Diff Checker Online" />
+    <meta
+      property="og:description"
+      content="Compare two versions of text and highlight line changes in your browser."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webutilitydesk.com/text-diff-checker/" />
+    <meta property="og:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free Text Diff Checker Online" />
+    <meta
+      name="twitter:description"
+      content="Compare two text blocks online and highlight added or removed lines."
+    />
+    <meta name="twitter:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.svg" />
+    <link rel="manifest" href="../assets/site.webmanifest" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <meta name="wud-ga4-id" content="" />
+    <meta name="wud-clarity-id" content="" />
+    <script src="../assets/analytics.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "Text Diff Checker",
+            "url": "https://webutilitydesk.com/text-diff-checker/",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Any",
+            "isAccessibleForFree": true,
+            "description": "Compare two text blocks online and highlight added or removed lines with a fast browser-based text diff checker.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://webutilitydesk.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Text Diff Checker",
+                "item": "https://webutilitydesk.com/text-diff-checker/"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Web Utility Desk home">
+        <img src="../assets/brand-mark.svg" alt="" width="34" height="34" />
+        <span>Web Utility Desk</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="../lorem-ipsum-generator/">Lorem</a>
+        <a href="../case-converter/">Case</a>
+        <a href="../slug-generator/">Slug</a>
+        <a href="../qr-scanner/">QR Scan</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="tool-page">
+        <div class="tool-hero">
+          <p class="eyebrow">Compare tool</p>
+          <h1>Text Diff Checker</h1>
+          <p class="summary">
+            Compare two drafts line by line and quickly spot additions, removals, and unchanged content.
+          </p>
+        </div>
+
+        <section class="tool-panel standalone-tool" aria-label="Text diff checker workspace">
+          <div class="tool-body">
+            <div class="tool-controls">
+              <div class="field-group">
+                <label for="left-input">Original text</label>
+                <textarea id="left-input" class="tool-input" rows="8">First version
+Same line
+Removed line</textarea>
+              </div>
+              <div class="field-group">
+                <label for="right-input">Updated text</label>
+                <textarea id="right-input" class="tool-input" rows="8">First version
+Same line
+Added line</textarea>
+              </div>
+            </div>
+            <div class="action-row" aria-label="Text diff actions">
+              <button class="primary-action" id="run-tool" type="button">Compare</button>
+              <button class="secondary-action" id="secondary-tool" type="button">Swap Samples</button>
+              <button class="secondary-action" id="copy-output" type="button">Copy Diff</button>
+              <button class="ghost-action" id="clear-tool" type="button">Clear</button>
+            </div>
+            <div class="field-group output-group">
+              <div class="output-header">
+                <label for="tool-output">Diff result</label>
+                <span id="tool-status" role="status" aria-live="polite">Ready</span>
+              </div>
+              <div id="tool-output" class="tool-preview diff-lines" aria-live="polite"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="section-block tool-content" aria-labelledby="diff-details">
+        <div class="section-heading">
+          <p class="eyebrow">Use cases</p>
+          <h2 id="diff-details">A fast way to inspect text changes without a code editor.</h2>
+        </div>
+        <div class="content-grid">
+          <article>
+            <h3>Draft review</h3>
+            <p>Check how a copy edit changed each line before you publish the final version.</p>
+          </article>
+          <article>
+            <h3>Changelog review</h3>
+            <p>Compare release notes, policy edits, and configuration exports line by line.</p>
+          </article>
+          <article>
+            <h3>Debugging</h3>
+            <p>Spot the exact wording that changed between two text payloads or saved snippets.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <span>Web Utility Desk</span>
+        <p>Free web utility tools for everyday technical work.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div>
+          <strong>Tools</strong>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../json-validator/">JSON Validator</a>
+          <a href="../base64-encoder-decoder/">Base64 Encoder/Decoder</a>
+          <a href="../uuid-generator/">UUID Generator</a>
+          <a href="../url-encoder-decoder/">URL Encoder/Decoder</a>
+          <a href="../password-generator/">Password Generator</a>
+          <a href="../hash-generator/">Hash Generator</a>
+          <a href="../jwt-decoder/">JWT Decoder</a>
+          <a href="../unix-timestamp-converter/">Unix Timestamp Converter</a>
+          <a href="../qr-code-generator/">QR Code Generator</a>
+          <a href="../lorem-ipsum-generator/">Lorem Ipsum Generator</a>
+          <a href="../case-converter/">Case Converter</a>
+          <a href="../text-diff-checker/">Text Diff Checker</a>
+          <a href="../slug-generator/">Slug Generator</a>
+          <a href="../qr-scanner/">QR Scanner</a>
+        </div>
+        <div>
+          <strong>Site</strong>
+          <a href="../about/">About</a>
+          <a href="../contact/">Contact</a>
+          <a href="../privacy-policy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+          <a href="../disclaimer/">Disclaimer</a>
+        </div>
+      </nav>
+    </footer>
+
+    <script>
+      const leftInput = document.querySelector("#left-input");
+      const rightInput = document.querySelector("#right-input");
+      const outputEl = document.querySelector("#tool-output");
+      const statusEl = document.querySelector("#tool-status");
+      const runButton = document.querySelector("#run-tool");
+      const sampleButton = document.querySelector("#secondary-tool");
+      const copyButton = document.querySelector("#copy-output");
+      const clearButton = document.querySelector("#clear-tool");
+
+      function setStatus(message, isError = false) {
+        statusEl.textContent = message;
+        statusEl.classList.toggle("is-error", isError);
+      }
+
+      function diffLines(left, right) {
+        const a = left.split(/\r?\n/);
+        const b = right.split(/\r?\n/);
+        const rows = Array.from({ length: a.length + 1 }, () => Array(b.length + 1).fill(0));
+
+        for (let i = a.length - 1; i >= 0; i -= 1) {
+          for (let j = b.length - 1; j >= 0; j -= 1) {
+            rows[i][j] = a[i] === b[j] ? rows[i + 1][j + 1] + 1 : Math.max(rows[i + 1][j], rows[i][j + 1]);
+          }
+        }
+
+        const result = [];
+        let i = 0;
+        let j = 0;
+
+        while (i < a.length && j < b.length) {
+          if (a[i] === b[j]) {
+            result.push({ type: "equal", text: a[i] });
+            i += 1;
+            j += 1;
+          } else if (rows[i + 1][j] >= rows[i][j + 1]) {
+            result.push({ type: "removed", text: a[i] });
+            i += 1;
+          } else {
+            result.push({ type: "added", text: b[j] });
+            j += 1;
+          }
+        }
+
+        while (i < a.length) {
+          result.push({ type: "removed", text: a[i] });
+          i += 1;
+        }
+
+        while (j < b.length) {
+          result.push({ type: "added", text: b[j] });
+          j += 1;
+        }
+
+        return result;
+      }
+
+      function renderDiff() {
+        const left = leftInput.value.trimEnd();
+        const right = rightInput.value.trimEnd();
+        const diff = diffLines(left, right);
+
+        if (!left && !right) {
+          outputEl.innerHTML = "<div class=\"scan-status\">Add text to both sides to compare changes.</div>";
+          setStatus("Ready");
+          return;
+        }
+
+        outputEl.innerHTML = diff
+          .map((item) => {
+            const prefix = item.type === "added" ? "+" : item.type === "removed" ? "-" : " ";
+            const className = item.type === "added" ? "is-added" : item.type === "removed" ? "is-removed" : "";
+            return `<div class="diff-line ${className}">${prefix} ${escapeHtml(item.text || "")}</div>`;
+          })
+          .join("");
+        setStatus("Compared");
+      }
+
+      function escapeHtml(value) {
+        return value
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+      }
+
+      async function copyOutput() {
+        const text = outputEl.innerText.trim();
+        await navigator.clipboard.writeText(text);
+        setStatus("Copied to clipboard");
+      }
+
+      function swapSamples() {
+        leftInput.value = `Web Utility Desk
+Same line
+Removed line`;
+        rightInput.value = `Web Utility Desk
+Same line
+Added line`;
+        renderDiff();
+      }
+
+      function clearAll() {
+        leftInput.value = "";
+        rightInput.value = "";
+        outputEl.innerHTML = "";
+        setStatus("Ready");
+      }
+
+      runButton.addEventListener("click", renderDiff);
+      sampleButton.addEventListener("click", swapSamples);
+      copyButton.addEventListener("click", copyOutput);
+      clearButton.addEventListener("click", clearAll);
+      leftInput.addEventListener("input", renderDiff);
+      rightInput.addEventListener("input", renderDiff);
+      renderDiff();
+    </script>
+  </body>
+</html>

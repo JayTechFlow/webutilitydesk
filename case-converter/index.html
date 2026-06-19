@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Case Converter Online | Web Utility Desk</title>
+    <meta
+      name="description"
+      content="Convert text between uppercase, lowercase, title case, camel case, Pascal case, snake case, and kebab case online."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://webutilitydesk.com/case-converter/" />
+    <meta property="og:title" content="Free Case Converter Online" />
+    <meta
+      property="og:description"
+      content="Convert text between common case styles in your browser."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webutilitydesk.com/case-converter/" />
+    <meta property="og:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free Case Converter Online" />
+    <meta
+      name="twitter:description"
+      content="Convert text between uppercase, lowercase, title case, camel case, Pascal case, snake case, and kebab case online."
+    />
+    <meta name="twitter:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.svg" />
+    <link rel="manifest" href="../assets/site.webmanifest" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <meta name="wud-ga4-id" content="" />
+    <meta name="wud-clarity-id" content="" />
+    <script src="../assets/analytics.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "Case Converter",
+            "url": "https://webutilitydesk.com/case-converter/",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Any",
+            "isAccessibleForFree": true,
+            "description": "Convert text between uppercase, lowercase, title case, camel case, Pascal case, snake case, and kebab case online.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://webutilitydesk.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Case Converter",
+                "item": "https://webutilitydesk.com/case-converter/"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Web Utility Desk home">
+        <img src="../assets/brand-mark.svg" alt="" width="34" height="34" />
+        <span>Web Utility Desk</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="../lorem-ipsum-generator/">Lorem</a>
+        <a href="../text-diff-checker/">Diff</a>
+        <a href="../slug-generator/">Slug</a>
+        <a href="../qr-scanner/">QR Scan</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="tool-page">
+        <div class="tool-hero">
+          <p class="eyebrow">Text tool</p>
+          <h1>Case Converter</h1>
+          <p class="summary">
+            Rewrite text into the most common case styles used in code, documentation, product copy, and URLs.
+          </p>
+        </div>
+
+        <section class="tool-panel standalone-tool" aria-label="Case converter workspace">
+          <div class="tool-body">
+            <div class="tool-controls">
+              <div class="control-row">
+                <div>
+                  <label for="style">Convert to</label>
+                  <select id="style" class="tool-select">
+                    <option value="sentence">Sentence case</option>
+                    <option value="title">Title Case</option>
+                    <option value="upper">UPPERCASE</option>
+                    <option value="lower">lowercase</option>
+                    <option value="camel">camelCase</option>
+                    <option value="pascal">PascalCase</option>
+                    <option value="snake">snake_case</option>
+                    <option value="kebab">kebab-case</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="tool-input">Input</label>
+                  <input id="tool-input" class="tool-select" type="text" value="Fast browser tools for developers" />
+                </div>
+              </div>
+              <div class="field-group output-group">
+                <div class="output-header">
+                  <label for="tool-output">Result</label>
+                  <span id="tool-status" role="status" aria-live="polite">Ready</span>
+                </div>
+                <textarea id="tool-output" class="tool-output" rows="10" readonly></textarea>
+              </div>
+            </div>
+            <div class="action-row" aria-label="Case converter actions">
+              <button class="primary-action" id="run-tool" type="button">Convert</button>
+              <button class="secondary-action" id="secondary-tool" type="button">Swap Sample</button>
+              <button class="secondary-action" id="copy-output" type="button">Copy</button>
+              <button class="ghost-action" id="clear-tool" type="button">Clear</button>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="section-block tool-content" aria-labelledby="case-details">
+        <div class="section-heading">
+          <p class="eyebrow">Use cases</p>
+          <h2 id="case-details">Convert copy for code, URLs, titles, and naming conventions.</h2>
+        </div>
+        <div class="content-grid">
+          <article>
+            <h3>Code naming</h3>
+            <p>Convert labels to camelCase, PascalCase, snake_case, and kebab-case for application code.</p>
+          </article>
+          <article>
+            <h3>Product copy</h3>
+            <p>Normalize headings, button labels, and marketing text to the style you need.</p>
+          </article>
+          <article>
+            <h3>Quick cleanup</h3>
+            <p>Fix accidental mixed casing before pasting content into docs, emails, or CMS fields.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <span>Web Utility Desk</span>
+        <p>Free web utility tools for everyday technical work.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div>
+          <strong>Tools</strong>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../json-validator/">JSON Validator</a>
+          <a href="../base64-encoder-decoder/">Base64 Encoder/Decoder</a>
+          <a href="../uuid-generator/">UUID Generator</a>
+          <a href="../url-encoder-decoder/">URL Encoder/Decoder</a>
+          <a href="../password-generator/">Password Generator</a>
+          <a href="../hash-generator/">Hash Generator</a>
+          <a href="../jwt-decoder/">JWT Decoder</a>
+          <a href="../unix-timestamp-converter/">Unix Timestamp Converter</a>
+          <a href="../qr-code-generator/">QR Code Generator</a>
+          <a href="../lorem-ipsum-generator/">Lorem Ipsum Generator</a>
+          <a href="../case-converter/">Case Converter</a>
+          <a href="../text-diff-checker/">Text Diff Checker</a>
+          <a href="../slug-generator/">Slug Generator</a>
+          <a href="../qr-scanner/">QR Scanner</a>
+        </div>
+        <div>
+          <strong>Site</strong>
+          <a href="../about/">About</a>
+          <a href="../contact/">Contact</a>
+          <a href="../privacy-policy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+          <a href="../disclaimer/">Disclaimer</a>
+        </div>
+      </nav>
+    </footer>
+
+    <script>
+      const styleEl = document.querySelector("#style");
+      const inputEl = document.querySelector("#tool-input");
+      const outputEl = document.querySelector("#tool-output");
+      const statusEl = document.querySelector("#tool-status");
+      const runButton = document.querySelector("#run-tool");
+      const sampleButton = document.querySelector("#secondary-tool");
+      const copyButton = document.querySelector("#copy-output");
+      const clearButton = document.querySelector("#clear-tool");
+
+      function wordsFromText(text) {
+        return text
+          .replace(/[_-]+/g, " ")
+          .trim()
+          .split(/\s+/)
+          .filter(Boolean);
+      }
+
+      function capitalize(text) {
+        return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+      }
+
+      function titleCase(text) {
+        return wordsFromText(text)
+          .map((word) => capitalize(word))
+          .join(" ");
+      }
+
+      function sentenceCase(text) {
+        const normalized = text.trim().toLowerCase();
+        return normalized ? capitalize(normalized) : "";
+      }
+
+      function camelCase(text) {
+        const words = wordsFromText(text).map((word) => word.toLowerCase());
+        return words
+          .map((word, index) => (index === 0 ? word : capitalize(word)))
+          .join("");
+      }
+
+      function pascalCase(text) {
+        return wordsFromText(text)
+          .map((word) => capitalize(word))
+          .join("");
+      }
+
+      function separatorCase(text, separator) {
+        return wordsFromText(text)
+          .map((word) => word.toLowerCase())
+          .join(separator);
+      }
+
+      function convert(text, style) {
+        switch (style) {
+          case "sentence":
+            return sentenceCase(text);
+          case "title":
+            return titleCase(text);
+          case "upper":
+            return text.toUpperCase();
+          case "lower":
+            return text.toLowerCase();
+          case "camel":
+            return camelCase(text);
+          case "pascal":
+            return pascalCase(text);
+          case "snake":
+            return separatorCase(text, "_");
+          case "kebab":
+            return separatorCase(text, "-");
+          default:
+            return text;
+        }
+      }
+
+      function setStatus(message, isError = false) {
+        statusEl.textContent = message;
+        statusEl.classList.toggle("is-error", isError);
+      }
+
+      function run() {
+        outputEl.value = convert(inputEl.value, styleEl.value);
+        setStatus("Converted");
+      }
+
+      async function copyOutput() {
+        await navigator.clipboard.writeText(outputEl.value);
+        setStatus("Copied to clipboard");
+      }
+
+      function clearAll() {
+        inputEl.value = "";
+        outputEl.value = "";
+        setStatus("Ready");
+      }
+
+      runButton.addEventListener("click", run);
+      sampleButton.addEventListener("click", () => {
+        inputEl.value = "Convert this heading into many styles";
+        styleEl.value = "camel";
+        run();
+      });
+      copyButton.addEventListener("click", copyOutput);
+      clearButton.addEventListener("click", clearAll);
+      inputEl.addEventListener("input", run);
+      styleEl.addEventListener("change", run);
+      run();
+    </script>
+  </body>
+</html>

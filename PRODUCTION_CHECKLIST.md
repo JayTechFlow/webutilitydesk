@@ -89,9 +89,15 @@ https://webutilitydesk.com/sitemap.xml
 
 - [ ] Create GA4 property.
 - [ ] Create Web data stream for `webutilitydesk.com`.
-- [ ] Add the real GA4 Measurement ID to the site head.
+- [ ] Add the real GA4 Measurement ID to the site head or analytics config.
 - [ ] Verify realtime events in GA4.
 - [ ] Do not commit placeholder or fake analytics IDs.
+
+## Microsoft Clarity
+
+- [ ] Create a Clarity project for `webutilitydesk.com`.
+- [ ] Add the real Clarity project ID to the site head or analytics config.
+- [ ] Verify session recordings and heatmaps in Clarity.
 
 ## SEO and AdSense Readiness
 
@@ -102,4 +108,3 @@ https://webutilitydesk.com/sitemap.xml
 - [ ] Run Lighthouse mobile audit.
 - [ ] Confirm About, Contact, Privacy Policy, Terms, and Disclaimer pages are live.
 - [ ] Apply for AdSense only after production domain and content are live.
-
