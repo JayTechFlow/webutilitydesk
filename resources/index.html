@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Resources | Web Utility Desk</title>
+    <meta
+      name="description"
+      content="A curated developer resources hub with official references for JSON, Base64, URL encoding, UUIDs, hashing, SEO, and future Next.js migration planning."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://webutilitydesk.com/resources/" />
+    <meta property="og:title" content="Developer Resources" />
+    <meta
+      property="og:description"
+      content="A curated developer resources hub with official references for JSON, Base64, URL encoding, UUIDs, hashing, SEO, and Next.js planning."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webutilitydesk.com/resources/" />
+    <meta property="og:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Developer Resources" />
+    <meta
+      name="twitter:description"
+      content="A curated developer resources hub with official references for JSON, Base64, URL encoding, UUIDs, hashing, SEO, and Next.js planning."
+    />
+    <meta name="twitter:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.svg" />
+    <link rel="manifest" href="../assets/site.webmanifest" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script src="../assets/analytics.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "name": "Developer Resources",
+            "url": "https://webutilitydesk.com/resources/",
+            "description": "A curated developer resources hub with official references for JSON, Base64, URL encoding, UUIDs, hashing, SEO, and Next.js planning."
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://webutilitydesk.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Resources",
+                "item": "https://webutilitydesk.com/resources/"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Web Utility Desk home">
+        <img src="../assets/brand-mark.svg" alt="" width="34" height="34" />
+        <span>Web Utility Desk</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="../blog/">Blog</a>
+        <a href="../guides/">Guides</a>
+        <a href="../json-formatter/">JSON</a>
+        <a href="../url-encoder-decoder/">URL</a>
+        <a href="../resources/">Resources</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="legal-page">
+        <p class="eyebrow">Developer resources</p>
+        <h1>Official references and practical next steps for building and maintaining the site.</h1>
+        <div class="legal-copy">
+          <section>
+            <h2>Why this page exists</h2>
+            <p>This hub is a lightweight authority page for the site. It gives readers a place to find official references, standards, and planning notes without leaving the Web Utility Desk ecosystem. That helps with trust, reduces duplicate content, and gives the site a stronger E-E-A-T signal because the resources are curated rather than random.</p>
+            <p>It also supports future development. If the site eventually moves to Next.js, this page becomes a natural location for migration notes, route mapping, and shared asset conventions. For now, it acts as the highest-signal reference page for developers who want the source material behind the tools and guides.</p>
+          </section>
+          <section>
+            <h2>Core references</h2>
+            <div class="content-grid">
+              <article>
+                <h3>JSON and data formats</h3>
+                <p><a href="https://www.json.org/json-en.html" rel="noopener noreferrer">JSON.org</a>, <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON" rel="noopener noreferrer">MDN JSON</a>, and the <a href="../json-formatter/">JSON Formatter</a> help with syntax and structure.</p>
+              </article>
+              <article>
+                <h3>URLs and encoding</h3>
+                <p><a href="https://developer.mozilla.org/docs/Web/API/URL" rel="noopener noreferrer">MDN URL API</a>, <a href="https://developer.mozilla.org/docs/Glossary/Percent-encoding" rel="noopener noreferrer">percent-encoding</a>, and the <a href="../url-encoder-decoder/">URL Encoder/Decoder</a> cover safe URL handling.</p>
+              </article>
+              <article>
+                <h3>Identifiers</h3>
+                <p><a href="https://www.rfc-editor.org/rfc/rfc9562" rel="noopener noreferrer">RFC 9562</a> and the <a href="../uuid-generator/">UUID Generator</a> explain modern identifier usage.</p>
+              </article>
+              <article>
+                <h3>Base64 and tokens</h3>
+                <p><a href="https://developer.mozilla.org/docs/Glossary/Base64" rel="noopener noreferrer">MDN Base64</a> and the <a href="../base64-encoder-decoder/">Base64 Encoder/Decoder</a> are useful for text-safe transport.</p>
+              </article>
+              <article>
+                <h3>Hashing</h3>
+                <p><a href="https://developer.mozilla.org/docs/Web/API/SubtleCrypto/digest" rel="noopener noreferrer">SubtleCrypto digest</a>, the <a href="../hash-generator/">Hash Generator</a>, and the dedicated MD5 and SHA256 tools support checksum workflows.</p>
+              </article>
+              <article>
+                <h3>SEO and publishing</h3>
+                <p><a href="https://developers.google.com/search/docs" rel="noopener noreferrer">Google Search Central</a>, the <a href="../slug-generator/">Slug Generator</a>, and the <a href="../url-parser/">URL Parser</a> help with search-friendly URLs.</p>
+              </article>
+            </div>
+          </section>
+          <section>
+            <h2>Site workflow notes</h2>
+            <p>Use the blog for concept-led explanations, the guides for beginner walkthroughs, and the tools for quick execution. When you add a new page, copy the shared head pattern, include analytics, keep canonical and social metadata in place, and connect the page back to the matching tool. That approach keeps the site easy to extend without breaking static performance.</p>
+            <p>For a future Next.js migration, preserve route names, shared metadata, canonical URLs, and the existing content clusters. That reduces migration risk because the public URL structure remains stable even if the rendering layer changes later.</p>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <span>Web Utility Desk</span>
+        <p>Free web utility tools for everyday technical work.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div>
+          <strong>Tools</strong>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../json-validator/">JSON Validator</a>
+          <a href="../base64-encoder-decoder/">Base64 Encoder/Decoder</a>
+          <a href="../url-encoder-decoder/">URL Encoder/Decoder</a>
+          <a href="../uuid-generator/">UUID Generator</a>
+          <a href="../hash-generator/">Hash Generator</a>
+          <a href="../slug-generator/">Slug Generator</a>
+        </div>
+        <div>
+          <strong>Site</strong>
+          <a href="../about/">About</a>
+          <a href="../blog/">Blog</a>
+          <a href="../guides/">Guides</a>
+          <a href="../resources/">Resources</a>
+          <a href="../contact/">Contact</a>
+          <a href="../privacy-policy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+        </div>
+      </nav>
+    </footer>
+  </body>
+</html>

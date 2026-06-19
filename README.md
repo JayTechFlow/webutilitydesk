@@ -83,6 +83,17 @@ Always include these shared assets on new pages:
 
 Every new page must include analytics.js, favicon assets, canonical URL, Open Graph metadata, and structured data where appropriate.
 
+## Next.js Migration Path
+
+The site is intentionally static today, but the current structure is compatible with a future Next.js migration.
+
+- Keep route slugs stable
+- Preserve the shared metadata pattern
+- Reuse the current content clusters: tools, blog, guides, resources, and legal pages
+- Replace the static `<head>` pattern with a shared metadata helper when the migration begins
+- Keep `assets/analytics.js` as the shared analytics source until the app shell is rebuilt
+- Avoid page-level duplication of canonical, social, and schema markup
+
 ## Run Locally
 
 Open `index.html` directly in a browser, or serve the folder:
