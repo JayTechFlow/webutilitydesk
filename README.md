@@ -23,7 +23,65 @@ Web Utility Desk is a static starter for a long-term tools website focused on or
 - Text diff checker
 - QR scanner
 - Responsive layout for desktop and mobile
-- GA4 and Microsoft Clarity support via opt-in head meta tags
+- GA4 analytics loaded through the shared `assets/analytics.js` loader
+- Canonical URLs, Open Graph metadata, and structured data on content pages
+
+## Analytics Architecture
+
+Analytics is centralized in `assets/analytics.js`.
+
+- The GA4 Measurement ID is defined once in the shared loader: `G-SNHJ9F5044`
+- Every page loads the same shared script
+- Page view tracking is dispatched from the loader, not from page-local code
+- Duplicate initialization is guarded so the loader can be included safely once per page
+
+The implementation rule is simple: do not add GA4 snippets, inline `gtag()` calls, or page-specific analytics bootstrap logic to HTML files. If analytics behavior changes, update `assets/analytics.js` only.
+
+## How To Add New Pages
+
+Use the existing HTML pages as the source of truth for new content pages.
+
+1. Copy the shared `<head>` pattern from an existing page.
+2. Include `assets/analytics.js`.
+3. Add a canonical URL.
+4. Add Open Graph and Twitter metadata.
+5. Add structured data where it makes sense for the page type.
+6. Add internal links to the matching tool pages and related articles.
+7. Update the relevant hub page and `sitemap.xml`.
+
+## Required Shared Assets
+
+Always include these shared assets on new pages:
+
+- `assets/styles.css`
+- `assets/analytics.js`
+- `assets/favicon.svg`
+- `assets/apple-touch-icon.svg`
+- `assets/site.webmanifest`
+- `assets/og-image.svg`
+
+## SEO Checklist
+
+- Canonical URL is present and correct
+- Title is descriptive and unique
+- Meta description is concise and specific
+- Open Graph title, description, image, and URL are present
+- Twitter card metadata is present
+- Internal links point to related tools and related articles
+- Structured data is valid JSON-LD
+- Page is added to `sitemap.xml`
+
+## Analytics Checklist
+
+- `assets/analytics.js` is included once
+- No inline GA4 code exists in the HTML
+- Measurement ID is loaded from the shared loader
+- Page view tracking is sent once per page load
+- Duplicate initialization is prevented
+
+## Contributor Rule
+
+Every new page must include analytics.js, favicon assets, canonical URL, Open Graph metadata, and structured data where appropriate.
 
 ## Run Locally
 
@@ -52,13 +110,13 @@ Recommended launch flow:
 5. Verify `https://webutilitydesk.com/sitemap.xml`.
 6. Add Google Search Console verification.
 7. Submit the sitemap in Search Console.
-8. Add GA4 only after the real Measurement ID is available.
+8. Keep analytics configuration in `assets/analytics.js` so the GA4 ID stays centralized.
 
 Detailed deployment steps are in [DEPLOYMENT.md](./DEPLOYMENT.md). The launch checklist is in [PRODUCTION_CHECKLIST.md](./PRODUCTION_CHECKLIST.md).
 
 ## Suggested Next Steps
 
 1. Buy and configure `webutilitydesk.com`.
-2. Add analytics and search console after hosting is selected.
+2. Keep GA4 and search console configuration in the shared loader and deployment setup.
 3. Publish five more high-search-intent tools before adding accounts or SaaS features.
 4. Add AdSense only after the site has enough useful content and crawlable pages.
