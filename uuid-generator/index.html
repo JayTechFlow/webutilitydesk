@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free UUID Generator Online - Random UUID v4 | Web Utility Desk</title>
+    <meta
+      name="description"
+      content="Generate random UUID v4 values online for tests, database records, prototypes, API examples, fixtures, and development workflows."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://webutilitydesk.com/uuid-generator/" />
+    <meta property="og:title" content="Free UUID Generator Online" />
+    <meta
+      property="og:description"
+      content="Generate random UUID values in your browser."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webutilitydesk.com/uuid-generator/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Free UUID Generator Online" />
+    <meta
+      name="twitter:description"
+      content="Generate random UUID values in your browser."
+    />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" href="../assets/brand-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script type="application/ld+json">
+{
+        "@context": "https://schema.org",
+        "@graph": [
+                {
+                        "@type": "WebApplication",
+                        "name": "UUID Generator",
+                        "url": "https://webutilitydesk.com/uuid-generator/",
+                        "applicationCategory": "DeveloperApplication",
+                        "operatingSystem": "Any",
+                        "isAccessibleForFree": true,
+                        "description": "Generate random UUID v4 values online for tests, database records, prototypes, API examples, fixtures, and development workflows.",
+                        "offers": {
+                                "@type": "Offer",
+                                "price": "0",
+                                "priceCurrency": "USD"
+                        }
+                },
+                {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                                {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Home",
+                                        "item": "https://webutilitydesk.com/"
+                                },
+                                {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "UUID Generator",
+                                        "item": "https://webutilitydesk.com/uuid-generator/"
+                                }
+                        ]
+                },
+                {
+                        "@type": "FAQPage",
+                        "mainEntity": [
+                                {
+                                        "@type": "Question",
+                                        "name": "What version of UUID is generated?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "The browser crypto randomUUID API generates UUID version 4 values. The fallback also follows the random UUID v4 shape."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "Are UUIDs guaranteed unique?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "They are designed to be practically unique with extremely low collision probability, but no random identifier can make an absolute mathematical promise in every possible universe."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "Can I generate multiple UUIDs?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Yes. Enter a count or use the Generate 5 action for quick batches."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "Should UUIDs be used as passwords?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "No. UUIDs are identifiers, not passwords or authentication secrets."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "Is generation local?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Yes. UUIDs are generated in the browser."
+                                        }
+                                }
+                        ]
+                }
+        ]
+}
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Web Utility Desk home">
+        <img src="../assets/brand-mark.svg" alt="" width="34" height="34" />
+        <span>Web Utility Desk</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="../json-formatter/">JSON</a>
+        <a href="../password-generator/">Password</a>
+        <a href="../hash-generator/">Hash</a>
+        <a href="../jwt-decoder/">JWT</a>
+        <a href="../qr-code-generator/">QR</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="tool-page">
+        <div class="tool-hero">
+          <p class="eyebrow">Generator tool</p>
+          <h1>UUID Generator</h1>
+          <p class="summary">Generate random UUID values for database records, mock data, automated tests, API examples, and prototypes.</p>
+        </div>
+
+        <section class="tool-panel standalone-tool" data-default-tool="uuid" aria-label="UUID generator workspace">
+          <div class="tool-body">
+            <div class="field-group">
+              <label id="input-label" for="tool-input">Number of UUIDs</label>
+              <textarea id="tool-input" spellcheck="false" rows="8">1</textarea>
+            </div>
+            <div class="action-row" aria-label="UUID Generator actions">
+              <button class="primary-action" id="run-tool" type="button">Generate UUID</button>
+              <button class="secondary-action" id="secondary-tool" type="button">Generate 5</button>
+              <button class="secondary-action" id="copy-output" type="button">Copy</button>
+              <button class="ghost-action" id="clear-tool" type="button">Clear</button>
+            </div>
+            <div class="field-group output-group">
+              <div class="output-header">
+                <label id="output-label" for="tool-output">Generated UUIDs</label>
+                <span id="tool-status" role="status" aria-live="polite">Ready</span>
+              </div>
+              <textarea id="tool-output" spellcheck="false" rows="12" readonly></textarea>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="section-block article-section" aria-labelledby="uuid-generator-guide">
+        <div class="section-heading">
+          <p class="eyebrow">Guide</p>
+          <h2 id="uuid-generator-guide">How to use this uuid generator in real projects.</h2>
+        </div>
+        <div class="article-copy">
+          <p>A UUID is a universally unique identifier. Developers use UUIDs when they need identifiers that can be created independently without asking a central database for the next number. They are useful in distributed systems, test data, event records, import jobs, queue messages, temporary objects, and prototypes where predictable incremental IDs are not ideal.</p>
+          <p>This generator creates random UUID values in the browser. Modern browsers use the built-in crypto randomUUID API when available. You can generate one value or enter a count to generate several at once. The output is line-separated, which makes it easy to copy into test fixtures, spreadsheets, seed scripts, API examples, or database insert statements.</p>
+        </div>
+      </section>
+
+      <section class="section-block article-section" aria-labelledby="uuid-generator-examples">
+        <div class="section-heading">
+          <p class="eyebrow">Examples</p>
+          <h2 id="uuid-generator-examples">Practical examples and everyday workflows.</h2>
+        </div>
+        <div class="article-copy">
+          <p>A UUID looks like 550e8400-e29b-41d4-a716-446655440000. The hyphenated format is familiar across databases, programming languages, API tools, and logs. In practice, you might use a generated UUID as a user ID in a mock JSON response, an order ID in a demo workflow, or a correlation ID while testing distributed tracing.</p>
+          <p>UUIDs are especially useful when frontend and backend work happen in parallel. A frontend developer can create stable sample IDs before a real database exists. A backend developer can use generated values in unit tests without relying on production records.</p>
+        </div>
+      </section>
+
+      <section class="section-block tool-content" aria-labelledby="uuid-generator-use-cases">
+        <div class="section-heading">
+          <p class="eyebrow">Use cases</p>
+          <h2 id="uuid-generator-use-cases">Where this tool fits into daily web work.</h2>
+        </div>
+        <div class="content-grid">
+          <article>
+            <h3>Mock data</h3>
+            <p>Create realistic identifiers for sample JSON, fixtures, demos, and local development.</p>
+          </article>
+          <article>
+            <h3>Database records</h3>
+            <p>Prepare IDs for systems that use UUID primary keys or external reference IDs.</p>
+          </article>
+          <article>
+            <h3>Correlation IDs</h3>
+            <p>Generate values for logs, message queues, and request tracing examples.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block article-section" aria-labelledby="uuid-generator-mistakes">
+        <div class="section-heading">
+          <p class="eyebrow">Common mistakes</p>
+          <h2 id="uuid-generator-mistakes">Avoid these issues before copying the result.</h2>
+        </div>
+        <div class="article-copy">
+          <p>Do not assume UUIDs are short or human friendly. They are designed for uniqueness, not readability. If users need to type or remember an ID, consider a shorter public code.</p>
+          <p>Do not use a UUID as a secret. A random UUID can be hard to guess, but it should not replace proper authentication, authorization, or signed tokens.</p>
+          <p>Be consistent with casing and formatting. Most systems accept lowercase hyphenated UUIDs, but some database schemas or validators are strict about the expected representation.</p>
+        </div>
+      </section>
+
+      <section class="section-block tool-content" aria-labelledby="uuid-generator-faq">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="uuid-generator-faq">UUID Generator questions.</h2>
+        </div>
+        <div class="content-grid">
+          <article>
+            <h3>What version of UUID is generated?</h3>
+            <p>The browser crypto randomUUID API generates UUID version 4 values. The fallback also follows the random UUID v4 shape.</p>
+          </article>
+          <article>
+            <h3>Are UUIDs guaranteed unique?</h3>
+            <p>They are designed to be practically unique with extremely low collision probability, but no random identifier can make an absolute mathematical promise in every possible universe.</p>
+          </article>
+          <article>
+            <h3>Can I generate multiple UUIDs?</h3>
+            <p>Yes. Enter a count or use the Generate 5 action for quick batches.</p>
+          </article>
+          <article>
+            <h3>Should UUIDs be used as passwords?</h3>
+            <p>No. UUIDs are identifiers, not passwords or authentication secrets.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block article-section" aria-labelledby="uuid-workflow">
+        <div class="section-heading">
+          <p class="eyebrow">Workflow</p>
+          <h2 id="uuid-workflow">Practical workflow for generated identifiers.</h2>
+        </div>
+        <div class="article-copy">
+          <p>Before generating UUIDs, decide how the identifier will be used. For temporary mock data, any generated value is usually fine. For database records, make sure the target column expects a UUID string and uses the same hyphenated format. For public URLs, consider whether a long UUID is acceptable for users or whether a shorter separate public code would be better.</p>
+          <p>When creating test data, generate identifiers once and keep them stable in fixtures. Constantly changing IDs can make snapshots, logs, and test failures harder to compare. If you need multiple linked records, generate a small batch and assign each value intentionally to users, orders, sessions, or events instead of copying random IDs without notes.</p>
+          <p>UUIDs are also useful for correlation IDs. When debugging a request that moves across services, a single generated ID can be attached to logs, messages, and API calls. That makes it easier to search across systems. The UUID itself does not provide tracing, but it gives teams a stable value to follow.</p>
+          <p>Pair this tool with the JSON Formatter when building sample API responses. Use the Unix Timestamp Converter for event times, the Password Generator for test credentials, and the QR Code Generator when you need to share a generated URL or identifier with a phone during testing.</p>
+          <p>For team workflows, include a short note explaining what each generated UUID represents. A clear label such as sample user ID, order ID, or trace ID makes the value useful later when another developer reads the fixture, log snippet, or bug report.</p>
+        </div>
+      </section>
+
+      <section class="section-block related-section" aria-labelledby="related-tools">
+        <div class="section-heading">
+          <p class="eyebrow">Related tools</p>
+          <h2 id="related-tools">Continue with another developer utility.</h2>
+        </div>
+        <div class="related-links">
+          <a href="../password-generator/">Password Generator</a>
+          <a href="../unix-timestamp-converter/">Unix Timestamp Converter</a>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../qr-code-generator/">QR Code Generator</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <span>Web Utility Desk</span>
+        <p>Free web utility tools for everyday technical work.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div>
+          <strong>Tools</strong>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../json-validator/">JSON Validator</a>
+          <a href="../base64-encoder-decoder/">Base64 Encoder/Decoder</a>
+          <a href="../uuid-generator/">UUID Generator</a>
+          <a href="../url-encoder-decoder/">URL Encoder/Decoder</a>
+          <a href="../password-generator/">Password Generator</a>
+          <a href="../hash-generator/">Hash Generator</a>
+          <a href="../jwt-decoder/">JWT Decoder</a>
+          <a href="../unix-timestamp-converter/">Unix Timestamp Converter</a>
+          <a href="../qr-code-generator/">QR Code Generator</a>
+        </div>
+        <div>
+          <strong>Site</strong>
+          <a href="../about/">About</a>
+          <a href="../contact/">Contact</a>
+          <a href="../privacy-policy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+          <a href="../disclaimer/">Disclaimer</a>
+        </div>
+      </nav>
+    </footer>
+
+    <script src="../assets/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free QR Code Generator Online - Text and URL QR Codes | Web Utility Desk</title>
+    <meta
+      name="description"
+      content="Generate QR codes online for text and URLs. Create a browser-based SVG QR code for links, notes, test data, and quick sharing."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://webutilitydesk.com/qr-code-generator/" />
+    <meta property="og:title" content="Free QR Code Generator Online" />
+    <meta
+      property="og:description"
+      content="Generate SVG QR codes for text and URLs in your browser."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webutilitydesk.com/qr-code-generator/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Free QR Code Generator Online" />
+    <meta
+      name="twitter:description"
+      content="Generate QR codes online for text and URLs. Create a browser-based SVG QR code for links, notes, test data, and quick sharing."
+    />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" href="../assets/brand-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "QR Code Generator",
+            "url": "https://webutilitydesk.com/qr-code-generator/",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Any",
+            "isAccessibleForFree": true,
+            "description": "A free browser-based QR code generator for text and URLs.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://webutilitydesk.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "QR Code Generator",
+                "item": "https://webutilitydesk.com/qr-code-generator/"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What can I put in a QR code?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You can encode short text, URLs, identifiers, and other plain text values."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this QR code generator use an external API?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The QR code is generated in the browser and returned as inline SVG markup."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why should QR text be short?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Shorter QR content creates simpler codes that are easier for cameras to scan reliably."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I copy the QR code SVG?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Generate the QR code and copy the SVG markup from the result field."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Web Utility Desk home">
+        <img src="../assets/brand-mark.svg" alt="" width="34" height="34" />
+        <span>Web Utility Desk</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="../url-encoder-decoder/">URL</a>
+        <a href="../uuid-generator/">UUID</a>
+        <a href="../password-generator/">Password</a>
+        <a href="../unix-timestamp-converter/">Time</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="tool-page">
+        <div class="tool-hero">
+          <p class="eyebrow">Generator tool</p>
+          <h1>QR Code Generator</h1>
+          <p class="summary">
+            Generate an SVG QR code for a URL, short note, identifier, or test value directly in the browser.
+          </p>
+        </div>
+
+        <section class="tool-panel standalone-tool" data-default-tool="qr" aria-label="QR code generator workspace">
+          <div class="tool-body">
+            <div class="field-group">
+              <label id="input-label" for="tool-input">Text or URL</label>
+              <textarea id="tool-input" spellcheck="false" rows="10">https://webutilitydesk.com</textarea>
+            </div>
+            <div class="action-row" aria-label="QR code generator actions">
+              <button class="primary-action" id="run-tool" type="button">Generate QR Code</button>
+              <button class="secondary-action" id="secondary-tool" type="button">Use Current Page</button>
+              <button class="secondary-action" id="copy-output" type="button">Copy SVG</button>
+              <button class="ghost-action" id="clear-tool" type="button">Clear</button>
+            </div>
+            <div class="field-group output-group">
+              <div class="output-header">
+                <label id="output-label" for="tool-output">QR code SVG</label>
+                <span id="tool-status" role="status" aria-live="polite">Ready</span>
+              </div>
+              <textarea id="tool-output" spellcheck="false" rows="12" readonly></textarea>
+              <div id="qr-preview" class="qr-preview" aria-label="QR code preview"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="section-block tool-content" aria-labelledby="qr-details">
+        <div class="section-heading">
+          <p class="eyebrow">Use cases</p>
+          <h2 id="qr-details">Create quick QR codes for links, text, and development testing.</h2>
+        </div>
+        <div class="content-grid">
+          <article>
+            <h3>Share URLs</h3>
+            <p>Turn a landing page, documentation URL, local demo link, or support article into a scannable code.</p>
+          </article>
+          <article>
+            <h3>Test mobile flows</h3>
+            <p>Use QR codes to move test values from desktop to phone during QA, demos, and device testing.</p>
+          </article>
+          <article>
+            <h3>Common mistakes</h3>
+            <p>Avoid very long text, low contrast colors, and resizing that makes modules too small for phone cameras.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block tool-content" aria-labelledby="qr-faq">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="qr-faq">QR code generator questions.</h2>
+        </div>
+        <div class="content-grid">
+          <article>
+            <h3>What output format is generated?</h3>
+            <p>The tool generates SVG markup, which stays sharp at different sizes and can be copied into another document.</p>
+          </article>
+          <article>
+            <h3>Is an internet service used?</h3>
+            <p>No. The QR code is created by the page script in your browser without calling an external QR API.</p>
+          </article>
+          <article>
+            <h3>Why is there a length limit?</h3>
+            <p>This launch version targets short text and URLs so generated codes stay readable and simple to scan.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block related-section" aria-labelledby="related-tools">
+        <div class="section-heading">
+          <p class="eyebrow">Related tools</p>
+          <h2 id="related-tools">Continue with another developer utility.</h2>
+        </div>
+        <div class="related-links">
+          <a href="../url-encoder-decoder/">URL Encoder/Decoder</a>
+          <a href="../uuid-generator/">UUID Generator</a>
+          <a href="../password-generator/">Password Generator</a>
+          <a href="../unix-timestamp-converter/">Unix Timestamp Converter</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <span>Web Utility Desk</span>
+        <p>Free web utility tools for everyday technical work.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div>
+          <strong>Tools</strong>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../json-validator/">JSON Validator</a>
+          <a href="../base64-encoder-decoder/">Base64 Encoder/Decoder</a>
+          <a href="../uuid-generator/">UUID Generator</a>
+          <a href="../url-encoder-decoder/">URL Encoder/Decoder</a>
+          <a href="../password-generator/">Password Generator</a>
+          <a href="../hash-generator/">Hash Generator</a>
+          <a href="../jwt-decoder/">JWT Decoder</a>
+          <a href="../unix-timestamp-converter/">Unix Timestamp Converter</a>
+          <a href="../qr-code-generator/">QR Code Generator</a>
+        </div>
+        <div>
+          <strong>Site</strong>
+          <a href="../about/">About</a>
+          <a href="../contact/">Contact</a>
+          <a href="../privacy-policy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+          <a href="../disclaimer/">Disclaimer</a>
+        </div>
+      </nav>
+    </footer>
+
+    <script src="../assets/app.js"></script>
+  </body>
+</html>

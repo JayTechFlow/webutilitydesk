@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free JWT Decoder Online - Decode JSON Web Tokens | Web Utility Desk</title>
+    <meta
+      name="description"
+      content="Decode JWT header and payload online in your browser. Inspect JSON Web Token claims for debugging authentication and API workflows."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://webutilitydesk.com/jwt-decoder/" />
+    <meta property="og:title" content="Free JWT Decoder Online" />
+    <meta
+      property="og:description"
+      content="Decode JWT headers and payloads locally in your browser."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webutilitydesk.com/jwt-decoder/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Free JWT Decoder Online" />
+    <meta
+      name="twitter:description"
+      content="Decode JWT header and payload online in your browser. Inspect JSON Web Token claims for debugging authentication and API workflows."
+    />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" href="../assets/brand-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "JWT Decoder",
+            "url": "https://webutilitydesk.com/jwt-decoder/",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Any",
+            "isAccessibleForFree": true,
+            "description": "A free browser-based JWT decoder for inspecting JSON Web Token headers and payloads.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://webutilitydesk.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "JWT Decoder",
+                "item": "https://webutilitydesk.com/jwt-decoder/"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Does this JWT decoder verify signatures?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. This decoder only reads the header and payload. Signature verification requires the correct secret or public key."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is a decoded JWT safe to trust?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Decoded claims are only readable data. Trust a JWT only after verifying its signature, issuer, audience, and expiration."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this tool send tokens to a server?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The token is decoded locally by the browser page."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What parts of a JWT are decoded?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The tool decodes the JWT header and payload sections. The signature section is shown only as a reminder that verification is not performed."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Web Utility Desk home">
+        <img src="../assets/brand-mark.svg" alt="" width="34" height="34" />
+        <span>Web Utility Desk</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="../json-formatter/">JSON</a>
+        <a href="../base64-encoder-decoder/">Base64</a>
+        <a href="../hash-generator/">Hash</a>
+        <a href="../password-generator/">Password</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="tool-page">
+        <div class="tool-hero">
+          <p class="eyebrow">Authentication tool</p>
+          <h1>JWT Decoder</h1>
+          <p class="summary">
+            Decode JSON Web Token headers and payloads while debugging login flows, API requests, and authorization claims.
+          </p>
+        </div>
+
+        <section class="tool-panel standalone-tool" data-default-tool="jwt" aria-label="JWT decoder workspace">
+          <div class="tool-body">
+            <div class="field-group">
+              <label id="input-label" for="tool-input">JWT input</label>
+              <textarea id="tool-input" spellcheck="false" rows="12">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IldlYiBVdGlsaXR5IERlc2siLCJpYXQiOjE3MTg3MTIwMDB9.signature</textarea>
+            </div>
+            <div class="action-row" aria-label="JWT decoder actions">
+              <button class="primary-action" id="run-tool" type="button">Decode JWT</button>
+              <button class="secondary-action" id="secondary-tool" type="button">Decode Payload Only</button>
+              <button class="secondary-action" id="copy-output" type="button">Copy</button>
+              <button class="ghost-action" id="clear-tool" type="button">Clear</button>
+            </div>
+            <div class="field-group output-group">
+              <div class="output-header">
+                <label id="output-label" for="tool-output">Decoded JWT</label>
+                <span id="tool-status" role="status" aria-live="polite">Ready</span>
+              </div>
+              <textarea id="tool-output" spellcheck="false" rows="14" readonly></textarea>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="section-block tool-content" aria-labelledby="jwt-details">
+        <div class="section-heading">
+          <p class="eyebrow">Use cases</p>
+          <h2 id="jwt-details">Inspect token claims without leaving your browser.</h2>
+        </div>
+        <div class="content-grid">
+          <article>
+            <h3>Debug authentication</h3>
+            <p>Decode tokens to check common claims such as subject, issuer, audience, issued-at time, and expiration time.</p>
+          </article>
+          <article>
+            <h3>Read header metadata</h3>
+            <p>Inspect the algorithm and token type from the header before verifying the token in your backend or identity provider.</p>
+          </article>
+          <article>
+            <h3>Common mistakes</h3>
+            <p>Do not treat decoded claims as trusted data. Anyone can edit an unsigned payload, so verification is required before authorization.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block tool-content" aria-labelledby="jwt-faq">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="jwt-faq">JWT decoder questions.</h2>
+        </div>
+        <div class="content-grid">
+          <article>
+            <h3>Is decoding the same as verifying?</h3>
+            <p>No. Decoding only reads the token. Verification checks whether the token was signed by a trusted issuer.</p>
+          </article>
+          <article>
+            <h3>Can I decode expired tokens?</h3>
+            <p>Yes. Expiration affects whether a token should be accepted, not whether its payload can be read.</p>
+          </article>
+          <article>
+            <h3>Why does my JWT fail?</h3>
+            <p>The tool expects a token with at least header and payload sections separated by dots.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block related-section" aria-labelledby="related-tools">
+        <div class="section-heading">
+          <p class="eyebrow">Related tools</p>
+          <h2 id="related-tools">Continue with another developer utility.</h2>
+        </div>
+        <div class="related-links">
+          <a href="../base64-encoder-decoder/">Base64 Encoder/Decoder</a>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../hash-generator/">Hash Generator</a>
+          <a href="../unix-timestamp-converter/">Unix Timestamp Converter</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <span>Web Utility Desk</span>
+        <p>Free web utility tools for everyday technical work.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div>
+          <strong>Tools</strong>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../json-validator/">JSON Validator</a>
+          <a href="../base64-encoder-decoder/">Base64 Encoder/Decoder</a>
+          <a href="../uuid-generator/">UUID Generator</a>
+          <a href="../url-encoder-decoder/">URL Encoder/Decoder</a>
+          <a href="../password-generator/">Password Generator</a>
+          <a href="../hash-generator/">Hash Generator</a>
+          <a href="../jwt-decoder/">JWT Decoder</a>
+          <a href="../unix-timestamp-converter/">Unix Timestamp Converter</a>
+          <a href="../qr-code-generator/">QR Code Generator</a>
+        </div>
+        <div>
+          <strong>Site</strong>
+          <a href="../about/">About</a>
+          <a href="../contact/">Contact</a>
+          <a href="../privacy-policy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+          <a href="../disclaimer/">Disclaimer</a>
+        </div>
+      </nav>
+    </footer>
+
+    <script src="../assets/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Password Generator Online - Secure Random Passwords | Web Utility Desk</title>
+    <meta
+      name="description"
+      content="Generate secure random passwords online with uppercase letters, lowercase letters, numbers, and symbols. Fast browser-based password generator."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://webutilitydesk.com/password-generator/" />
+    <meta property="og:title" content="Free Password Generator Online" />
+    <meta
+      property="og:description"
+      content="Create secure random passwords in your browser."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webutilitydesk.com/password-generator/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Free Password Generator Online" />
+    <meta
+      name="twitter:description"
+      content="Generate secure random passwords online with uppercase letters, lowercase letters, numbers, and symbols. Fast browser-based password generator."
+    />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" href="../assets/brand-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "Password Generator",
+            "url": "https://webutilitydesk.com/password-generator/",
+            "applicationCategory": "SecurityApplication",
+            "operatingSystem": "Any",
+            "isAccessibleForFree": true,
+            "description": "A free browser-based password generator for creating secure random passwords.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://webutilitydesk.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Password Generator",
+                "item": "https://webutilitydesk.com/password-generator/"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What length should a strong password be?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A password of at least 16 characters is a practical baseline for most accounts. Longer passwords are better for sensitive accounts, password managers, and administrative systems."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this password generator send passwords to a server?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The generator runs in your browser and creates passwords locally with the browser crypto API."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Should I reuse generated passwords?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Use a unique password for every account so one leaked password does not expose other services."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What characters are included?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Generated passwords include uppercase letters, lowercase letters, numbers, and symbols."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Web Utility Desk home">
+        <img src="../assets/brand-mark.svg" alt="" width="34" height="34" />
+        <span>Web Utility Desk</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="../hash-generator/">Hash</a>
+        <a href="../jwt-decoder/">JWT</a>
+        <a href="../qr-code-generator/">QR</a>
+        <a href="../unix-timestamp-converter/">Time</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="tool-page">
+        <div class="tool-hero">
+          <p class="eyebrow">Security tool</p>
+          <h1>Password Generator</h1>
+          <p class="summary">
+            Generate strong random passwords for accounts, test users, admin panels, and password manager entries.
+          </p>
+        </div>
+
+        <section class="tool-panel standalone-tool" data-default-tool="password" aria-label="Password generator workspace">
+          <div class="tool-body">
+            <div class="field-group">
+              <label id="input-label" for="tool-input">Password length</label>
+              <textarea id="tool-input" spellcheck="false" rows="8">20</textarea>
+            </div>
+            <div class="action-row" aria-label="Password generator actions">
+              <button class="primary-action" id="run-tool" type="button">Generate Password</button>
+              <button class="secondary-action" id="secondary-tool" type="button">Generate 5</button>
+              <button class="secondary-action" id="copy-output" type="button">Copy</button>
+              <button class="ghost-action" id="clear-tool" type="button">Clear</button>
+            </div>
+            <div class="field-group output-group">
+              <div class="output-header">
+                <label id="output-label" for="tool-output">Generated password</label>
+                <span id="tool-status" role="status" aria-live="polite">Ready</span>
+              </div>
+              <textarea id="tool-output" spellcheck="false" rows="10" readonly></textarea>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="section-block tool-content" aria-labelledby="password-details">
+        <div class="section-heading">
+          <p class="eyebrow">Use cases</p>
+          <h2 id="password-details">Create unique passwords without installing extra software.</h2>
+        </div>
+        <div class="content-grid">
+          <article>
+            <h3>Account security</h3>
+            <p>Use generated passwords for email, cloud dashboards, admin panels, database tools, and any account that should not share credentials.</p>
+          </article>
+          <article>
+            <h3>Development testing</h3>
+            <p>Create sample passwords for local test accounts, seed data, QA workflows, and onboarding demos without typing predictable values.</p>
+          </article>
+          <article>
+            <h3>Common mistakes</h3>
+            <p>Avoid short passwords, repeated words, personal details, reused credentials, and storing passwords in plain text documents.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block tool-content" aria-labelledby="password-faq">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="password-faq">Password generator questions.</h2>
+        </div>
+        <div class="content-grid">
+          <article>
+            <h3>What length should I use?</h3>
+            <p>Use at least 16 characters for normal accounts and longer passwords for highly sensitive systems.</p>
+          </article>
+          <article>
+            <h3>Is the password saved?</h3>
+            <p>No. The page does not provide accounts or storage, and the generated value stays in the browser page.</p>
+          </article>
+          <article>
+            <h3>Can I generate multiple passwords?</h3>
+            <p>Yes. Use the secondary action to create five passwords with the selected length.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block related-section" aria-labelledby="related-tools">
+        <div class="section-heading">
+          <p class="eyebrow">Related tools</p>
+          <h2 id="related-tools">Continue with another developer utility.</h2>
+        </div>
+        <div class="related-links">
+          <a href="../hash-generator/">Hash Generator</a>
+          <a href="../jwt-decoder/">JWT Decoder</a>
+          <a href="../uuid-generator/">UUID Generator</a>
+          <a href="../qr-code-generator/">QR Code Generator</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <span>Web Utility Desk</span>
+        <p>Free web utility tools for everyday technical work.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div>
+          <strong>Tools</strong>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../json-validator/">JSON Validator</a>
+          <a href="../base64-encoder-decoder/">Base64 Encoder/Decoder</a>
+          <a href="../uuid-generator/">UUID Generator</a>
+          <a href="../url-encoder-decoder/">URL Encoder/Decoder</a>
+          <a href="../password-generator/">Password Generator</a>
+          <a href="../hash-generator/">Hash Generator</a>
+          <a href="../jwt-decoder/">JWT Decoder</a>
+          <a href="../unix-timestamp-converter/">Unix Timestamp Converter</a>
+          <a href="../qr-code-generator/">QR Code Generator</a>
+        </div>
+        <div>
+          <strong>Site</strong>
+          <a href="../about/">About</a>
+          <a href="../contact/">Contact</a>
+          <a href="../privacy-policy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+          <a href="../disclaimer/">Disclaimer</a>
+        </div>
+      </nav>
+    </footer>
+
+    <script src="../assets/app.js"></script>
+  </body>
+</html>

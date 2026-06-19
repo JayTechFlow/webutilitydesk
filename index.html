@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Utility Desk - Free Web Utility Tools for Developers, Students, and Teams</title>
+    <meta
+      name="description"
+      content="Web Utility Desk is a practical collection of fast browser-based tools for JSON formatting, Base64 conversion, URL encoding, UUID generation, timestamps, password generation, hashing, JWT decoding, and QR codes."
+    />
+    <meta
+      name="keywords"
+      content="web utility tools, json formatter, base64 encoder, url encoder, uuid generator, timestamp converter, password generator, hash generator, jwt decoder, qr code generator"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://webutilitydesk.com/" />
+    <meta property="og:title" content="Web Utility Desk" />
+    <meta
+      property="og:description"
+      content="Free web utility tools for everyday technical tasks."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webutilitydesk.com/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Web Utility Desk" />
+    <meta
+      name="twitter:description"
+      content="Web Utility Desk is a practical collection of fast browser-based tools for JSON formatting, Base64 conversion, URL encoding, UUID generation, timestamps, password generation, hashing, JWT decoding, and QR codes."
+    />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" href="./assets/brand-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Web Utility Desk",
+        "url": "https://webutilitydesk.com/",
+        "description": "Free browser-based utility tools for JSON, text, encoding, timestamps, security, QR codes, and everyday web tasks."
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Web Utility Desk home">
+        <img src="./assets/brand-mark.svg" alt="" width="34" height="34" />
+        <span>Web Utility Desk</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="#tools">Tools</a>
+        <a href="./json-formatter/">JSON</a>
+        <a href="./password-generator/">Password</a>
+        <a href="./hash-generator/">Hash</a>
+        <a href="./jwt-decoder/">JWT</a>
+        <a href="./qr-code-generator/">QR</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="workspace" aria-labelledby="workspace-title">
+        <div class="workspace-copy">
+          <p class="eyebrow">Fast browser tools</p>
+          <h1 id="workspace-title">Simple utilities for daily web work.</h1>
+          <p class="summary">
+            Format data, convert text, generate IDs, and handle common web tasks without sign-up.
+          </p>
+          <div class="search-wrap">
+            <label for="tool-search">Find a tool</label>
+            <input
+              id="tool-search"
+              type="search"
+              placeholder="Search JSON, Base64, password, hash, JWT, QR..."
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <section class="tool-panel" id="tools" data-default-tool="json" aria-label="Utility workspace">
+          <div class="tool-tabs" role="tablist" aria-label="Tool selector">
+            <button class="tool-tab is-active" type="button" data-tool="json" role="tab" aria-selected="true">
+              JSON
+            </button>
+            <button class="tool-tab" type="button" data-tool="json-validator" role="tab" aria-selected="false">
+              Validate
+            </button>
+            <button class="tool-tab" type="button" data-tool="base64" role="tab" aria-selected="false">
+              Base64
+            </button>
+            <button class="tool-tab" type="button" data-tool="url" role="tab" aria-selected="false">
+              URL
+            </button>
+            <button class="tool-tab" type="button" data-tool="uuid" role="tab" aria-selected="false">
+              UUID
+            </button>
+            <button class="tool-tab" type="button" data-tool="password" role="tab" aria-selected="false">
+              Pass
+            </button>
+            <button class="tool-tab" type="button" data-tool="hash" role="tab" aria-selected="false">
+              Hash
+            </button>
+            <button class="tool-tab" type="button" data-tool="jwt" role="tab" aria-selected="false">
+              JWT
+            </button>
+            <button class="tool-tab" type="button" data-tool="timestamp" role="tab" aria-selected="false">
+              Time
+            </button>
+            <button class="tool-tab" type="button" data-tool="qr" role="tab" aria-selected="false">
+              QR
+            </button>
+            <button class="tool-tab" type="button" data-tool="slug" role="tab" aria-selected="false">
+              Slug
+            </button>
+          </div>
+
+          <div class="tool-body">
+            <div class="field-group">
+              <label id="input-label" for="tool-input">JSON input</label>
+              <textarea id="tool-input" spellcheck="false" rows="9">{ "name": "Web Utility Desk", "type": "utility platform" }</textarea>
+            </div>
+            <div class="action-row" aria-label="Tool actions">
+              <button class="primary-action" id="run-tool" type="button">Format JSON</button>
+              <button class="secondary-action" id="secondary-tool" type="button">Minify</button>
+              <button class="secondary-action" id="copy-output" type="button">Copy</button>
+              <button class="ghost-action" id="clear-tool" type="button">Clear</button>
+            </div>
+            <div class="field-group output-group">
+              <div class="output-header">
+                <label id="output-label" for="tool-output">Result</label>
+                <span id="tool-status" role="status" aria-live="polite">Ready</span>
+              </div>
+              <textarea id="tool-output" spellcheck="false" rows="9" readonly></textarea>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="section-block" id="categories" aria-labelledby="categories-title">
+        <div class="section-heading">
+          <p class="eyebrow">Launch categories</p>
+          <h2 id="categories-title">Built to grow into a complete utility library.</h2>
+        </div>
+        <div class="tool-grid" id="tool-grid">
+          <a class="tool-card" href="./json-formatter/" data-keywords="json formatter prettify minify beautify">
+            <span class="tool-icon">{}</span>
+            <h3>JSON Formatter</h3>
+            <p>Validate, prettify, and minify JSON snippets directly in the browser.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./json-validator/" data-keywords="json validator validate syntax error parse">
+            <span class="tool-icon">OK</span>
+            <h3>JSON Validator</h3>
+            <p>Check JSON syntax and get a clear result before using data in apps or APIs.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./base64-encoder-decoder/" data-keywords="base64 encode decode text conversion">
+            <span class="tool-icon">B64</span>
+            <h3>Base64 Converter</h3>
+            <p>Encode and decode text for quick debugging and content handling.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./url-encoder-decoder/" data-keywords="url encode decode uri component">
+            <span class="tool-icon">URL</span>
+            <h3>URL Encoder</h3>
+            <p>Convert unsafe characters for query strings, redirects, and links.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./uuid-generator/" data-keywords="uuid random id generator">
+            <span class="tool-icon">ID</span>
+            <h3>UUID Generator</h3>
+            <p>Create random UUID values for tests, records, and prototypes.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./password-generator/" data-keywords="password generator secure random credentials">
+            <span class="tool-icon">PW</span>
+            <h3>Password Generator</h3>
+            <p>Create secure random passwords with letters, numbers, and symbols.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./hash-generator/" data-keywords="hash generator sha256 sha512 digest">
+            <span class="tool-icon">#</span>
+            <h3>Hash Generator</h3>
+            <p>Generate SHA-256 and SHA-512 hashes for text values in the browser.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./jwt-decoder/" data-keywords="jwt decoder json web token header payload">
+            <span class="tool-icon">JWT</span>
+            <h3>JWT Decoder</h3>
+            <p>Decode JSON Web Token headers and payloads for authentication debugging.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./unix-timestamp-converter/" data-keywords="timestamp unix date time converter">
+            <span class="tool-icon">TS</span>
+            <h3>Unix Timestamp Converter</h3>
+            <p>Convert Unix timestamps into readable local and UTC date values.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <a class="tool-card" href="./qr-code-generator/" data-keywords="qr code generator url text svg">
+            <span class="tool-icon">QR</span>
+            <h3>QR Code Generator</h3>
+            <p>Create SVG QR codes for URLs, text, and quick mobile testing.</p>
+            <span class="tool-link-text">Open tool</span>
+          </a>
+          <article class="tool-card" data-keywords="slug generator seo title url">
+            <span class="tool-icon">Aa</span>
+            <h3>Slug Generator</h3>
+            <p>Create readable URL slugs for articles, docs, and landing pages.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block roadmap" id="roadmap" aria-labelledby="roadmap-title">
+        <div class="section-heading">
+          <p class="eyebrow">Growth plan</p>
+          <h2 id="roadmap-title">A practical path for organic traffic.</h2>
+        </div>
+        <div class="roadmap-list">
+          <div>
+            <h3>Phase 1</h3>
+            <p>Ship fast client-side utilities with clean URLs, search snippets, and internal linking.</p>
+          </div>
+          <div>
+            <h3>Phase 2</h3>
+            <p>Add comparison pages, learning pages, and downloadable references around each tool category.</p>
+          </div>
+          <div>
+            <h3>Phase 3</h3>
+            <p>Introduce accounts, saved workspaces, AI-assisted utilities, affiliate pages, and paid SaaS workflows.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <span>Web Utility Desk</span>
+        <p>Free web utility tools for everyday technical work.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div>
+          <strong>Tools</strong>
+          <a href="./json-formatter/">JSON Formatter</a>
+          <a href="./json-validator/">JSON Validator</a>
+          <a href="./base64-encoder-decoder/">Base64 Encoder/Decoder</a>
+          <a href="./uuid-generator/">UUID Generator</a>
+          <a href="./url-encoder-decoder/">URL Encoder/Decoder</a>
+          <a href="./password-generator/">Password Generator</a>
+          <a href="./hash-generator/">Hash Generator</a>
+          <a href="./jwt-decoder/">JWT Decoder</a>
+          <a href="./unix-timestamp-converter/">Unix Timestamp Converter</a>
+          <a href="./qr-code-generator/">QR Code Generator</a>
+        </div>
+        <div>
+          <strong>Site</strong>
+          <a href="./about/">About</a>
+          <a href="./contact/">Contact</a>
+          <a href="./privacy-policy/">Privacy</a>
+          <a href="./terms/">Terms</a>
+          <a href="./disclaimer/">Disclaimer</a>
+        </div>
+      </nav>
+    </footer>
+
+    <script src="./assets/app.js"></script>
+  </body>
+</html>

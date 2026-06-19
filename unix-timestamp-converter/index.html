@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Unix Timestamp Converter Online | Web Utility Desk</title>
+    <meta
+      name="description"
+      content="Convert Unix timestamps to readable local, UTC, ISO, seconds, and milliseconds values online. Fast browser-based timestamp converter."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://webutilitydesk.com/unix-timestamp-converter/" />
+    <meta property="og:title" content="Free Unix Timestamp Converter Online" />
+    <meta
+      property="og:description"
+      content="Convert Unix timestamps and date strings in your browser."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webutilitydesk.com/unix-timestamp-converter/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Free Unix Timestamp Converter Online" />
+    <meta
+      name="twitter:description"
+      content="Convert Unix timestamps to readable local, UTC, ISO, seconds, and milliseconds values online. Fast browser-based timestamp converter."
+    />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" href="../assets/brand-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "Unix Timestamp Converter",
+            "url": "https://webutilitydesk.com/unix-timestamp-converter/",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Any",
+            "isAccessibleForFree": true,
+            "description": "A free browser-based Unix timestamp converter for seconds, milliseconds, UTC, local time, and ISO dates.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://webutilitydesk.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Unix Timestamp Converter",
+                "item": "https://webutilitydesk.com/unix-timestamp-converter/"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is a Unix timestamp?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A Unix timestamp is a numeric value that represents time elapsed since January 1, 1970 at 00:00:00 UTC."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this converter support milliseconds?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. The converter accepts 10-digit second timestamps and longer millisecond timestamps."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why do local and UTC times differ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "UTC is a global time standard. Local time includes your browser timezone offset."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I convert the current time?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Use the secondary action to convert the current browser time."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Web Utility Desk home">
+        <img src="../assets/brand-mark.svg" alt="" width="34" height="34" />
+        <span>Web Utility Desk</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="../jwt-decoder/">JWT</a>
+        <a href="../uuid-generator/">UUID</a>
+        <a href="../json-formatter/">JSON</a>
+        <a href="../qr-code-generator/">QR</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="tool-page">
+        <div class="tool-hero">
+          <p class="eyebrow">Time tool</p>
+          <h1>Unix Timestamp Converter</h1>
+          <p class="summary">
+            Convert Unix timestamps into readable local time, UTC time, ISO strings, seconds, and milliseconds.
+          </p>
+        </div>
+
+        <section class="tool-panel standalone-tool" data-default-tool="timestamp" aria-label="Unix timestamp converter workspace">
+          <div class="tool-body">
+            <div class="field-group">
+              <label id="input-label" for="tool-input">Unix timestamp or date</label>
+              <textarea id="tool-input" spellcheck="false" rows="10">1718712000</textarea>
+            </div>
+            <div class="action-row" aria-label="Timestamp converter actions">
+              <button class="primary-action" id="run-tool" type="button">Convert</button>
+              <button class="secondary-action" id="secondary-tool" type="button">Use Current Time</button>
+              <button class="secondary-action" id="copy-output" type="button">Copy</button>
+              <button class="ghost-action" id="clear-tool" type="button">Clear</button>
+            </div>
+            <div class="field-group output-group">
+              <div class="output-header">
+                <label id="output-label" for="tool-output">Converted time</label>
+                <span id="tool-status" role="status" aria-live="polite">Ready</span>
+              </div>
+              <textarea id="tool-output" spellcheck="false" rows="12" readonly></textarea>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="section-block tool-content" aria-labelledby="timestamp-details">
+        <div class="section-heading">
+          <p class="eyebrow">Use cases</p>
+          <h2 id="timestamp-details">Convert timestamps used in logs, APIs, databases, and tokens.</h2>
+        </div>
+        <div class="content-grid">
+          <article>
+            <h3>Debug logs</h3>
+            <p>Convert numeric timestamps from logs and monitoring tools into readable values during incident review.</p>
+          </article>
+          <article>
+            <h3>Check API data</h3>
+            <p>Inspect timestamp fields in API responses, webhook payloads, database rows, and scheduled jobs.</p>
+          </article>
+          <article>
+            <h3>Common mistakes</h3>
+            <p>Seconds and milliseconds are easy to confuse. A 10-digit value is usually seconds, while 13 digits is usually milliseconds.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block tool-content" aria-labelledby="timestamp-faq">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="timestamp-faq">Unix timestamp converter questions.</h2>
+        </div>
+        <div class="content-grid">
+          <article>
+            <h3>What timezone is used?</h3>
+            <p>The result includes both local browser time and UTC so you can compare them directly.</p>
+          </article>
+          <article>
+            <h3>Can I enter a date string?</h3>
+            <p>Yes. The converter accepts a parseable date string as well as Unix timestamp values.</p>
+          </article>
+          <article>
+            <h3>What is Unix epoch?</h3>
+            <p>The Unix epoch is January 1, 1970 at midnight UTC, the reference point for Unix timestamps.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block related-section" aria-labelledby="related-tools">
+        <div class="section-heading">
+          <p class="eyebrow">Related tools</p>
+          <h2 id="related-tools">Continue with another developer utility.</h2>
+        </div>
+        <div class="related-links">
+          <a href="../jwt-decoder/">JWT Decoder</a>
+          <a href="../uuid-generator/">UUID Generator</a>
+          <a href="../json-validator/">JSON Validator</a>
+          <a href="../qr-code-generator/">QR Code Generator</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <span>Web Utility Desk</span>
+        <p>Free web utility tools for everyday technical work.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div>
+          <strong>Tools</strong>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../json-validator/">JSON Validator</a>
+          <a href="../base64-encoder-decoder/">Base64 Encoder/Decoder</a>
+          <a href="../uuid-generator/">UUID Generator</a>
+          <a href="../url-encoder-decoder/">URL Encoder/Decoder</a>
+          <a href="../password-generator/">Password Generator</a>
+          <a href="../hash-generator/">Hash Generator</a>
+          <a href="../jwt-decoder/">JWT Decoder</a>
+          <a href="../unix-timestamp-converter/">Unix Timestamp Converter</a>
+          <a href="../qr-code-generator/">QR Code Generator</a>
+        </div>
+        <div>
+          <strong>Site</strong>
+          <a href="../about/">About</a>
+          <a href="../contact/">Contact</a>
+          <a href="../privacy-policy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+          <a href="../disclaimer/">Disclaimer</a>
+        </div>
+      </nav>
+    </footer>
+
+    <script src="../assets/app.js"></script>
+  </body>
+</html>

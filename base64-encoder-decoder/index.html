@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Base64 Encoder and Decoder Online | Web Utility Desk</title>
+    <meta
+      name="description"
+      content="Encode text to Base64 or decode Base64 back to readable text online. Includes Unicode support, examples, common mistakes, and FAQ."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://webutilitydesk.com/base64-encoder-decoder/" />
+    <meta property="og:title" content="Free Base64 Encoder and Decoder Online" />
+    <meta
+      property="og:description"
+      content="Encode and decode Base64 text in your browser."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webutilitydesk.com/base64-encoder-decoder/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Free Base64 Encoder and Decoder Online" />
+    <meta
+      name="twitter:description"
+      content="Encode and decode Base64 text in your browser."
+    />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" href="../assets/brand-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script type="application/ld+json">
+{
+        "@context": "https://schema.org",
+        "@graph": [
+                {
+                        "@type": "WebApplication",
+                        "name": "Base64 Encoder and Decoder",
+                        "url": "https://webutilitydesk.com/base64-encoder-decoder/",
+                        "applicationCategory": "DeveloperApplication",
+                        "operatingSystem": "Any",
+                        "isAccessibleForFree": true,
+                        "description": "Encode text to Base64 or decode Base64 back to readable text online. Includes Unicode support, examples, common mistakes, and FAQ.",
+                        "offers": {
+                                "@type": "Offer",
+                                "price": "0",
+                                "priceCurrency": "USD"
+                        }
+                },
+                {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                                {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Home",
+                                        "item": "https://webutilitydesk.com/"
+                                },
+                                {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "Base64 Encoder and Decoder",
+                                        "item": "https://webutilitydesk.com/base64-encoder-decoder/"
+                                }
+                        ]
+                },
+                {
+                        "@type": "FAQPage",
+                        "mainEntity": [
+                                {
+                                        "@type": "Question",
+                                        "name": "Is Base64 encryption?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "No. Base64 is reversible encoding. It does not protect data or provide confidentiality."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "Can I decode any Base64 string?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "You can decode valid Base64 text. Truncated, corrupted, or non-text binary output may fail or appear unreadable."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "Does this tool support Unicode?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Yes. It uses UTF-8 encoding so regular Unicode text can be encoded and decoded."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "Why is my Base64 output longer?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Base64 uses text characters to represent data, so encoded output is usually larger than the original input."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "Is the text sent to a server?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "No. Encoding and decoding are handled in the browser."
+                                        }
+                                }
+                        ]
+                }
+        ]
+}
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Web Utility Desk home">
+        <img src="../assets/brand-mark.svg" alt="" width="34" height="34" />
+        <span>Web Utility Desk</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="../json-formatter/">JSON</a>
+        <a href="../password-generator/">Password</a>
+        <a href="../hash-generator/">Hash</a>
+        <a href="../jwt-decoder/">JWT</a>
+        <a href="../qr-code-generator/">QR</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="tool-page">
+        <div class="tool-hero">
+          <p class="eyebrow">Encoding tool</p>
+          <h1>Base64 Encoder and Decoder</h1>
+          <p class="summary">Convert plain text to Base64 or decode Base64 strings while debugging APIs, tokens, content payloads, and encoded examples.</p>
+        </div>
+
+        <section class="tool-panel standalone-tool" data-default-tool="base64" aria-label="Base64 encoder decoder workspace">
+          <div class="tool-body">
+            <div class="field-group">
+              <label id="input-label" for="tool-input">Text input</label>
+              <textarea id="tool-input" spellcheck="false" rows="12">Web Utility Desk</textarea>
+            </div>
+            <div class="action-row" aria-label="Base64 Encoder and Decoder actions">
+              <button class="primary-action" id="run-tool" type="button">Encode</button>
+              <button class="secondary-action" id="secondary-tool" type="button">Decode</button>
+              <button class="secondary-action" id="copy-output" type="button">Copy</button>
+              <button class="ghost-action" id="clear-tool" type="button">Clear</button>
+            </div>
+            <div class="field-group output-group">
+              <div class="output-header">
+                <label id="output-label" for="tool-output">Base64 result</label>
+                <span id="tool-status" role="status" aria-live="polite">Ready</span>
+              </div>
+              <textarea id="tool-output" spellcheck="false" rows="12" readonly></textarea>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="section-block article-section" aria-labelledby="base64-encoder-decoder-guide">
+        <div class="section-heading">
+          <p class="eyebrow">Guide</p>
+          <h2 id="base64-encoder-decoder-guide">How to use this base64 encoder and decoder in real projects.</h2>
+        </div>
+        <div class="article-copy">
+          <p>Base64 is a text encoding format that represents binary or text data using a limited set of safe characters. It is commonly used when data needs to move through systems that expect plain text, such as JSON payloads, email bodies, HTML attributes, authorization examples, and configuration values. This encoder and decoder converts regular UTF-8 text to Base64 and decodes Base64 back into readable text.</p>
+          <p>The important detail is that Base64 is encoding, not encryption. Anyone who has a Base64 string can decode it. That makes it useful for transport and debugging, but not for secrecy. Use it for inspection, conversion, examples, and compatibility; do not use it as a security layer for passwords, secrets, or private tokens.</p>
+        </div>
+      </section>
+
+      <section class="section-block article-section" aria-labelledby="base64-encoder-decoder-examples">
+        <div class="section-heading">
+          <p class="eyebrow">Examples</p>
+          <h2 id="base64-encoder-decoder-examples">Practical examples and everyday workflows.</h2>
+        </div>
+        <div class="article-copy">
+          <p>If you encode Web Utility Desk, the output is a compact string that can be placed safely in many text-only contexts. Developers often see this pattern in basic authentication examples, small embedded assets, or API documentation. Decoding is equally useful when logs or sample payloads contain encoded text that needs to be read quickly.</p>
+          <p>Base64 also appears inside JWTs, although JWTs use a URL-safe variant and split the token into header, payload, and signature parts. For general JWT inspection, use the JWT Decoder page because it handles the token structure and JSON parsing more directly.</p>
+        </div>
+      </section>
+
+      <section class="section-block tool-content" aria-labelledby="base64-encoder-decoder-use-cases">
+        <div class="section-heading">
+          <p class="eyebrow">Use cases</p>
+          <h2 id="base64-encoder-decoder-use-cases">Where this tool fits into daily web work.</h2>
+        </div>
+        <div class="content-grid">
+          <article>
+            <h3>API debugging</h3>
+            <p>Decode encoded fields found in API responses, examples, logs, and webhook payloads.</p>
+          </article>
+          <article>
+            <h3>Text transport</h3>
+            <p>Encode short text so it can be included in systems that are sensitive to special characters.</p>
+          </article>
+          <article>
+            <h3>Learning encodings</h3>
+            <p>Compare original text with encoded output to understand how transport encodings differ from encryption.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block article-section" aria-labelledby="base64-encoder-decoder-mistakes">
+        <div class="section-heading">
+          <p class="eyebrow">Common mistakes</p>
+          <h2 id="base64-encoder-decoder-mistakes">Avoid these issues before copying the result.</h2>
+        </div>
+        <div class="article-copy">
+          <p>The biggest mistake is treating Base64 as secure. It is reversible and should never be used to hide sensitive data from users or attackers.</p>
+          <p>Another common issue is copying spaces, line breaks, or missing padding from a Base64 string. This tool removes whitespace during decode, but badly truncated input still cannot be recovered.</p>
+          <p>Be aware of character encoding. This tool handles UTF-8 text, so regular Unicode characters are supported, but binary file conversion is outside the current launch scope.</p>
+        </div>
+      </section>
+
+      <section class="section-block tool-content" aria-labelledby="base64-encoder-decoder-faq">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="base64-encoder-decoder-faq">Base64 Encoder and Decoder questions.</h2>
+        </div>
+        <div class="content-grid">
+          <article>
+            <h3>Is Base64 encryption?</h3>
+            <p>No. Base64 is reversible encoding. It does not protect data or provide confidentiality.</p>
+          </article>
+          <article>
+            <h3>Can I decode any Base64 string?</h3>
+            <p>You can decode valid Base64 text. Truncated, corrupted, or non-text binary output may fail or appear unreadable.</p>
+          </article>
+          <article>
+            <h3>Does this tool support Unicode?</h3>
+            <p>Yes. It uses UTF-8 encoding so regular Unicode text can be encoded and decoded.</p>
+          </article>
+          <article>
+            <h3>Why is my Base64 output longer?</h3>
+            <p>Base64 uses text characters to represent data, so encoded output is usually larger than the original input.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block article-section" aria-labelledby="base64-workflow">
+        <div class="section-heading">
+          <p class="eyebrow">Workflow</p>
+          <h2 id="base64-workflow">Practical workflow for encoded text.</h2>
+        </div>
+        <div class="article-copy">
+          <p>When you find a Base64 value in logs or documentation, first decide whether you expect text or binary data. This tool is designed for readable text workflows. If decoding produces normal words, JSON, URLs, or configuration values, you can continue inspecting the result. If the output looks broken, the original value may represent binary data, may be incomplete, or may use a different encoding variant.</p>
+          <p>For API work, keep the original encoded value beside the decoded result. Encoded values are often copied from headers, examples, or payload fields, and it is easy to lose padding or accidentally copy a neighboring quote. If a decoded value matters for debugging, save both forms in your notes so another developer can reproduce your steps.</p>
+          <p>When encoding text, remember that the output is safe to transport but not secret. If the text contains credentials, private tokens, or personal data, Base64 does not protect it. Anyone with access to the encoded value can reverse it. For sensitive workflows, use proper encryption, tokenization, or a secure secret manager instead of encoding.</p>
+          <p>Base64 often appears near JSON, JWT, hash, and URL workflows. Decode Base64 first if you need to inspect hidden text. Move to the JSON Formatter when the decoded value is JSON. Use the JWT Decoder for full tokens. Use the Hash Generator when you need a one-way digest rather than reversible text.</p>
+        </div>
+      </section>
+
+      <section class="section-block related-section" aria-labelledby="related-tools">
+        <div class="section-heading">
+          <p class="eyebrow">Related tools</p>
+          <h2 id="related-tools">Continue with another developer utility.</h2>
+        </div>
+        <div class="related-links">
+          <a href="../url-encoder-decoder/">URL Encoder/Decoder</a>
+          <a href="../jwt-decoder/">JWT Decoder</a>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../hash-generator/">Hash Generator</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <span>Web Utility Desk</span>
+        <p>Free web utility tools for everyday technical work.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div>
+          <strong>Tools</strong>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../json-validator/">JSON Validator</a>
+          <a href="../base64-encoder-decoder/">Base64 Encoder/Decoder</a>
+          <a href="../uuid-generator/">UUID Generator</a>
+          <a href="../url-encoder-decoder/">URL Encoder/Decoder</a>
+          <a href="../password-generator/">Password Generator</a>
+          <a href="../hash-generator/">Hash Generator</a>
+          <a href="../jwt-decoder/">JWT Decoder</a>
+          <a href="../unix-timestamp-converter/">Unix Timestamp Converter</a>
+          <a href="../qr-code-generator/">QR Code Generator</a>
+        </div>
+        <div>
+          <strong>Site</strong>
+          <a href="../about/">About</a>
+          <a href="../contact/">Contact</a>
+          <a href="../privacy-policy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+          <a href="../disclaimer/">Disclaimer</a>
+        </div>
+      </nav>
+    </footer>
+
+    <script src="../assets/app.js"></script>
+  </body>
+</html>

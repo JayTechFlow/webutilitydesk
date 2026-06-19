@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free URL Encoder and Decoder Online | Web Utility Desk</title>
+    <meta
+      name="description"
+      content="Encode text for URLs or decode URL-encoded strings online. Convert query strings, redirect values, URI components, and examples in your browser."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://webutilitydesk.com/url-encoder-decoder/" />
+    <meta property="og:title" content="Free URL Encoder and Decoder Online" />
+    <meta
+      property="og:description"
+      content="Encode and decode URL components in your browser."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webutilitydesk.com/url-encoder-decoder/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Free URL Encoder and Decoder Online" />
+    <meta
+      name="twitter:description"
+      content="Encode and decode URL components in your browser."
+    />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" href="../assets/brand-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script type="application/ld+json">
+{
+        "@context": "https://schema.org",
+        "@graph": [
+                {
+                        "@type": "WebApplication",
+                        "name": "URL Encoder and Decoder",
+                        "url": "https://webutilitydesk.com/url-encoder-decoder/",
+                        "applicationCategory": "DeveloperApplication",
+                        "operatingSystem": "Any",
+                        "isAccessibleForFree": true,
+                        "description": "Encode text for URLs or decode URL-encoded strings online. Convert query strings, redirect values, URI components, and examples in your browser.",
+                        "offers": {
+                                "@type": "Offer",
+                                "price": "0",
+                                "priceCurrency": "USD"
+                        }
+                },
+                {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                                {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Home",
+                                        "item": "https://webutilitydesk.com/"
+                                },
+                                {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "URL Encoder and Decoder",
+                                        "item": "https://webutilitydesk.com/url-encoder-decoder/"
+                                }
+                        ]
+                },
+                {
+                        "@type": "FAQPage",
+                        "mainEntity": [
+                                {
+                                        "@type": "Question",
+                                        "name": "What does URL encoding do?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "It converts unsafe or reserved characters into percent-encoded text so values can be placed inside URLs more safely."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "Should I encode a full URL or a parameter value?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Usually encode the parameter value, not the entire URL structure. Full URL encoding is mainly needed when a URL itself is nested inside another value."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "Why do spaces become %20?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "A space is not a safe literal character in many URL contexts, so it is represented as %20."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "Can this decode query strings?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Yes. Paste an encoded URL component or query value and use the Decode URL action."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "Is this different from Base64?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Yes. URL encoding is for URL-safe text. Base64 is a general text encoding for representing data."
+                                        }
+                                }
+                        ]
+                }
+        ]
+}
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Web Utility Desk home">
+        <img src="../assets/brand-mark.svg" alt="" width="34" height="34" />
+        <span>Web Utility Desk</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="../json-formatter/">JSON</a>
+        <a href="../password-generator/">Password</a>
+        <a href="../hash-generator/">Hash</a>
+        <a href="../jwt-decoder/">JWT</a>
+        <a href="../qr-code-generator/">QR</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="tool-page">
+        <div class="tool-hero">
+          <p class="eyebrow">Encoding tool</p>
+          <h1>URL Encoder and Decoder</h1>
+          <p class="summary">Encode text for query strings or decode URL-encoded values while working with links, redirects, tracking parameters, and APIs.</p>
+        </div>
+
+        <section class="tool-panel standalone-tool" data-default-tool="url" aria-label="URL encoder decoder workspace">
+          <div class="tool-body">
+            <div class="field-group">
+              <label id="input-label" for="tool-input">URL or text input</label>
+              <textarea id="tool-input" spellcheck="false" rows="12">https://webutilitydesk.com/tools?q=json formatter</textarea>
+            </div>
+            <div class="action-row" aria-label="URL Encoder and Decoder actions">
+              <button class="primary-action" id="run-tool" type="button">Encode URL</button>
+              <button class="secondary-action" id="secondary-tool" type="button">Decode URL</button>
+              <button class="secondary-action" id="copy-output" type="button">Copy</button>
+              <button class="ghost-action" id="clear-tool" type="button">Clear</button>
+            </div>
+            <div class="field-group output-group">
+              <div class="output-header">
+                <label id="output-label" for="tool-output">URL result</label>
+                <span id="tool-status" role="status" aria-live="polite">Ready</span>
+              </div>
+              <textarea id="tool-output" spellcheck="false" rows="12" readonly></textarea>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="section-block article-section" aria-labelledby="url-encoder-decoder-guide">
+        <div class="section-heading">
+          <p class="eyebrow">Guide</p>
+          <h2 id="url-encoder-decoder-guide">How to use this url encoder and decoder in real projects.</h2>
+        </div>
+        <div class="article-copy">
+          <p>URL encoding converts characters that may be unsafe or ambiguous in a URL into percent-encoded sequences. Spaces, symbols, non-ASCII characters, and reserved characters can change how a browser, server, or router interprets a link. Encoding is especially important for query string values, redirect targets, search terms, callback URLs, and data passed between web pages.</p>
+          <p>This tool uses standard URI component encoding and decoding. Paste a value, encode it for use inside a URL component, or decode an encoded value to read it clearly. It is useful when debugging links copied from logs, analytics tools, email templates, OAuth flows, payment redirects, or support tickets.</p>
+        </div>
+      </section>
+
+      <section class="section-block article-section" aria-labelledby="url-encoder-decoder-examples">
+        <div class="section-heading">
+          <p class="eyebrow">Examples</p>
+          <h2 id="url-encoder-decoder-examples">Practical examples and everyday workflows.</h2>
+        </div>
+        <div class="article-copy">
+          <p>For example, the search term json formatter becomes json%20formatter when encoded as a query parameter value. If a full redirect target contains its own question mark and ampersands, encoding prevents those characters from being mistaken as part of the outer URL. This is common in login callbacks and marketing campaign links.</p>
+          <p>Decoding helps when you receive a long link such as callback=https%3A%2F%2Fexample.com%2Fdone%3Fstatus%3Dok. After decoding, you can see the real destination and parameters more easily, which makes debugging safer and faster.</p>
+        </div>
+      </section>
+
+      <section class="section-block tool-content" aria-labelledby="url-encoder-decoder-use-cases">
+        <div class="section-heading">
+          <p class="eyebrow">Use cases</p>
+          <h2 id="url-encoder-decoder-use-cases">Where this tool fits into daily web work.</h2>
+        </div>
+        <div class="content-grid">
+          <article>
+            <h3>Query strings</h3>
+            <p>Encode search terms, filter values, redirect URLs, and campaign parameters before appending them to links.</p>
+          </article>
+          <article>
+            <h3>Log inspection</h3>
+            <p>Decode encoded paths and query values copied from server logs, browser dev tools, or analytics exports.</p>
+          </article>
+          <article>
+            <h3>API testing</h3>
+            <p>Prepare URL component values for REST endpoints, webhook URLs, and callback parameters.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block article-section" aria-labelledby="url-encoder-decoder-mistakes">
+        <div class="section-heading">
+          <p class="eyebrow">Common mistakes</p>
+          <h2 id="url-encoder-decoder-mistakes">Avoid these issues before copying the result.</h2>
+        </div>
+        <div class="article-copy">
+          <p>Do not encode an entire URL when only one parameter value should be encoded. Encoding the whole URL can turn slashes and colons into percent sequences where a browser expects normal URL structure.</p>
+          <p>Do not decode unknown redirect URLs and then blindly open them. Decoding makes text readable, but it does not prove the destination is safe.</p>
+          <p>Avoid double encoding. If a value already contains percent-encoded sections, encoding it again can produce confusing output such as %2520 instead of %20.</p>
+        </div>
+      </section>
+
+      <section class="section-block tool-content" aria-labelledby="url-encoder-decoder-faq">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="url-encoder-decoder-faq">URL Encoder and Decoder questions.</h2>
+        </div>
+        <div class="content-grid">
+          <article>
+            <h3>What does URL encoding do?</h3>
+            <p>It converts unsafe or reserved characters into percent-encoded text so values can be placed inside URLs more safely.</p>
+          </article>
+          <article>
+            <h3>Should I encode a full URL or a parameter value?</h3>
+            <p>Usually encode the parameter value, not the entire URL structure. Full URL encoding is mainly needed when a URL itself is nested inside another value.</p>
+          </article>
+          <article>
+            <h3>Why do spaces become %20?</h3>
+            <p>A space is not a safe literal character in many URL contexts, so it is represented as %20.</p>
+          </article>
+          <article>
+            <h3>Can this decode query strings?</h3>
+            <p>Yes. Paste an encoded URL component or query value and use the Decode URL action.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block article-section" aria-labelledby="url-workflow">
+        <div class="section-heading">
+          <p class="eyebrow">Workflow</p>
+          <h2 id="url-workflow">Practical workflow for safer links.</h2>
+        </div>
+        <div class="article-copy">
+          <p>When building a URL, identify each part before encoding anything. The scheme, domain, path, query parameter names, and query parameter values play different roles. Most of the time, only a query parameter value needs encoding. If you encode the entire URL too early, the browser may no longer recognize the structure of the link.</p>
+          <p>For redirect and callback workflows, encode nested URLs carefully. A common pattern is redirect_uri=https%3A%2F%2Fexample.com%2Fcallback. The nested URL is encoded because it is being stored as a value inside another URL. Without encoding, its own question mark and ampersands could be interpreted as part of the outer query string.</p>
+          <p>When decoding links from logs, review the destination before opening it. Decoding makes the link readable, but it does not make it safe. This is especially important for redirect parameters, email links, support tickets, and links copied from unknown systems. Treat decoded output as text to inspect first, not as a link to trust automatically.</p>
+          <p>Use this tool alongside the QR Code Generator when preparing scannable links. Encode query values before generating a QR code so the final URL is clean. Use the Base64 tool when you are dealing with encoded payload text, and use the JSON tools when decoded values contain structured data.</p>
+          <p>For shared debugging notes, keep the raw value, encoded value, and decoded value together. That makes it easier for teammates to confirm exactly which part was transformed and prevents confusion when a link contains multiple nested parameters.</p>
+        </div>
+      </section>
+
+      <section class="section-block related-section" aria-labelledby="related-tools">
+        <div class="section-heading">
+          <p class="eyebrow">Related tools</p>
+          <h2 id="related-tools">Continue with another developer utility.</h2>
+        </div>
+        <div class="related-links">
+          <a href="../base64-encoder-decoder/">Base64 Encoder/Decoder</a>
+          <a href="../qr-code-generator/">QR Code Generator</a>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../jwt-decoder/">JWT Decoder</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <span>Web Utility Desk</span>
+        <p>Free web utility tools for everyday technical work.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div>
+          <strong>Tools</strong>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../json-validator/">JSON Validator</a>
+          <a href="../base64-encoder-decoder/">Base64 Encoder/Decoder</a>
+          <a href="../uuid-generator/">UUID Generator</a>
+          <a href="../url-encoder-decoder/">URL Encoder/Decoder</a>
+          <a href="../password-generator/">Password Generator</a>
+          <a href="../hash-generator/">Hash Generator</a>
+          <a href="../jwt-decoder/">JWT Decoder</a>
+          <a href="../unix-timestamp-converter/">Unix Timestamp Converter</a>
+          <a href="../qr-code-generator/">QR Code Generator</a>
+        </div>
+        <div>
+          <strong>Site</strong>
+          <a href="../about/">About</a>
+          <a href="../contact/">Contact</a>
+          <a href="../privacy-policy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+          <a href="../disclaimer/">Disclaimer</a>
+        </div>
+      </nav>
+    </footer>
+
+    <script src="../assets/app.js"></script>
+  </body>
+</html>
