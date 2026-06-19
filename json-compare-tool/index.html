@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Compare Tool | Web Utility Desk</title>
+    <meta name="description" content="Compare two JSON documents, inspect structural differences, and copy a normalized diff summary." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://webutilitydesk.com/json-compare-tool/" />
+    <meta property="og:title" content="JSON Compare Tool" />
+    <meta property="og:description" content="Compare two JSON documents and inspect structural differences in the browser." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webutilitydesk.com/json-compare-tool/" />
+    <meta property="og:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="JSON Compare Tool" />
+    <meta name="twitter:description" content="Compare two JSON documents and inspect structural differences in the browser." />
+    <meta name="twitter:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.svg" />
+    <link rel="manifest" href="../assets/site.webmanifest" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script src="../assets/analytics.js" defer></script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "JSON Compare Tool",
+      "url": "https://webutilitydesk.com/json-compare-tool/",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "isAccessibleForFree": true,
+      "description": "Compare two JSON documents, inspect structural differences, and copy a normalized diff summary.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://webutilitydesk.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "JSON Compare Tool",
+          "item": "https://webutilitydesk.com/json-compare-tool/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does the tool compare nested values?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The diff output includes nested object and array paths."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I compare different key orders?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The tool focuses on structure and value differences instead of formatting noise."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the comparison browser-only?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The JSON is parsed locally in your browser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if one document is invalid JSON?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The page shows the parsing error so you can fix the input before comparing again."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Web Utility Desk home">
+        <img src="../assets/brand-mark.svg" alt="" width="34" height="34" />
+        <span>Web Utility Desk</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="../json-formatter/">JSON</a>
+        <a href="../json-validator/">Validate</a>
+        <a href="../regex-tester/">Regex</a>
+        <a href="../sql-formatter/">SQL</a>
+        <a href="../blog/">Blog</a>
+        <a href="../guides/">Guides</a>
+        <a href="../resources/">Resources</a>
+      </nav>
+    </header>
+    <main>
+      <section class="tool-page">
+        <div class="tool-hero">
+          <p class="eyebrow">Comparison tool</p>
+          <h1>JSON Compare Tool</h1>
+          <p class="summary">Compare two JSON documents side by side, inspect changed keys or values, and copy a summary without leaving your browser.</p>
+        </div>
+        <section class="tool-panel standalone-tool" aria-label="JSON Compare Tool workspace">
+          <div class="tool-body">
+            <div class="tool-controls">
+              <div class="field-group">
+                <label for="json-left">JSON left</label>
+                <textarea id="json-left" spellcheck="false" rows="10">{
+  "name": "Web Utility Desk",
+  "status": "draft",
+  "features": ["json", "url", "uuid"]
+}</textarea>
+              </div>
+              <div class="field-group">
+                <label for="json-right">JSON right</label>
+                <textarea id="json-right" spellcheck="false" rows="10">{
+  "name": "Web Utility Desk",
+  "status": "published",
+  "features": ["json", "url", "uuid", "regex"]
+}</textarea>
+              </div>
+            </div>
+            <div class="action-row" aria-label="JSON compare actions">
+              <button class="primary-action" id="run-tool" type="button">Compare JSON</button>
+              <button class="secondary-action" id="secondary-tool" type="button">Use Sample</button>
+              <button class="secondary-action" id="copy-output" type="button">Copy Summary</button>
+              <button class="ghost-action" id="clear-tool" type="button">Clear</button>
+            </div>
+            <div class="field-group output-group">
+              <div class="output-header">
+                <label for="tool-output">Comparison summary</label>
+                <span id="tool-status" role="status" aria-live="polite">Ready</span>
+              </div>
+              <textarea id="tool-output" spellcheck="false" rows="10" readonly></textarea>
+            </div>
+            <div class="tool-preview" id="json-diff-preview"></div>
+          </div>
+        </section>
+      </section>
+      <section class="section-block article-section" aria-labelledby="json-compare-guide">
+        <div class="section-heading">
+          <div><p class="eyebrow">Guide</p></div>
+          <h2 id="json-compare-guide">Why JSON comparison is useful before you ship a change.</h2>
+        </div>
+        <div class="article-copy">
+          <p>When an API response changes, it is not always obvious whether the structure changed in a meaningful way. A JSON compare tool shows which keys were added, removed, or updated so you can review the exact delta instead of reading both blobs line by line.</p>
+          <p>This page is a good companion to the <a href="../json-formatter/">JSON Formatter</a> and <a href="../json-validator/">JSON Validator</a> because it expects structured JSON on both sides. If you are comparing exported data from a spreadsheet, use the <a href="../csv-to-json-converter/">CSV to JSON Converter</a> first.</p>
+        </div>
+      </section>
+      <section class="section-block tool-content" aria-labelledby="json-compare-examples">
+        <div class="section-heading">
+          <div><p class="eyebrow">Examples</p></div>
+          <h2 id="json-compare-examples">Common JSON comparison workflows.</h2>
+        </div>
+        <div class="content-grid">
+          <article><h3>API review</h3><p>Spot changed fields in a response before you merge a backend or frontend update.</p></article>
+          <article><h3>Fixture checks</h3><p>Compare a saved test fixture with a new export to see what changed.</p></article>
+          <article><h3>Content sync</h3><p>Review differences between CMS payloads, webhook bodies, or configuration files.</p></article>
+        </div>
+      </section>
+      <section class="section-block article-section" aria-labelledby="json-compare-workflow">
+        <div class="section-heading">
+          <div><p class="eyebrow">Workflow</p></div>
+          <h2 id="json-compare-workflow">Keep the comparison readable and focused.</h2>
+        </div>
+        <div class="article-copy">
+          <p>Start by formatting or validating both inputs if they came from different systems. That removes noise from whitespace and helps the diff engine focus on the actual structural differences. Then look at whether the change is additive, destructive, or a simple value update.</p>
+          <p>When a JSON object grows quickly, pay attention to nested arrays and repeated records. Those are the places where regressions hide. The tool reports those paths directly so you can decide whether the change is expected or whether a downstream page, API, or automation script needs to be updated.</p>
+        </div>
+      </section>
+      <section class="section-block tool-content" aria-labelledby="json-compare-faq">
+        <div class="section-heading">
+          <div><p class="eyebrow">FAQ</p></div>
+          <h2 id="json-compare-faq">JSON Compare Tool questions.</h2>
+        </div>
+        <div class="content-grid">
+          <article><h3>Does the tool compare nested values?</h3><p>Yes. The diff output includes nested object and array paths.</p></article>
+          <article><h3>Can I compare different key orders?</h3><p>Yes. The tool focuses on structure and value differences instead of formatting noise.</p></article>
+          <article><h3>Is the comparison browser-only?</h3><p>Yes. The JSON is parsed locally in your browser.</p></article>
+          <article><h3>What if one document is invalid JSON?</h3><p>The page shows the parsing error so you can fix the input before comparing again.</p></article>
+        </div>
+      </section>
+      <section class="section-block related-section" aria-labelledby="related-tools">
+        <div class="section-heading">
+          <div><p class="eyebrow">Related tools</p></div>
+          <h2 id="related-tools">Continue with another developer utility.</h2>
+        </div>
+        <div class="related-links">
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../json-validator/">JSON Validator</a>
+          <a href="../csv-to-json-converter/">CSV to JSON Converter</a>
+          <a href="../text-diff-checker/">Text Diff Checker</a>
+        </div>
+      </section>
+    </main>
+    <script>const leftEl=document.querySelector("#json-left"),rightEl=document.querySelector("#json-right"),outputEl=document.querySelector("#tool-output"),previewEl=document.querySelector("#json-diff-preview"),statusEl=document.querySelector("#tool-status"),setStatus=(message,isError=false)=>{statusEl.textContent=message;statusEl.classList.toggle("is-error",isError)},render=({differences,leftPretty,rightPretty,summary})=>{outputEl.value=[summary,"", "Left JSON:", leftPretty, "", "Right JSON:", rightPretty].join("\n");previewEl.innerHTML=differences.length?'<div class="diff-lines">'+differences.map((item)=>'<div class="diff-line '+(item.type==="added"?"is-added":item.type==="removed"?"is-removed":"")+'"><strong>'+item.path+'</strong> · '+item.type+'<br />Left: '+GrowthTools.escapeHtml(JSON.stringify(item.left))+'<br />Right: '+GrowthTools.escapeHtml(JSON.stringify(item.right))+'</div>').join('')+'</div>':'<div class="scan-status">No differences found.</div>'};const run=()=>{try{const result=GrowthTools.compareJsonText(leftEl.value,rightEl.value);render(result);setStatus(result.summary)}catch(error){previewEl.innerHTML="";outputEl.value="";setStatus(error.message,true)}};document.querySelector("#run-tool").addEventListener("click",run);document.querySelector("#secondary-tool").addEventListener("click",()=>{leftEl.value='{\n  "name": "Web Utility Desk",\n  "status": "draft",\n  "features": ["json", "url", "uuid"]\n}';rightEl.value='{\n  "name": "Web Utility Desk",\n  "status": "published",\n  "features": ["json", "url", "uuid", "regex"]\n}';run()});document.querySelector("#copy-output").addEventListener("click",()=>GrowthTools.copyText(outputEl.value).then(()=>setStatus("Copied to clipboard")));document.querySelector("#clear-tool").addEventListener("click",()=>{leftEl.value='';rightEl.value='';outputEl.value='';previewEl.innerHTML='';setStatus('Ready')});[leftEl,rightEl].forEach((el)=>el.addEventListener("input",run));run();</script>
+    <footer class="site-footer">
+      <div>
+        <span>Web Utility Desk</span>
+        <p>Free web utility tools for everyday technical work.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div>
+          <strong>Tools</strong>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../json-validator/">JSON Validator</a>
+          <a href="../csv-to-json-converter/">CSV to JSON Converter</a>
+          <a href="../regex-tester/">Regex Tester</a>
+          <a href="../regex-generator/">Regex Generator</a>
+          <a href="../sql-formatter/">SQL Formatter</a>
+          <a href="../json-compare-tool/">JSON Compare Tool</a>
+          <a href="../html-minifier/">HTML Minifier</a>
+          <a href="../css-minifier/">CSS Minifier</a>
+          <a href="../javascript-minifier/">JavaScript Minifier</a>
+        </div>
+        <div>
+          <strong>Site</strong>
+          <a href="../about/">About</a>
+          <a href="../blog/">Blog</a>
+          <a href="../guides/">Guides</a>
+          <a href="../resources/">Resources</a>
+          <a href="../contact/">Contact</a>
+          <a href="../privacy-policy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+        </div>
+      </nav>
+    </footer>
+  </body>
+</html>

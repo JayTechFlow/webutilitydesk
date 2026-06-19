@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regex Generator | Web Utility Desk</title>
+    <meta name="description" content="Generate useful regex patterns from plain text and common validation presets in your browser." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://webutilitydesk.com/regex-generator/" />
+    <meta property="og:title" content="Regex Generator" />
+    <meta property="og:description" content="Generate practical regex patterns from plain text and common validation presets." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webutilitydesk.com/regex-generator/" />
+    <meta property="og:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Regex Generator" />
+    <meta name="twitter:description" content="Generate practical regex patterns from plain text and common validation presets." />
+    <meta name="twitter:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.svg" />
+    <link rel="manifest" href="../assets/site.webmanifest" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script src="../assets/analytics.js" defer></script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Regex Generator",
+      "url": "https://webutilitydesk.com/regex-generator/",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "isAccessibleForFree": true,
+      "description": "Generate useful regex patterns from plain text and common validation presets in your browser.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://webutilitydesk.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Regex Generator",
+          "item": "https://webutilitydesk.com/regex-generator/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is the generated regex escaped?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Literal text is escaped so special characters are treated as text unless the preset says otherwise."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I generate common validation patterns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The preset list includes digits, letters, email, URL, and slug patterns."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I still test the pattern?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Always test generated output with real sample text before using it in production."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the generator browser-only?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The pattern is built locally in the browser."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Web Utility Desk home">
+        <img src="../assets/brand-mark.svg" alt="" width="34" height="34" />
+        <span>Web Utility Desk</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="../json-formatter/">JSON</a>
+        <a href="../json-validator/">Validate</a>
+        <a href="../regex-tester/">Regex</a>
+        <a href="../sql-formatter/">SQL</a>
+        <a href="../blog/">Blog</a>
+        <a href="../guides/">Guides</a>
+        <a href="../resources/">Resources</a>
+      </nav>
+    </header>
+    <main>
+      <section class="tool-page">
+        <div class="tool-hero">
+          <p class="eyebrow">Pattern builder tool</p>
+          <h1>Regex Generator</h1>
+          <p class="summary">Turn plain text into a usable regex pattern, then copy the literal into your editor or validation rule.</p>
+        </div>
+        <section class="tool-panel standalone-tool" aria-label="Regex Generator workspace">
+          <div class="tool-body">
+            <div class="tool-controls">
+              <div class="field-group">
+                <label for="regex-input">Sample text</label>
+                <input id="regex-input" class="tool-select" type="text" value="Web Utility Desk" />
+              </div>
+              <div class="field-group">
+                <label for="regex-mode">Pattern mode</label>
+                <select id="regex-mode" class="tool-select">
+                  <option value="exact">Exact match</option>
+                  <option value="contains">Contains text</option>
+                  <option value="startsWith">Starts with</option>
+                  <option value="endsWith">Ends with</option>
+                  <option value="wholeWord">Whole word</option>
+                  <option value="digits">Digits only</option>
+                  <option value="letters">Letters only</option>
+                  <option value="email">Email</option>
+                  <option value="url">URL</option>
+                  <option value="slug">Slug</option>
+                </select>
+              </div>
+            </div>
+            <div class="action-row" aria-label="Regex generator actions">
+              <button class="primary-action" id="run-tool" type="button">Generate Regex</button>
+              <button class="secondary-action" id="secondary-tool" type="button">Use Sample</button>
+              <button class="secondary-action" id="copy-output" type="button">Copy Pattern</button>
+              <button class="ghost-action" id="clear-tool" type="button">Clear</button>
+            </div>
+            <div class="field-group output-group">
+              <div class="output-header">
+                <label for="tool-output">Generated regex</label>
+                <span id="tool-status" role="status" aria-live="polite">Ready</span>
+              </div>
+              <textarea id="tool-output" spellcheck="false" rows="10" readonly></textarea>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="section-block article-section" aria-labelledby="regex-generator-guide">
+        <div class="section-heading">
+          <div><p class="eyebrow">Guide</p></div>
+          <h2 id="regex-generator-guide">Generate a practical regex instead of starting from scratch.</h2>
+        </div>
+        <div class="article-copy">
+          <p>A regex generator is useful when you know the kind of text you want to match but do not want to build the pattern character by character. This page helps you create a strong starting point for common tasks like exact matching, contains checks, whole-word validation, and common field formats such as emails, URLs, and slugs.</p>
+          <p>The result is still a regex, which means you should test it before you rely on it in production. Use the generated output with the <a href="../regex-tester/">Regex Tester</a> to verify the pattern against real sample text, and pair it with the <a href="../slug-generator/">Slug Generator</a> when you are working with URL-friendly names.</p>
+        </div>
+      </section>
+      <section class="section-block tool-content" aria-labelledby="regex-generator-examples">
+        <div class="section-heading">
+          <div><p class="eyebrow">Examples</p></div>
+          <h2 id="regex-generator-examples">Common ways developers use generated patterns.</h2>
+        </div>
+        <div class="content-grid">
+          <article><h3>Validation rules</h3><p>Generate a quick pattern for slugs, numbers, email addresses, or simple text checks.</p></article>
+          <article><h3>Search filters</h3><p>Create a safe literal match before you use a pattern in a text filter or admin search.</p></article>
+          <article><h3>Clean-up tasks</h3><p>Start from a generated pattern and refine it for replacements or data cleanup.</p></article>
+        </div>
+      </section>
+      <section class="section-block article-section" aria-labelledby="regex-generator-workflow">
+        <div class="section-heading">
+          <div><p class="eyebrow">Workflow</p></div>
+          <h2 id="regex-generator-workflow">How to keep generated patterns useful.</h2>
+        </div>
+        <div class="article-copy">
+          <p>Keep the generated pattern as small as possible. If you only need to match a literal string, exact mode is usually better than a broad contains pattern because it reduces accidental matches. If you need a validation rule, start from the preset that is closest to your target format and then tighten the result in the tester.</p>
+          <p>The browser tool makes it easy to move between generation and testing without leaving the page. That is useful when you are iterating on forms, search features, content rules, or support tooling where a small regex error can break a workflow or reject valid input.</p>
+        </div>
+      </section>
+      <section class="section-block tool-content" aria-labelledby="regex-generator-faq">
+        <div class="section-heading">
+          <div><p class="eyebrow">FAQ</p></div>
+          <h2 id="regex-generator-faq">Regex Generator questions.</h2>
+        </div>
+        <div class="content-grid">
+          <article><h3>Is the generated regex escaped?</h3><p>Yes. Literal text is escaped so special characters are treated as text unless the preset says otherwise.</p></article>
+          <article><h3>Can I generate common validation patterns?</h3><p>Yes. The preset list includes digits, letters, email, URL, and slug patterns.</p></article>
+          <article><h3>Should I still test the pattern?</h3><p>Yes. Always test generated output with real sample text before using it in production.</p></article>
+          <article><h3>Is the generator browser-only?</h3><p>Yes. The pattern is built locally in the browser.</p></article>
+        </div>
+      </section>
+      <section class="section-block related-section" aria-labelledby="related-tools">
+        <div class="section-heading">
+          <div><p class="eyebrow">Related tools</p></div>
+          <h2 id="related-tools">Continue with another developer utility.</h2>
+        </div>
+        <div class="related-links">
+          <a href="../regex-tester/">Regex Tester</a>
+          <a href="../json-compare-tool/">JSON Compare Tool</a>
+          <a href="../slug-generator/">Slug Generator</a>
+          <a href="../url-encoder-decoder/">URL Encoder/Decoder</a>
+        </div>
+      </section>
+    </main>
+    <script>const inputEl=document.querySelector("#regex-input"),modeEl=document.querySelector("#regex-mode"),outputEl=document.querySelector("#tool-output"),statusEl=document.querySelector("#tool-status"),setStatus=(message,isError=false)=>{statusEl.textContent=message;statusEl.classList.toggle("is-error",isError)},run=()=>{try{const result=GrowthTools.buildRegexPattern({input:inputEl.value,mode:modeEl.value,ignoreCase:true,multiline:false,dotAll:false});outputEl.value="Literal: "+result.literal+"\nPattern: /"+result.source+"/"+result.flags+"\n"+result.explanation;setStatus("Generated")}catch(error){setStatus(error.message,true)}};document.querySelector("#run-tool").addEventListener("click",run);document.querySelector("#secondary-tool").addEventListener("click",()=>{inputEl.value="Web Utility Desk";modeEl.value="exact";run()});document.querySelector("#copy-output").addEventListener("click",()=>GrowthTools.copyText(outputEl.value).then(()=>setStatus("Copied to clipboard")));document.querySelector("#clear-tool").addEventListener("click",()=>{inputEl.value="";outputEl.value="";setStatus("Ready")});inputEl.addEventListener("input",run);modeEl.addEventListener("change",run);run();</script>
+    <footer class="site-footer">
+      <div>
+        <span>Web Utility Desk</span>
+        <p>Free web utility tools for everyday technical work.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div>
+          <strong>Tools</strong>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../json-validator/">JSON Validator</a>
+          <a href="../csv-to-json-converter/">CSV to JSON Converter</a>
+          <a href="../regex-tester/">Regex Tester</a>
+          <a href="../regex-generator/">Regex Generator</a>
+          <a href="../sql-formatter/">SQL Formatter</a>
+          <a href="../json-compare-tool/">JSON Compare Tool</a>
+          <a href="../html-minifier/">HTML Minifier</a>
+          <a href="../css-minifier/">CSS Minifier</a>
+          <a href="../javascript-minifier/">JavaScript Minifier</a>
+        </div>
+        <div>
+          <strong>Site</strong>
+          <a href="../about/">About</a>
+          <a href="../blog/">Blog</a>
+          <a href="../guides/">Guides</a>
+          <a href="../resources/">Resources</a>
+          <a href="../contact/">Contact</a>
+          <a href="../privacy-policy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+        </div>
+      </nav>
+    </footer>
+  </body>
+</html>

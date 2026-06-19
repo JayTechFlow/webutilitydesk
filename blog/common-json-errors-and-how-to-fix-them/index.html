@@ -167,7 +167,7 @@
           <section>
             <h2 id="troubleshooting-patterns">A practical troubleshooting pattern</h2>
             <p>When JSON keeps failing, the fastest fix is usually not to stare at the whole payload. Instead, isolate the exact layer where the error appears. Start with the outer shape. If the braces or brackets are wrong, fix that first. If the outer shape is fine, move inward one level at a time and look for a value that was copied from a JavaScript object, a form submission, or a log line with hidden characters. That approach is much faster than rereading the whole sample because it narrows the search to one likely class of failure at a time.</p>
-            <p>It also helps to compare the broken sample against a known good example. Put a valid object next to the failing one and look for the difference in quoting, punctuation, or value types. If the bug is in a long response, remove fields until the error disappears. The first field you remove after the failure goes away is usually in the right neighborhood. That is the kind of methodical process that turns JSON debugging from guesswork into something repeatable and calm.</p>
+            <p>It also helps to compare the broken sample against a known good example. Put a valid object next to the failing one and look for the difference in quoting, punctuation, or value types. If the bug is in a long response, remove fields until the error disappears. The first field you remove after the failure goes away is usually in the right neighborhood. That is the kind of methodical process that turns JSON debugging from guesswork into something repeatable and calm. When you are comparing two payloads, the <a href="../../json-compare-tool/">JSON Compare Tool</a> can show changed paths directly, which makes regressions easier to spot.</p>
           </section>
 
           <section>
@@ -199,6 +199,7 @@
             <div class="related-links">
           <a href="../../json-validator/">Open JSON Validator</a>
           <a href="../../json-formatter/">Open JSON Formatter</a>
+          <a href="../../json-compare-tool/">Open JSON Compare Tool</a>
           <a href="../../jwt-decoder/">Open JWT Decoder</a>
             </div>
           </section>
@@ -213,7 +214,21 @@
         </div>
       </section>
     </main>
-    <footer class="site-footer"><div><span>Web Utility Desk</span><p>Free web utility tools for everyday technical work.</p></div><nav class="footer-nav" aria-label="Footer navigation"><div><strong>Tools</strong><a href="../../json-formatter/">JSON Formatter</a><a href="../../json-validator/">JSON Validator</a><a href="../../base64-encoder-decoder/">Base64 Encoder/Decoder</a><a href="../../url-encoder-decoder/">URL Encoder/Decoder</a><a href="../../uuid-generator/">UUID Generator</a><a href="../../hash-generator/">Hash Generator</a><a href="../../md5-generator/">MD5 Generator</a><a href="../../sha256-generator/">SHA256 Generator</a><a href="../../word-counter/">Word Counter</a><a href="../../character-counter/">Character Counter</a><a href="../../text-diff-checker/">Text Diff Checker</a><a href="../../case-converter/">Case Converter</a><a href="../../slug-generator/">Slug Generator</a></div><div><strong>Site</strong><a href="../../about/">About</a>
+    <footer class="site-footer"><div><span>Web Utility Desk</span><p>Free web utility tools for everyday technical work.</p></div><nav class="footer-nav" aria-label="Footer navigation"><div>
+          <strong>Tools</strong>
+          <a href="../../json-formatter/">JSON Formatter</a>
+          <a href="../../json-validator/">JSON Validator</a>
+          <a href="../../csv-to-json-converter/">CSV to JSON Converter</a>
+          <a href="../../regex-tester/">Regex Tester</a>
+          <a href="../../regex-generator/">Regex Generator</a>
+          <a href="../../sql-formatter/">SQL Formatter</a>
+          <a href="../../json-compare-tool/">JSON Compare Tool</a>
+          <a href="../../html-minifier/">HTML Minifier</a>
+          <a href="../../css-minifier/">CSS Minifier</a>
+          <a href="../../javascript-minifier/">JavaScript Minifier</a>
+        </div>
+        <div>
+          <strong>Site</strong><a href="../../about/">About</a>
           <a href="../../resources/">Resources</a><a href="../../blog/">Blog</a><a href="../../guides/">Guides</a><a href="../../contact/">Contact</a><a href="../../privacy-policy/">Privacy</a><a href="../../terms/">Terms</a></div></nav></footer>
   </body>
 </html>

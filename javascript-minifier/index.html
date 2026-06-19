@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Minifier | Web Utility Desk</title>
+    <meta name="description" content="Shrink simple JavaScript snippets in the browser with a practical minification workflow and examples." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://webutilitydesk.com/javascript-minifier/" />
+    <meta property="og:title" content="JavaScript Minifier" />
+    <meta property="og:description" content="Minify simple JavaScript snippets in the browser and copy compact output." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webutilitydesk.com/javascript-minifier/" />
+    <meta property="og:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="JavaScript Minifier" />
+    <meta name="twitter:description" content="Minify simple JavaScript snippets in the browser and copy compact output." />
+    <meta name="twitter:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.svg" />
+    <link rel="manifest" href="../assets/site.webmanifest" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script src="../assets/analytics.js" defer></script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "JavaScript Minifier",
+      "url": "https://webutilitydesk.com/javascript-minifier/",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "isAccessibleForFree": true,
+      "description": "Shrink simple JavaScript snippets in the browser with a practical minification workflow and examples.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://webutilitydesk.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "JavaScript Minifier",
+          "item": "https://webutilitydesk.com/javascript-minifier/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is this a full build-tool replacement?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It is a practical browser-side minifier for small scripts and snippets."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it remove comments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. It removes standard comments while keeping strings and template literals intact."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the minification browser-only?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The snippet is minified locally in your browser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I use for large bundles?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use your normal build pipeline for large or framework-generated bundles."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Web Utility Desk home">
+        <img src="../assets/brand-mark.svg" alt="" width="34" height="34" />
+        <span>Web Utility Desk</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="../json-formatter/">JSON</a>
+        <a href="../json-validator/">Validate</a>
+        <a href="../regex-tester/">Regex</a>
+        <a href="../sql-formatter/">SQL</a>
+        <a href="../blog/">Blog</a>
+        <a href="../guides/">Guides</a>
+        <a href="../resources/">Resources</a>
+      </nav>
+    </header>
+    <main>
+      <section class="tool-page">
+        <div class="tool-hero">
+          <p class="eyebrow">Script optimization tool</p>
+          <h1>JavaScript Minifier</h1>
+          <p class="summary">Shrink simple JavaScript snippets locally before you paste them into a bundle, template, or deployment step.</p>
+        </div>
+        <section class="tool-panel standalone-tool" aria-label="JavaScript Minifier workspace">
+          <div class="tool-body">
+            <div class="field-group">
+              <label for="js-input">JavaScript input</label>
+              <textarea id="js-input" spellcheck="false" rows="12">const greet = (name) => {
+  // Keep the greeting readable
+  return `Hello, ${name}!`;
+};
+
+console.log(greet("Web Utility Desk"));</textarea>
+            </div>
+            <div class="action-row" aria-label="JavaScript minifier actions">
+              <button class="primary-action" id="run-tool" type="button">Minify JS</button>
+              <button class="secondary-action" id="secondary-tool" type="button">Use Sample</button>
+              <button class="secondary-action" id="copy-output" type="button">Copy JS</button>
+              <button class="ghost-action" id="clear-tool" type="button">Clear</button>
+            </div>
+            <div class="field-group output-group">
+              <div class="output-header">
+                <label for="tool-output">Minified JavaScript</label>
+                <span id="tool-status" role="status" aria-live="polite">Ready</span>
+              </div>
+              <textarea id="tool-output" spellcheck="false" rows="12" readonly></textarea>
+            </div>
+            <div class="scan-status">Best for simple browser snippets, small utility functions, and quick deployment checks.</div>
+          </div>
+        </section>
+      </section>
+      <section class="section-block article-section" aria-labelledby="js-minify-guide">
+        <div class="section-heading">
+          <div><p class="eyebrow">Guide</p></div>
+          <h2 id="js-minify-guide">Why a browser-side JavaScript minifier still helps.</h2>
+        </div>
+        <div class="article-copy">
+          <p>JavaScript minification is usually handled by a build tool, but there are still plenty of cases where a quick browser-side minifier is useful. You might be cleaning up a small snippet, checking a script before you paste it into a template, or comparing the compact version with a readable one during a static-site workflow.</p>
+          <p>This tool is intentionally conservative. It is best for simple functions, snippets, and helper code. For related cleanup, pair it with the <a href="../html-minifier/">HTML Minifier</a> and <a href="../css-minifier/">CSS Minifier</a> so the whole page bundle stays tidy.</p>
+        </div>
+      </section>
+      <section class="section-block tool-content" aria-labelledby="js-minify-examples">
+        <div class="section-heading">
+          <div><p class="eyebrow">Examples</p></div>
+          <h2 id="js-minify-examples">Common JavaScript minification workflows.</h2>
+        </div>
+        <div class="content-grid">
+          <article><h3>Snippets</h3><p>Compact quick utility functions before you paste them into a CMS or template.</p></article>
+          <article><h3>Small widgets</h3><p>Shrink helper code for static forms, banners, and embed scripts.</p></article>
+          <article><h3>Comparison</h3><p>See the readable source and the compact output side by side during review.</p></article>
+        </div>
+      </section>
+      <section class="section-block article-section" aria-labelledby="js-minify-workflow">
+        <div class="section-heading">
+          <div><p class="eyebrow">Workflow</p></div>
+          <h2 id="js-minify-workflow">Use the output carefully for production scripts.</h2>
+        </div>
+        <div class="article-copy">
+          <p>The page is designed to help with small, understandable snippets rather than complex frameworks or code that relies on advanced parsing. If you are minifying application bundles, let your build pipeline handle the final pass. The browser tool is most useful as a quick check or an educational utility.</p>
+          <p>When the script needs to work alongside HTML and CSS, treat all three asset types as a coordinated set. The cleaner the surrounding markup and styles, the easier it is to see whether a script change is worth shipping or whether you should simplify the feature first.</p>
+        </div>
+      </section>
+      <section class="section-block tool-content" aria-labelledby="js-minify-faq">
+        <div class="section-heading">
+          <div><p class="eyebrow">FAQ</p></div>
+          <h2 id="js-minify-faq">JavaScript Minifier questions.</h2>
+        </div>
+        <div class="content-grid">
+          <article><h3>Is this a full build-tool replacement?</h3><p>No. It is a practical browser-side minifier for small scripts and snippets.</p></article>
+          <article><h3>Does it remove comments?</h3><p>Yes. It removes standard comments while keeping strings and template literals intact.</p></article>
+          <article><h3>Is the minification browser-only?</h3><p>Yes. The snippet is minified locally in your browser.</p></article>
+          <article><h3>What should I use for large bundles?</h3><p>Use your normal build pipeline for large or framework-generated bundles.</p></article>
+        </div>
+      </section>
+      <section class="section-block related-section" aria-labelledby="related-tools">
+        <div class="section-heading">
+          <div><p class="eyebrow">Related tools</p></div>
+          <h2 id="related-tools">Continue with another developer utility.</h2>
+        </div>
+        <div class="related-links">
+          <a href="../html-minifier/">HTML Minifier</a>
+          <a href="../css-minifier/">CSS Minifier</a>
+          <a href="../regex-tester/">Regex Tester</a>
+          <a href="../json-formatter/">JSON Formatter</a>
+        </div>
+      </section>
+    </main>
+    <script>const inputEl=document.querySelector("#js-input"),outputEl=document.querySelector("#tool-output"),statusEl=document.querySelector("#tool-status"),setStatus=(message,isError=false)=>{statusEl.textContent=message;statusEl.classList.toggle("is-error",isError)},run=()=>{try{outputEl.value=GrowthTools.minifyJs(inputEl.value);setStatus("Minified")}catch(error){setStatus(error.message,true)}};document.querySelector("#run-tool").addEventListener("click",run);document.querySelector("#secondary-tool").addEventListener("click",()=>{inputEl.value='const greet = (name) => {\n  // Keep the greeting readable\n  return "Hello, " + name + "!";\n};\n\nconsole.log(greet("Web Utility Desk"));';run()});document.querySelector("#copy-output").addEventListener("click",()=>GrowthTools.copyText(outputEl.value).then(()=>setStatus("Copied to clipboard")));document.querySelector("#clear-tool").addEventListener("click",()=>{inputEl.value='';outputEl.value='';setStatus('Ready')});inputEl.addEventListener("input",run);run();</script>
+    <footer class="site-footer">
+      <div>
+        <span>Web Utility Desk</span>
+        <p>Free web utility tools for everyday technical work.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div>
+          <strong>Tools</strong>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../json-validator/">JSON Validator</a>
+          <a href="../csv-to-json-converter/">CSV to JSON Converter</a>
+          <a href="../regex-tester/">Regex Tester</a>
+          <a href="../regex-generator/">Regex Generator</a>
+          <a href="../sql-formatter/">SQL Formatter</a>
+          <a href="../json-compare-tool/">JSON Compare Tool</a>
+          <a href="../html-minifier/">HTML Minifier</a>
+          <a href="../css-minifier/">CSS Minifier</a>
+          <a href="../javascript-minifier/">JavaScript Minifier</a>
+        </div>
+        <div>
+          <strong>Site</strong>
+          <a href="../about/">About</a>
+          <a href="../blog/">Blog</a>
+          <a href="../guides/">Guides</a>
+          <a href="../resources/">Resources</a>
+          <a href="../contact/">Contact</a>
+          <a href="../privacy-policy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+        </div>
+      </nav>
+    </footer>
+  </body>
+</html>

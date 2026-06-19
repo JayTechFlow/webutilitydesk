@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Minifier | Web Utility Desk</title>
+    <meta name="description" content="Minify HTML in the browser with examples, copy actions, and common minification caveats." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://webutilitydesk.com/html-minifier/" />
+    <meta property="og:title" content="HTML Minifier" />
+    <meta property="og:description" content="Minify HTML in the browser and copy compact markup." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webutilitydesk.com/html-minifier/" />
+    <meta property="og:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HTML Minifier" />
+    <meta name="twitter:description" content="Minify HTML in the browser and copy compact markup." />
+    <meta name="twitter:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.svg" />
+    <link rel="manifest" href="../assets/site.webmanifest" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script src="../assets/analytics.js" defer></script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "HTML Minifier",
+      "url": "https://webutilitydesk.com/html-minifier/",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "isAccessibleForFree": true,
+      "description": "Minify HTML in the browser with examples, copy actions, and common minification caveats.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://webutilitydesk.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "HTML Minifier",
+          "item": "https://webutilitydesk.com/html-minifier/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does the minifier remove comments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. It strips normal HTML comments before compacting whitespace."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it preserve browser-side code blocks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Script, style, pre, textarea, and code blocks are preserved as blocks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the minification browser-only?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The markup is compacted locally in your browser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I minify every HTML file?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Minify the files where the size or deployment workflow benefits from it."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Web Utility Desk home">
+        <img src="../assets/brand-mark.svg" alt="" width="34" height="34" />
+        <span>Web Utility Desk</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="../json-formatter/">JSON</a>
+        <a href="../json-validator/">Validate</a>
+        <a href="../regex-tester/">Regex</a>
+        <a href="../sql-formatter/">SQL</a>
+        <a href="../blog/">Blog</a>
+        <a href="../guides/">Guides</a>
+        <a href="../resources/">Resources</a>
+      </nav>
+    </header>
+    <main>
+      <section class="tool-page">
+        <div class="tool-hero">
+          <p class="eyebrow">Markup optimization tool</p>
+          <h1>HTML Minifier</h1>
+          <p class="summary">Shrink HTML markup locally, keep the browser workflow fast, and copy compact output for deployment or templates.</p>
+        </div>
+        <section class="tool-panel standalone-tool" aria-label="HTML Minifier workspace">
+          <div class="tool-body">
+            <div class="field-group">
+              <label for="html-input">HTML input</label>
+              <textarea id="html-input" spellcheck="false" rows="12"><div class="card">
+  <h2>Web Utility Desk</h2>
+  <p>Fast browser tools for developers.</p>
+</div></textarea>
+            </div>
+            <div class="action-row" aria-label="HTML minifier actions">
+              <button class="primary-action" id="run-tool" type="button">Minify HTML</button>
+              <button class="secondary-action" id="secondary-tool" type="button">Use Sample</button>
+              <button class="secondary-action" id="copy-output" type="button">Copy HTML</button>
+              <button class="ghost-action" id="clear-tool" type="button">Clear</button>
+            </div>
+            <div class="field-group output-group">
+              <div class="output-header">
+                <label for="tool-output">Minified HTML</label>
+                <span id="tool-status" role="status" aria-live="polite">Ready</span>
+              </div>
+              <textarea id="tool-output" spellcheck="false" rows="12" readonly></textarea>
+            </div>
+            <div class="scan-status">Good for landing pages, snippets, and small templates. Keep complex documents readable first.</div>
+          </div>
+        </section>
+      </section>
+      <section class="section-block article-section" aria-labelledby="html-minify-guide">
+        <div class="section-heading">
+          <div><p class="eyebrow">Guide</p></div>
+          <h2 id="html-minify-guide">When HTML minification is worth doing.</h2>
+        </div>
+        <div class="article-copy">
+          <p>HTML minification removes comments and unnecessary whitespace so the markup becomes smaller and easier to ship. That can be useful for landing pages, templates, and static files where every byte still matters, even when you are not using a build pipeline.</p>
+          <p>The page keeps the workflow browser-side. That means you can test how compact your markup becomes before you decide whether to paste it into a deployment bundle, a CMS, or a static export. For related cleanup tasks, pair this page with the <a href="../css-minifier/">CSS Minifier</a> and <a href="../javascript-minifier/">JavaScript Minifier</a>.</p>
+        </div>
+      </section>
+      <section class="section-block tool-content" aria-labelledby="html-minify-examples">
+        <div class="section-heading">
+          <div><p class="eyebrow">Examples</p></div>
+          <h2 id="html-minify-examples">Practical minification workflows.</h2>
+        </div>
+        <div class="content-grid">
+          <article><h3>Landing pages</h3><p>Shrink simple marketing markup before you ship static pages or emails.</p></article>
+          <article><h3>Templates</h3><p>Prepare compact fragments for CMS, snippet, or server-side template workflows.</p></article>
+          <article><h3>Debugging</h3><p>Compare readable source with compact output when you are checking a deployment issue.</p></article>
+        </div>
+      </section>
+      <section class="section-block article-section" aria-labelledby="html-minify-workflow">
+        <div class="section-heading">
+          <div><p class="eyebrow">Workflow</p></div>
+          <h2 id="html-minify-workflow">Minify carefully when the markup contains code.</h2>
+        </div>
+        <div class="article-copy">
+          <p>The safest minification workflow starts with a readable source document. If the page contains script, style, or preformatted code blocks, review the output before you rely on it. Minification is most useful when the markup is simple and the content is already validated.</p>
+          <p>If the HTML page is paired with CSS and JavaScript bundles, use the dedicated minifiers for those assets too. Keeping each asset type separate makes it easier to see what changed and keeps your deploy workflow predictable.</p>
+        </div>
+      </section>
+      <section class="section-block tool-content" aria-labelledby="html-minify-faq">
+        <div class="section-heading">
+          <div><p class="eyebrow">FAQ</p></div>
+          <h2 id="html-minify-faq">HTML Minifier questions.</h2>
+        </div>
+        <div class="content-grid">
+          <article><h3>Does the minifier remove comments?</h3><p>Yes. It strips normal HTML comments before compacting whitespace.</p></article>
+          <article><h3>Does it preserve browser-side code blocks?</h3><p>Yes. Script, style, pre, textarea, and code blocks are preserved as blocks.</p></article>
+          <article><h3>Is the minification browser-only?</h3><p>Yes. The markup is compacted locally in your browser.</p></article>
+          <article><h3>Should I minify every HTML file?</h3><p>No. Minify the files where the size or deployment workflow benefits from it.</p></article>
+        </div>
+      </section>
+      <section class="section-block related-section" aria-labelledby="related-tools">
+        <div class="section-heading">
+          <div><p class="eyebrow">Related tools</p></div>
+          <h2 id="related-tools">Continue with another developer utility.</h2>
+        </div>
+        <div class="related-links">
+          <a href="../css-minifier/">CSS Minifier</a>
+          <a href="../javascript-minifier/">JavaScript Minifier</a>
+          <a href="../html-encoder-decoder/">HTML Encoder/Decoder</a>
+          <a href="../text-reverser/">Text Reverser</a>
+        </div>
+      </section>
+    </main>
+    <script>const inputEl=document.querySelector("#html-input"),outputEl=document.querySelector("#tool-output"),statusEl=document.querySelector("#tool-status"),setStatus=(message,isError=false)=>{statusEl.textContent=message;statusEl.classList.toggle("is-error",isError)},run=()=>{try{outputEl.value=GrowthTools.minifyHtml(inputEl.value);setStatus("Minified")}catch(error){setStatus(error.message,true)}};document.querySelector("#run-tool").addEventListener("click",run);document.querySelector("#secondary-tool").addEventListener("click",()=>{inputEl.value='<div class="card">\n  <h2>Web Utility Desk</h2>\n  <p>Fast browser tools for developers.</p>\n</div>';run()});document.querySelector("#copy-output").addEventListener("click",()=>GrowthTools.copyText(outputEl.value).then(()=>setStatus("Copied to clipboard")));document.querySelector("#clear-tool").addEventListener("click",()=>{inputEl.value='';outputEl.value='';setStatus('Ready')});inputEl.addEventListener("input",run);run();</script>
+    <footer class="site-footer">
+      <div>
+        <span>Web Utility Desk</span>
+        <p>Free web utility tools for everyday technical work.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div>
+          <strong>Tools</strong>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../json-validator/">JSON Validator</a>
+          <a href="../csv-to-json-converter/">CSV to JSON Converter</a>
+          <a href="../regex-tester/">Regex Tester</a>
+          <a href="../regex-generator/">Regex Generator</a>
+          <a href="../sql-formatter/">SQL Formatter</a>
+          <a href="../json-compare-tool/">JSON Compare Tool</a>
+          <a href="../html-minifier/">HTML Minifier</a>
+          <a href="../css-minifier/">CSS Minifier</a>
+          <a href="../javascript-minifier/">JavaScript Minifier</a>
+        </div>
+        <div>
+          <strong>Site</strong>
+          <a href="../about/">About</a>
+          <a href="../blog/">Blog</a>
+          <a href="../guides/">Guides</a>
+          <a href="../resources/">Resources</a>
+          <a href="../contact/">Contact</a>
+          <a href="../privacy-policy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+        </div>
+      </nav>
+    </footer>
+  </body>
+</html>

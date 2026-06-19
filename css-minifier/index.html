@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Minifier | Web Utility Desk</title>
+    <meta name="description" content="Minify CSS locally, keep your workflow browser-side, and copy compact styles for deployment." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://webutilitydesk.com/css-minifier/" />
+    <meta property="og:title" content="CSS Minifier" />
+    <meta property="og:description" content="Minify CSS locally in the browser and copy compact styles." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webutilitydesk.com/css-minifier/" />
+    <meta property="og:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CSS Minifier" />
+    <meta name="twitter:description" content="Minify CSS locally in the browser and copy compact styles." />
+    <meta name="twitter:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.svg" />
+    <link rel="manifest" href="../assets/site.webmanifest" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script src="../assets/analytics.js" defer></script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "CSS Minifier",
+      "url": "https://webutilitydesk.com/css-minifier/",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "isAccessibleForFree": true,
+      "description": "Minify CSS locally, keep your workflow browser-side, and copy compact styles for deployment.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://webutilitydesk.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "CSS Minifier",
+          "item": "https://webutilitydesk.com/css-minifier/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does the minifier remove comments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Standard CSS comments are removed before the compact output is returned."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it keep quoted strings intact?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The minifier keeps quoted string values intact while removing extra whitespace around them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the minification browser-only?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The stylesheet is minified locally in your browser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I minify vendor-specific generated CSS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the tool on the compiled stylesheet you actually ship, not on source partials that still need preprocessing."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Web Utility Desk home">
+        <img src="../assets/brand-mark.svg" alt="" width="34" height="34" />
+        <span>Web Utility Desk</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="../json-formatter/">JSON</a>
+        <a href="../json-validator/">Validate</a>
+        <a href="../regex-tester/">Regex</a>
+        <a href="../sql-formatter/">SQL</a>
+        <a href="../blog/">Blog</a>
+        <a href="../guides/">Guides</a>
+        <a href="../resources/">Resources</a>
+      </nav>
+    </header>
+    <main>
+      <section class="tool-page">
+        <div class="tool-hero">
+          <p class="eyebrow">Stylesheet optimization tool</p>
+          <h1>CSS Minifier</h1>
+          <p class="summary">Turn readable CSS into compact output locally, then copy it into your build, template, or deployment workflow.</p>
+        </div>
+        <section class="tool-panel standalone-tool" aria-label="CSS Minifier workspace">
+          <div class="tool-body">
+            <div class="field-group">
+              <label for="css-input">CSS input</label>
+              <textarea id="css-input" spellcheck="false" rows="12">.card {
+  padding: 1rem;
+  border: 1px solid #d9e4df;
+  color: #17211f;
+}
+
+.card h2 {
+  margin: 0 0 0.75rem;
+}</textarea>
+            </div>
+            <div class="action-row" aria-label="CSS minifier actions">
+              <button class="primary-action" id="run-tool" type="button">Minify CSS</button>
+              <button class="secondary-action" id="secondary-tool" type="button">Use Sample</button>
+              <button class="secondary-action" id="copy-output" type="button">Copy CSS</button>
+              <button class="ghost-action" id="clear-tool" type="button">Clear</button>
+            </div>
+            <div class="field-group output-group">
+              <div class="output-header">
+                <label for="tool-output">Minified CSS</label>
+                <span id="tool-status" role="status" aria-live="polite">Ready</span>
+              </div>
+              <textarea id="tool-output" spellcheck="false" rows="12" readonly></textarea>
+            </div>
+            <div class="scan-status">This minifier works best for standard stylesheet rules and small component styles.</div>
+          </div>
+        </section>
+      </section>
+      <section class="section-block article-section" aria-labelledby="css-minify-guide">
+        <div class="section-heading">
+          <div><p class="eyebrow">Guide</p></div>
+          <h2 id="css-minify-guide">Why CSS minification still matters for static sites.</h2>
+        </div>
+        <div class="article-copy">
+          <p>CSS minification removes comments and extra whitespace so the stylesheet becomes lighter and quicker to ship. For static sites, that is a straightforward win because the asset is smaller without changing the visual output. It also makes build output cleaner when you are comparing versions or moving toward a more automated pipeline.</p>
+          <p>The browser-based workflow is useful when you want to check the result quickly before you commit it. If you are cleaning up related content assets too, use the <a href="../html-minifier/">HTML Minifier</a> for markup and the <a href="../javascript-minifier/">JavaScript Minifier</a> for scripts.</p>
+        </div>
+      </section>
+      <section class="section-block tool-content" aria-labelledby="css-minify-examples">
+        <div class="section-heading">
+          <div><p class="eyebrow">Examples</p></div>
+          <h2 id="css-minify-examples">Typical CSS optimization workflows.</h2>
+        </div>
+        <div class="content-grid">
+          <article><h3>Component styles</h3><p>Compact card, button, and layout rules before you publish them.</p></article>
+          <article><h3>Landing pages</h3><p>Shrink a static page stylesheet without touching the design intent.</p></article>
+          <article><h3>Code review</h3><p>Review readable CSS first, then minify it for the production bundle.</p></article>
+        </div>
+      </section>
+      <section class="section-block article-section" aria-labelledby="css-minify-workflow">
+        <div class="section-heading">
+          <div><p class="eyebrow">Workflow</p></div>
+          <h2 id="css-minify-workflow">Keep your stylesheet simple before minifying it.</h2>
+        </div>
+        <div class="article-copy">
+          <p>If your CSS depends on complex preprocessing or build-time transforms, minify the compiled output rather than the source partials. That keeps the browser tool aligned with what actually ships. It is also a good practice when you want to compare the compact stylesheet with your HTML or JavaScript assets during a release review.</p>
+          <p>Use the minifier as a final pass, not as a substitute for organized source files. Good selector names, sensible grouping, and a stable order are still important. The tool only reduces the extra space around the code you already wrote.</p>
+        </div>
+      </section>
+      <section class="section-block tool-content" aria-labelledby="css-minify-faq">
+        <div class="section-heading">
+          <div><p class="eyebrow">FAQ</p></div>
+          <h2 id="css-minify-faq">CSS Minifier questions.</h2>
+        </div>
+        <div class="content-grid">
+          <article><h3>Does the minifier remove comments?</h3><p>Yes. Standard CSS comments are removed before the compact output is returned.</p></article>
+          <article><h3>Does it keep quoted strings intact?</h3><p>Yes. The minifier keeps quoted string values intact while removing extra whitespace around them.</p></article>
+          <article><h3>Is the minification browser-only?</h3><p>Yes. The stylesheet is minified locally in your browser.</p></article>
+          <article><h3>Should I minify vendor-specific generated CSS?</h3><p>Use the tool on the compiled stylesheet you actually ship, not on source partials that still need preprocessing.</p></article>
+        </div>
+      </section>
+      <section class="section-block related-section" aria-labelledby="related-tools">
+        <div class="section-heading">
+          <div><p class="eyebrow">Related tools</p></div>
+          <h2 id="related-tools">Continue with another developer utility.</h2>
+        </div>
+        <div class="related-links">
+          <a href="../html-minifier/">HTML Minifier</a>
+          <a href="../javascript-minifier/">JavaScript Minifier</a>
+          <a href="../color-converter/">Color Converter</a>
+          <a href="../case-converter/">Case Converter</a>
+        </div>
+      </section>
+    </main>
+    <script>const inputEl=document.querySelector("#css-input"),outputEl=document.querySelector("#tool-output"),statusEl=document.querySelector("#tool-status"),setStatus=(message,isError=false)=>{statusEl.textContent=message;statusEl.classList.toggle("is-error",isError)},run=()=>{try{outputEl.value=GrowthTools.minifyCss(inputEl.value);setStatus("Minified")}catch(error){setStatus(error.message,true)}};document.querySelector("#run-tool").addEventListener("click",run);document.querySelector("#secondary-tool").addEventListener("click",()=>{inputEl.value='.card {\n  padding: 1rem;\n  border: 1px solid #d9e4df;\n  color: #17211f;\n}\n\n.card h2 {\n  margin: 0 0 0.75rem;\n}';run()});document.querySelector("#copy-output").addEventListener("click",()=>GrowthTools.copyText(outputEl.value).then(()=>setStatus("Copied to clipboard")));document.querySelector("#clear-tool").addEventListener("click",()=>{inputEl.value='';outputEl.value='';setStatus('Ready')});inputEl.addEventListener("input",run);run();</script>
+    <footer class="site-footer">
+      <div>
+        <span>Web Utility Desk</span>
+        <p>Free web utility tools for everyday technical work.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div>
+          <strong>Tools</strong>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../json-validator/">JSON Validator</a>
+          <a href="../csv-to-json-converter/">CSV to JSON Converter</a>
+          <a href="../regex-tester/">Regex Tester</a>
+          <a href="../regex-generator/">Regex Generator</a>
+          <a href="../sql-formatter/">SQL Formatter</a>
+          <a href="../json-compare-tool/">JSON Compare Tool</a>
+          <a href="../html-minifier/">HTML Minifier</a>
+          <a href="../css-minifier/">CSS Minifier</a>
+          <a href="../javascript-minifier/">JavaScript Minifier</a>
+        </div>
+        <div>
+          <strong>Site</strong>
+          <a href="../about/">About</a>
+          <a href="../blog/">Blog</a>
+          <a href="../guides/">Guides</a>
+          <a href="../resources/">Resources</a>
+          <a href="../contact/">Contact</a>
+          <a href="../privacy-policy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+        </div>
+      </nav>
+    </footer>
+  </body>
+</html>

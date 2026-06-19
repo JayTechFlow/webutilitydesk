@@ -44,6 +44,516 @@
     return [...value].reverse().join("");
   }
 
+  function escapeRegex(value) {
+    return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  function parseDelimitedRows(text, delimiter = ",") {
+    const source = String(text).replace(/\r\n?/g, "\n");
+    const rows = [];
+    let row = [];
+    let cell = "";
+    let inQuotes = false;
+
+    for (let index = 0; index < source.length; index += 1) {
+      const char = source[index];
+      const next = source[index + 1];
+
+      if (inQuotes) {
+        if (char === '"') {
+          if (next === '"') {
+            cell += '"';
+            index += 1;
+          } else {
+            inQuotes = false;
+          }
+        } else {
+          cell += char;
+        }
+        continue;
+      }
+
+      if (char === '"') {
+        inQuotes = true;
+        continue;
+      }
+
+      if (char === delimiter) {
+        row.push(cell);
+        cell = "";
+        continue;
+      }
+
+      if (char === "\n") {
+        row.push(cell);
+        rows.push(row);
+        row = [];
+        cell = "";
+        continue;
+      }
+
+      cell += char;
+    }
+
+    row.push(cell);
+    rows.push(row);
+
+    return rows.filter((currentRow) => currentRow.length > 1 || currentRow[0].trim() !== "");
+  }
+
+  function csvToJson(text, options = {}) {
+    const useHeaders = options.useHeaders !== false;
+    const rows = parseDelimitedRows(text);
+
+    if (!rows.length) {
+      throw new Error("Paste CSV data first.");
+    }
+
+    if (!useHeaders) {
+      return {
+        records: rows,
+        json: JSON.stringify(rows, null, 2),
+        rowCount: rows.length,
+        columnCount: Math.max(...rows.map((row) => row.length)),
+      };
+    }
+
+    const headers = rows.shift().map((header, index) => header.trim() || `column_${index + 1}`);
+    const records = rows.map((row) => {
+      const record = {};
+      headers.forEach((header, index) => {
+        record[header] = row[index] ?? "";
+      });
+      return record;
+    });
+
+    return {
+      headers,
+      records,
+      json: JSON.stringify(records, null, 2),
+      rowCount: records.length,
+      columnCount: headers.length,
+    };
+  }
+
+  function buildRegexPattern({ input, mode, ignoreCase = true, multiline = false, dotAll = false }) {
+    const value = String(input).trim();
+    const escaped = escapeRegex(value);
+    const presets = {
+      exact: `^${escaped}$`,
+      contains: escaped,
+      startsWith: `^${escaped}`,
+      endsWith: `${escaped}$`,
+      wholeWord: `\\b${escaped}\\b`,
+      digits: "^\\d+$",
+      letters: "^[A-Za-z]+$",
+      email: "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$",
+      url: "^(https?:\\/\\/)?[\\w.-]+(?:\\.[\\w.-]+)+(?:[\\/?#][^\\s]*)?$",
+      slug: "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+    };
+
+    const source = presets[mode] || escaped;
+    const flags = `${ignoreCase ? "i" : ""}${multiline ? "m" : ""}${dotAll ? "s" : ""}${mode === "contains" ? "g" : ""}`;
+
+    return {
+      source,
+      flags,
+      literal: `/${source}/${flags || "g"}`,
+      explanation:
+        mode === "digits"
+          ? "Matches only digits from start to finish."
+          : mode === "letters"
+            ? "Matches only letters from start to finish."
+            : mode === "email"
+              ? "Matches a common email shape."
+              : mode === "url"
+                ? "Matches a common URL shape."
+                : mode === "slug"
+                  ? "Matches a simple SEO-friendly slug."
+                  : mode === "wholeWord"
+                    ? "Wraps the sample in word boundaries."
+                    : `Builds a ${mode.replace(/([A-Z])/g, " $1").toLowerCase()} regex from the sample text.`,
+    };
+  }
+
+  function compareJsonValues(left, right, path, differences) {
+    if (Array.isArray(left) && Array.isArray(right)) {
+      const maxLength = Math.max(left.length, right.length);
+      for (let index = 0; index < maxLength; index += 1) {
+        const nextPath = `${path}[${index}]`;
+        if (index >= left.length) {
+          differences.push({ path: nextPath, type: "added", left: undefined, right: right[index] });
+          continue;
+        }
+        if (index >= right.length) {
+          differences.push({ path: nextPath, type: "removed", left: left[index], right: undefined });
+          continue;
+        }
+        compareJsonValues(left[index], right[index], nextPath, differences);
+      }
+      return;
+    }
+
+    if (isPlainObject(left) && isPlainObject(right)) {
+      const keys = new Set([...Object.keys(left), ...Object.keys(right)]);
+      keys.forEach((key) => {
+        const nextPath = path === "$" ? `$.${key}` : `${path}.${key}`;
+        if (!(key in left)) {
+          differences.push({ path: nextPath, type: "added", left: undefined, right: right[key] });
+          return;
+        }
+        if (!(key in right)) {
+          differences.push({ path: nextPath, type: "removed", left: left[key], right: undefined });
+          return;
+        }
+        compareJsonValues(left[key], right[key], nextPath, differences);
+      });
+      return;
+    }
+
+    if (!isDeepEqual(left, right)) {
+      differences.push({ path, type: "changed", left, right });
+    }
+  }
+
+  function compareJsonText(leftText, rightText) {
+    const left = JSON.parse(leftText);
+    const right = JSON.parse(rightText);
+    const differences = [];
+    compareJsonValues(left, right, "$", differences);
+
+    return {
+      left,
+      right,
+      leftPretty: JSON.stringify(left, null, 2),
+      rightPretty: JSON.stringify(right, null, 2),
+      differences,
+      summary:
+        differences.length === 0
+          ? "The JSON documents match."
+          : `${differences.length} difference${differences.length === 1 ? "" : "s"} found.`,
+    };
+  }
+
+  function isPlainObject(value) {
+    return Boolean(value) && typeof value === "object" && !Array.isArray(value);
+  }
+
+  function isDeepEqual(left, right) {
+    if (Object.is(left, right)) {
+      return true;
+    }
+
+    if (Array.isArray(left) && Array.isArray(right)) {
+      return left.length === right.length && left.every((item, index) => isDeepEqual(item, right[index]));
+    }
+
+    if (isPlainObject(left) && isPlainObject(right)) {
+      const leftKeys = Object.keys(left);
+      const rightKeys = Object.keys(right);
+      return (
+        leftKeys.length === rightKeys.length &&
+        leftKeys.every((key) => Object.prototype.hasOwnProperty.call(right, key) && isDeepEqual(left[key], right[key]))
+      );
+    }
+
+    return false;
+  }
+
+  function maskTokens(text, pattern) {
+    const values = [];
+    const masked = String(text).replace(pattern, (match) => {
+      values.push(match);
+      return `__MASK_${values.length - 1}__`;
+    });
+    return {
+      masked,
+      restore(value) {
+        return values.reduce((result, token, index) => result.replaceAll(`__MASK_${index}__`, token), value);
+      },
+    };
+  }
+
+  function formatSql(sql) {
+    const source = String(sql).replace(/\r\n?/g, "\n").trim();
+    if (!source) {
+      return "";
+    }
+
+    const preserved = maskTokens(
+      source,
+      /'(?:''|[^'])*'|"(?:["]|[^"])*"|`(?:``|[^`])*`|\[(?:[^\]]|\]\])*\]|--[^\n]*|\/\*[\s\S]*?\*\//g,
+    );
+
+    const keywords = [
+      "SELECT",
+      "FROM",
+      "WHERE",
+      "GROUP BY",
+      "HAVING",
+      "ORDER BY",
+      "LIMIT",
+      "OFFSET",
+      "JOIN",
+      "INNER JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "FULL JOIN",
+      "CROSS JOIN",
+      "OUTER JOIN",
+      "ON",
+      "UNION ALL",
+      "UNION",
+      "INSERT INTO",
+      "VALUES",
+      "UPDATE",
+      "SET",
+      "DELETE FROM",
+      "CASE",
+      "WHEN",
+      "THEN",
+      "ELSE",
+      "END",
+      "AND",
+      "OR",
+      "AS",
+    ];
+
+    let text = preserved.masked.replace(/\s+/g, " ").trim();
+    text = text.replace(/\b(group by|order by|inner join|left join|right join|full join|cross join|outer join|union all|insert into|delete from)\b/gi, (match) => match.toUpperCase());
+    keywords
+      .slice()
+      .sort((a, b) => b.length - a.length)
+      .forEach((keyword) => {
+        const pattern = new RegExp(`\\b${keyword.replace(/\s+/g, "\\s+")}\\b`, "gi");
+        text = text.replace(pattern, (match) => `\n${match.toUpperCase()}`);
+      });
+
+    text = text.replace(/,\s*/g, ",\n  ");
+    text = text.replace(/\s*\(\s*/g, " (\n  ");
+    text = text.replace(/\s*\)\s*/g, "\n)");
+
+    const lines = text
+      .split("\n")
+      .map((line) => line.trim())
+      .filter(Boolean);
+
+    let indent = 0;
+    const formatted = lines.map((line) => {
+      if (/^\)/.test(line) || /^(ELSE|WHEN|THEN|AND|OR|ON)\b/i.test(line)) {
+        indent = Math.max(indent - 1, 0);
+      }
+
+      const current = `${"  ".repeat(indent)}${line}`;
+
+      if (/\($/.test(line) || /^(SELECT|CASE|WHEN|THEN|ELSE|UNION(?: ALL)?|INSERT INTO|UPDATE|DELETE FROM)\b/i.test(line)) {
+        indent += 1;
+      }
+
+      if (/^END\b/i.test(line)) {
+        indent = Math.max(indent - 1, 0);
+      }
+
+      return current;
+    });
+
+    return preserved.restore(
+      formatted
+        .join("\n")
+        .replace(/\n{3,}/g, "\n\n")
+        .replace(/[ \t]+\n/g, "\n")
+        .replace(/\s+([,;])/g, "$1"),
+    );
+  }
+
+  function minifyHtml(html) {
+    const source = String(html).replace(/\r\n?/g, "\n").trim();
+    if (!source) {
+      return "";
+    }
+
+    const preserved = maskTokens(source, /<(script|style|pre|textarea|code)\b[\s\S]*?<\/\1>/gi);
+    const minified = preserved.masked
+      .replace(/<!--[\s\S]*?-->/g, "")
+      .replace(/>\s+</g, "><")
+      .replace(/\s{2,}/g, " ")
+      .replace(/\n+/g, "")
+      .trim();
+
+    return preserved.restore(minified);
+  }
+
+  function minifyCss(css) {
+    const source = String(css).replace(/\r\n?/g, "\n");
+    let output = "";
+    let inString = null;
+    let escaped = false;
+    let inComment = false;
+
+    for (let index = 0; index < source.length; index += 1) {
+      const char = source[index];
+      const next = source[index + 1];
+
+      if (inComment) {
+        if (char === "*" && next === "/") {
+          inComment = false;
+          index += 1;
+        }
+        continue;
+      }
+
+      if (inString) {
+        output += char;
+        if (escaped) {
+          escaped = false;
+        } else if (char === "\\") {
+          escaped = true;
+        } else if (char === inString) {
+          inString = null;
+        }
+        continue;
+      }
+
+      if (char === "/" && next === "*") {
+        inComment = true;
+        index += 1;
+        continue;
+      }
+
+      if (char === "'" || char === '"') {
+        inString = char;
+        output += char;
+        continue;
+      }
+
+      if (/\s/.test(char)) {
+        const last = output[output.length - 1];
+        const remaining = source.slice(index + 1).match(/\S/);
+        const nextChar = remaining ? remaining[0] : "";
+        if (last && /[A-Za-z0-9_\)\]]/.test(last) && nextChar && /[A-Za-z0-9_\(\[#.]/.test(nextChar)) {
+          output += " ";
+        }
+        continue;
+      }
+
+      if ("{}:;,>+~".includes(char)) {
+        output = output.replace(/\s+$/g, "");
+        output += char;
+        while (source[index + 1] && /\s/.test(source[index + 1])) {
+          index += 1;
+        }
+        continue;
+      }
+
+      output += char;
+    }
+
+    return output
+      .replace(/;}/g, "}")
+      .replace(/\s{2,}/g, " ")
+      .trim();
+  }
+
+  function minifyJs(js) {
+    const source = String(js).replace(/\r\n?/g, "\n");
+    let output = "";
+    let inString = null;
+    let inTemplate = false;
+    let escaped = false;
+    let inBlockComment = false;
+    let inLineComment = false;
+    let previousNonSpace = "";
+
+    for (let index = 0; index < source.length; index += 1) {
+      const char = source[index];
+      const next = source[index + 1];
+
+      if (inBlockComment) {
+        if (char === "*" && next === "/") {
+          inBlockComment = false;
+          index += 1;
+        }
+        continue;
+      }
+
+      if (inLineComment) {
+        if (char === "\n") {
+          inLineComment = false;
+          output += "\n";
+        }
+        continue;
+      }
+
+      if (inString) {
+        output += char;
+        if (escaped) {
+          escaped = false;
+        } else if (char === "\\") {
+          escaped = true;
+        } else if (char === inString) {
+          inString = null;
+        }
+        continue;
+      }
+
+      if (inTemplate) {
+        output += char;
+        if (escaped) {
+          escaped = false;
+        } else if (char === "\\") {
+          escaped = true;
+        } else if (char === "`") {
+          inTemplate = false;
+        }
+        continue;
+      }
+
+      if (char === "/" && next === "*") {
+        inBlockComment = true;
+        index += 1;
+        continue;
+      }
+
+      if (char === "/" && next === "/" && /[\s({[;,=:+\-*!?]/.test(previousNonSpace || " ")) {
+        inLineComment = true;
+        index += 1;
+        continue;
+      }
+
+      if (char === "'" || char === '"') {
+        inString = char;
+        output += char;
+        previousNonSpace = char;
+        continue;
+      }
+
+      if (char === "`") {
+        inTemplate = true;
+        output += char;
+        previousNonSpace = char;
+        continue;
+      }
+
+      if (/\s/.test(char)) {
+        const last = output[output.length - 1];
+        const nextNonSpace = source.slice(index + 1).match(/\S/);
+        if (last && /[A-Za-z0-9_$)\]]/.test(last) && nextNonSpace && /[A-Za-z0-9_$([{]/.test(nextNonSpace[0])) {
+          output += " ";
+        }
+        continue;
+      }
+
+      output += char;
+      previousNonSpace = char;
+    }
+
+    return output
+      .replace(/\s*([=+\-*/%<>?:;,{}()[\]])\s*/g, "$1")
+      .replace(/;}/g, "}")
+      .replace(/\n{2,}/g, "\n")
+      .trim();
+  }
+
   function generateRandomNumbers({ min, max, count, integerOnly = true }) {
     const start = Number(min);
     const end = Number(max);
@@ -306,6 +816,15 @@
     countWords,
     countCharacters,
     reverseText,
+    escapeRegex,
+    parseDelimitedRows,
+    csvToJson,
+    buildRegexPattern,
+    compareJsonText,
+    formatSql,
+    minifyHtml,
+    minifyCss,
+    minifyJs,
     generateRandomNumbers,
     encodeHtml,
     decodeHtml,

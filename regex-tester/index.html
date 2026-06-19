@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regex Tester | Web Utility Desk</title>
+    <meta name="description" content="Test regular expressions against sample text, inspect matches, and copy the pattern without leaving your browser." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://webutilitydesk.com/regex-tester/" />
+    <meta property="og:title" content="Regex Tester" />
+    <meta property="og:description" content="Test regular expressions against sample text and inspect matches in the browser." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webutilitydesk.com/regex-tester/" />
+    <meta property="og:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Regex Tester" />
+    <meta name="twitter:description" content="Test regular expressions against sample text and inspect matches in the browser." />
+    <meta name="twitter:image" content="https://webutilitydesk.com/assets/og-image.svg" />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.svg" />
+    <link rel="manifest" href="../assets/site.webmanifest" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script src="../assets/analytics.js" defer></script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Regex Tester",
+      "url": "https://webutilitydesk.com/regex-tester/",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "isAccessibleForFree": true,
+      "description": "Test regular expressions against sample text, inspect matches, and copy the pattern without leaving your browser.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://webutilitydesk.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Regex Tester",
+          "item": "https://webutilitydesk.com/regex-tester/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does the tester support flags?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can edit the flags field to test case-insensitive, multiline, or global matching."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I see capture groups?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The output includes the matches and any capture groups from the first match."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the matching done locally?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The regex runs in your browser with no server round-trip."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my pattern is invalid?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The page shows the JavaScript regex error so you can fix the syntax before testing again."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Web Utility Desk home">
+        <img src="../assets/brand-mark.svg" alt="" width="34" height="34" />
+        <span>Web Utility Desk</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="../json-formatter/">JSON</a>
+        <a href="../json-validator/">Validate</a>
+        <a href="../regex-tester/">Regex</a>
+        <a href="../sql-formatter/">SQL</a>
+        <a href="../blog/">Blog</a>
+        <a href="../guides/">Guides</a>
+        <a href="../resources/">Resources</a>
+      </nav>
+    </header>
+    <main>
+      <section class="tool-page">
+        <div class="tool-hero">
+          <p class="eyebrow">Pattern testing tool</p>
+          <h1>Regex Tester</h1>
+          <p class="summary">Check patterns against sample text, inspect matched groups, and see exactly what your regex is doing before you ship it.</p>
+        </div>
+        <section class="tool-panel standalone-tool" aria-label="Regex Tester workspace">
+          <div class="tool-body">
+            <div class="tool-controls">
+              <div class="field-group">
+                <label for="regex-pattern">Regex pattern</label>
+                <input id="regex-pattern" class="tool-select" type="text" value="Web Utility Desk" />
+              </div>
+              <div class="field-group">
+                <label for="regex-flags">Flags</label>
+                <input id="regex-flags" class="tool-select" type="text" value="gi" />
+              </div>
+            </div>
+            <div class="field-group" style="margin-top: 14px;">
+              <label for="regex-sample">Sample text</label>
+              <textarea id="regex-sample" spellcheck="false" rows="10">Web Utility Desk helps developers test, format, and compare content.
+The desk also keeps utility workflows simple for teams.</textarea>
+            </div>
+            <div class="action-row" aria-label="Regex tester actions">
+              <button class="primary-action" id="run-tool" type="button">Test Regex</button>
+              <button class="secondary-action" id="secondary-tool" type="button">Use Sample</button>
+              <button class="secondary-action" id="copy-output" type="button">Copy Result</button>
+              <button class="ghost-action" id="clear-tool" type="button">Clear</button>
+            </div>
+            <div class="field-group output-group">
+              <div class="output-header">
+                <label for="tool-output">Match summary</label>
+                <span id="tool-status" role="status" aria-live="polite">Ready</span>
+              </div>
+              <textarea id="tool-output" spellcheck="false" rows="10" readonly></textarea>
+            </div>
+            <div class="tool-preview" id="regex-preview" aria-label="Regex preview"></div>
+          </div>
+        </section>
+      </section>
+      <section class="section-block article-section" aria-labelledby="regex-guide">
+        <div class="section-heading">
+          <div><p class="eyebrow">Guide</p></div>
+          <h2 id="regex-guide">How to use a regex tester without guessing.</h2>
+        </div>
+        <div class="article-copy">
+          <p>Regular expressions are powerful because they let you match patterns instead of single literal strings, but that power is also why small mistakes are easy to miss. A tester helps you see whether the engine matched the text you expected, whether your flags are correct, and whether the pattern is too broad or too narrow for the task.</p>
+          <p>This page runs entirely in the browser, so you can iterate quickly on validation rules, search filters, text cleanup, and scraping rules. When you are done testing, move to the <a href="../regex-generator/">Regex Generator</a> if you need a safer starting point, or compare the resulting text with the <a href="../text-diff-checker/">Text Diff Checker</a>.</p>
+        </div>
+      </section>
+      <section class="section-block tool-content" aria-labelledby="regex-examples">
+        <div class="section-heading">
+          <div><p class="eyebrow">Examples</p></div>
+          <h2 id="regex-examples">Common regex testing workflows.</h2>
+        </div>
+        <div class="content-grid">
+          <article><h3>Validation</h3><p>Check whether user names, emails, or slugs match the intended validation rule.</p></article>
+          <article><h3>Search</h3><p>Confirm that your pattern captures the right text before you use it in code or a CMS filter.</p></article>
+          <article><h3>Cleanup</h3><p>Test patterns that remove repeated spaces, tags, or noisy labels from text.</p></article>
+        </div>
+      </section>
+      <section class="section-block article-section" aria-labelledby="regex-workflow">
+        <div class="section-heading">
+          <div><p class="eyebrow">Workflow</p></div>
+          <h2 id="regex-workflow">What to inspect when a pattern fails.</h2>
+        </div>
+        <div class="article-copy">
+          <p>If the pattern produces no matches, start by checking the flags and the anchors. A pattern that is missing the i flag may fail on case differences, while an overly strict ^ or $ anchor can prevent partial matches from appearing at all. The tester makes those issues visible without opening a code editor.</p>
+          <p>If the pattern matches too much, reduce its scope by adding literal boundaries, escaping punctuation, or tightening the character classes. Use the preview area to confirm what the engine found in the sample text and copy the final pattern only after the output looks right.</p>
+        </div>
+      </section>
+      <section class="section-block tool-content" aria-labelledby="regex-faq">
+        <div class="section-heading">
+          <div><p class="eyebrow">FAQ</p></div>
+          <h2 id="regex-faq">Regex Tester questions.</h2>
+        </div>
+        <div class="content-grid">
+          <article><h3>Does the tester support flags?</h3><p>Yes. You can edit the flags field to test case-insensitive, multiline, or global matching.</p></article>
+          <article><h3>Can I see capture groups?</h3><p>Yes. The output includes the matches and any capture groups from the first match.</p></article>
+          <article><h3>Is the matching done locally?</h3><p>Yes. The regex runs in your browser with no server round-trip.</p></article>
+          <article><h3>What if my pattern is invalid?</h3><p>The page shows the JavaScript regex error so you can fix the syntax before testing again.</p></article>
+        </div>
+      </section>
+      <section class="section-block related-section" aria-labelledby="related-tools">
+        <div class="section-heading">
+          <div><p class="eyebrow">Related tools</p></div>
+          <h2 id="related-tools">Continue with another developer utility.</h2>
+        </div>
+        <div class="related-links">
+          <a href="../regex-generator/">Regex Generator</a>
+          <a href="../json-compare-tool/">JSON Compare Tool</a>
+          <a href="../text-diff-checker/">Text Diff Checker</a>
+          <a href="../slug-generator/">Slug Generator</a>
+        </div>
+      </section>
+    </main>
+    <script>const patternEl=document.querySelector("#regex-pattern"),flagsEl=document.querySelector("#regex-flags"),sampleEl=document.querySelector("#regex-sample"),outputEl=document.querySelector("#tool-output"),previewEl=document.querySelector("#regex-preview"),statusEl=document.querySelector("#tool-status"),setStatus=(message,isError=false)=>{statusEl.textContent=message;statusEl.classList.toggle("is-error",isError)},renderPreview=(text,matches)=>{const escaped=GrowthTools.escapeHtml(text);if(!matches.length){previewEl.innerHTML='<div class="scan-status">No matches found.</div>';return}let html="";let lastIndex=0;matches.forEach(({index,match})=>{html+=GrowthTools.escapeHtml(text.slice(lastIndex,index))+"<mark>"+GrowthTools.escapeHtml(match)+"</mark>";lastIndex=index+match.length});html+=GrowthTools.escapeHtml(text.slice(lastIndex));previewEl.innerHTML=html};const run=()=>{try{const regex=new RegExp(patternEl.value,flagsEl.value);const text=sampleEl.value;const matches=[];if(regex.global){for(const match of text.matchAll(regex)){matches.push({index:match.index||0,match:match[0]})}}else{const match=regex.exec(text);if(match)matches.push({index:match.index||0,match:match[0]})}const first=matches[0];const summary=["Pattern: /"+patternEl.value+"/"+flagsEl.value,"Matches: "+matches.length];if(first){summary.push("First match: "+first.match)}if(regex.global&&matches.length){summary.push("Global matching enabled")}outputEl.value=summary.join("\n");renderPreview(text,matches);setStatus("Tested")}catch(error){previewEl.innerHTML="";setStatus(error.message,true);outputEl.value=""}};document.querySelector("#run-tool").addEventListener("click",run);document.querySelector("#secondary-tool").addEventListener("click",()=>{patternEl.value="Web Utility Desk";flagsEl.value="gi";sampleEl.value="Web Utility Desk helps developers test, format, and compare content.\nThe desk also keeps utility workflows simple for teams.";run()});document.querySelector("#copy-output").addEventListener("click",()=>GrowthTools.copyText(outputEl.value).then(()=>setStatus("Copied to clipboard")));document.querySelector("#clear-tool").addEventListener("click",()=>{patternEl.value="";flagsEl.value="";sampleEl.value="";outputEl.value="";previewEl.innerHTML="";setStatus("Ready")});[patternEl,flagsEl,sampleEl].forEach((el)=>el.addEventListener(el.tagName==="TEXTAREA"?"input":"input",run));run();</script>
+    <footer class="site-footer">
+      <div>
+        <span>Web Utility Desk</span>
+        <p>Free web utility tools for everyday technical work.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div>
+          <strong>Tools</strong>
+          <a href="../json-formatter/">JSON Formatter</a>
+          <a href="../json-validator/">JSON Validator</a>
+          <a href="../csv-to-json-converter/">CSV to JSON Converter</a>
+          <a href="../regex-tester/">Regex Tester</a>
+          <a href="../regex-generator/">Regex Generator</a>
+          <a href="../sql-formatter/">SQL Formatter</a>
+          <a href="../json-compare-tool/">JSON Compare Tool</a>
+          <a href="../html-minifier/">HTML Minifier</a>
+          <a href="../css-minifier/">CSS Minifier</a>
+          <a href="../javascript-minifier/">JavaScript Minifier</a>
+        </div>
+        <div>
+          <strong>Site</strong>
+          <a href="../about/">About</a>
+          <a href="../blog/">Blog</a>
+          <a href="../guides/">Guides</a>
+          <a href="../resources/">Resources</a>
+          <a href="../contact/">Contact</a>
+          <a href="../privacy-policy/">Privacy</a>
+          <a href="../terms/">Terms</a>
+        </div>
+      </nav>
+    </footer>
+  </body>
+</html>
