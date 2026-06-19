@@ -6,6 +6,41 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://webutilitydesk.com/blog/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://webutilitydesk.com/blog/what-is-json/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://webutilitydesk.com/blog/json-formatter-vs-json-validator/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://webutilitydesk.com/blog/sha256-vs-md5-explained/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://webutilitydesk.com/guides/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://webutilitydesk.com/guides/what-is-url-encoding/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://webutilitydesk.com/guides/uuid-explained-for-beginners/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://webutilitydesk.com/json-formatter/</loc>
     <lastmod>2026-06-19</lastmod>
     <priority>0.9</priority>
