@@ -24,6 +24,7 @@ Web Utility Desk is a static starter for a long-term tools website focused on or
 - QR scanner
 - Responsive layout for desktop and mobile
 - GA4 analytics loaded through the shared `assets/analytics.js` loader
+- Official AdSense loader included globally on every HTML page
 - Canonical URLs, Open Graph metadata, and structured data on content pages
 
 ## Analytics Architecture
@@ -36,6 +37,23 @@ Analytics is centralized in `assets/analytics.js`.
 - Duplicate initialization is guarded so the loader can be included safely once per page
 
 The implementation rule is simple: do not add GA4 snippets, inline `gtag()` calls, or page-specific analytics bootstrap logic to HTML files. If analytics behavior changes, update `assets/analytics.js` only.
+
+## AdSense Architecture
+
+AdSense is wired through the shared HTML head pattern so every current page receives the same loader once.
+
+- Publisher ID: `ca-pub-8988449511803364`
+- Official loader: `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8988449511803364`
+- `ads.txt` location: `/ads.txt`
+- `ads.txt` line: `google.com, pub-8988449511803364, DIRECT, f08c47fec0942fa0`
+
+Rules for future pages:
+
+1. Copy the shared head structure from an existing page.
+2. Include the official AdSense loader exactly once.
+3. Keep the loader alongside the shared analytics script so new pages inherit the same monetization setup.
+4. Do not add page-specific AdSense variants or duplicate loader tags.
+5. Keep `ads.txt` at the repository root so it deploys to `https://webutilitydesk.com/ads.txt`.
 
 ## How To Add New Pages
 
