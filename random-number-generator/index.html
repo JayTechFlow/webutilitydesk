@@ -43,8 +43,7 @@
           <a href="../javascript-minifier/">JavaScript Minifier</a>
         </div>
         <div>
-          <strong>Site</strong><a href="../about/">About</a>
-          <a href="../resources/">Resources</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy</a><a href="../terms/">Terms</a><a href="../disclaimer/">Disclaimer</a></div></nav></footer>
+          <strong>Site</strong>undefined          <a href="../resources/">Resources</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy</a><a href="../terms/">Terms</a><a href="../disclaimer/">Disclaimer</a></div></nav></footer>
     <script src="../assets/growth-tools.js"></script><script>const minEl=document.querySelector("#min"),maxEl=document.querySelector("#max"),countEl=document.querySelector("#count"),modeEl=document.querySelector("#mode"),outputEl=document.querySelector("#tool-output"),statusEl=document.querySelector("#tool-status"),setStatus=(m,e=false)=>{statusEl.textContent=m;statusEl.classList.toggle("is-error",e)};const run=()=>{try{outputEl.value=GrowthTools.generateRandomNumbers({min:minEl.value,max:maxEl.value,count:countEl.value,integerOnly:modeEl.value==="integer"});setStatus("Generated")}catch(error){setStatus(error.message,true)}};document.querySelector("#run-tool").addEventListener("click",run);document.querySelector("#secondary-tool").addEventListener("click",()=>{minEl.value=10;maxEl.value=99;countEl.value=8;modeEl.value="integer";run()});document.querySelector("#copy-output").addEventListener("click",()=>GrowthTools.copyText(outputEl.value).then(()=>setStatus("Copied to clipboard")));document.querySelector("#clear-tool").addEventListener("click",()=>{minEl.value="";maxEl.value="";countEl.value="";outputEl.value="";setStatus("Ready")});[minEl,maxEl,countEl,modeEl].forEach((el)=>el.addEventListener(el.tagName==="SELECT"?"change":"input",run));run();</script>
   </body>
 </html>

@@ -87,12 +87,20 @@
             <p>Web Utility Desk is designed around browser-based tools. The current tools process input on the page using client-side JavaScript. The site does not provide user accounts, user dashboards, file uploads, or server-side storage for tool input in its current static form.</p>
           </section>
           <section>
-            <h2>Analytics and advertising</h2>
-            <p>The site may use privacy-respecting analytics, Google Analytics, Google Search Console verification, advertising services, or affiliate links after production launch. Those services may use cookies, device information, or aggregated usage data according to their own policies. Analytics and advertising integrations should only be added with real production identifiers.</p>
+            <h2>Analytics and cookies</h2>
+            <p>The site may use Google Analytics through the shared loader and may rely on cookies or similar technologies when that service is enabled. Analytics should only be configured with real production identifiers, and the implementation should remain separate from page-local tool logic.</p>
           </section>
           <section>
-            <h2>Personal information</h2>
-            <p>The static tools do not require personal information to operate. If a contact form or email channel is added, information sent through that channel should be used only to respond to the request, improve the site, or handle legitimate operational needs.</p>
+            <h2>Search Console and indexing</h2>
+            <p>Google Search Console may be used to verify ownership, monitor crawl health, and submit the sitemap. That service is used for search visibility and diagnostics rather than for collecting user input from the site.</p>
+          </section>
+          <section>
+            <h2>AdSense readiness</h2>
+            <p>If advertising is added later, it should appear only after the site has stable public content, clear ownership, and the necessary policy pages. Advertising must remain visually and editorially separate from the core utility content.</p>
+          </section>
+          <section>
+            <h2>User privacy rights</h2>
+            <p>If a user sends information through a future contact channel, that information should only be used to respond to the request, improve the site, or handle legitimate operational needs. Users should be able to request correction or deletion of submitted contact information where applicable.</p>
           </section>
           <section>
             <h2>Security note</h2>
@@ -124,6 +132,9 @@
         <div>
           <strong>Site</strong>
           <a href="../about/">About</a>
+          <a href="../author/">Author</a>
+          <a href="../editorial-policy/">Editorial Policy</a>
+          <a href="../content-review-policy/">Content Review Policy</a>
           <a href="../resources/">Resources</a>
           <a href="../contact/">Contact</a>
           <a href="../privacy-policy/">Privacy</a>

@@ -43,8 +43,7 @@
           <a href="../javascript-minifier/">JavaScript Minifier</a>
         </div>
         <div>
-          <strong>Site</strong><a href="../about/">About</a>
-          <a href="../resources/">Resources</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy</a><a href="../terms/">Terms</a><a href="../disclaimer/">Disclaimer</a></div></nav></footer>
+          <strong>Site</strong>undefined          <a href="../resources/">Resources</a><a href="../contact/">Contact</a><a href="../privacy-policy/">Privacy</a><a href="../terms/">Terms</a><a href="../disclaimer/">Disclaimer</a></div></nav></footer>
     <script src="../assets/growth-tools.js"></script><script>const inputEl=document.querySelector("#tool-input"),outputEl=document.querySelector("#tool-output"),statusEl=document.querySelector("#tool-status"),setStatus=(m,e=false)=>{statusEl.textContent=m;statusEl.classList.toggle("is-error",e)};const run=()=>{const text=inputEl.value;outputEl.value=`Characters: ${GrowthTools.countCharacters(text)}\nCharacters (no spaces): ${[...text].filter((ch)=>!/\\s/.test(ch)).length}\nWords: ${GrowthTools.countWords(text)}\nLines: ${text ? text.split(/\\r?\\n/).length : 0}\nBytes: ${new TextEncoder().encode(text).length}`;setStatus("Counted")};document.querySelector("#run-tool").addEventListener("click",run);document.querySelector("#secondary-tool").addEventListener("click",()=>{inputEl.value="Count this text for me.";run()});document.querySelector("#copy-output").addEventListener("click",()=>GrowthTools.copyText(outputEl.value).then(()=>setStatus("Copied to clipboard")));document.querySelector("#clear-tool").addEventListener("click",()=>{inputEl.value="";outputEl.value="";setStatus("Ready")});inputEl.addEventListener("input",run);run();</script>
   </body>
 </html>
