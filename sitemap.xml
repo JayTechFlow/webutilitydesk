@@ -7,7 +7,7 @@
   </url>
   <url>
     <loc>https://webutilitydesk.com/blog/</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -28,6 +28,16 @@
   <url>
     <loc>https://webutilitydesk.com/blog/common-json-errors-and-how-to-fix-them/</loc>
     <lastmod>2026-06-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://webutilitydesk.com/blog/csv-vs-tsv-which-format-should-you-use/</loc>
+    <lastmod>2026-06-21</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://webutilitydesk.com/blog/common-csv-parsing-errors-and-how-to-fix-them/</loc>
+    <lastmod>2026-06-21</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -57,7 +67,7 @@
   </url>
   <url>
     <loc>https://webutilitydesk.com/guides/</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -96,13 +106,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://webutilitydesk.com/guides/csv-to-json-converter-explained/</loc>
+    <lastmod>2026-06-21</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://webutilitydesk.com/resources/</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://webutilitydesk.com/csv-to-json-converter/</loc>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
