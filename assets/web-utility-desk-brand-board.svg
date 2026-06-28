@@ -1,0 +1,244 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2480" height="3300" viewBox="0 0 2480 3300" role="img" aria-labelledby="title desc">
+  <title id="title">Web Utility Desk - Brand Concept Board</title>
+  <desc id="desc">Ten distinct minimalist logo concepts for Web Utility Desk with transparent background.</desc>
+  <defs>
+    <style>
+      .ink { fill: #0f172a; }
+      .ink2 { fill: #111827; }
+      .blue { fill: #2563eb; }
+      .blue2 { fill: #1d4ed8; }
+      .cyan { fill: #06b6d4; }
+      .stroke-ink { stroke: #0f172a; }
+      .stroke-blue { stroke: #2563eb; }
+      .stroke-soft { stroke: #dbe7f5; }
+      .label { font-family: Inter, Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif; letter-spacing: 0.14em; font-weight: 700; fill: #64748b; }
+      .title { font-family: Inter, Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif; font-weight: 800; fill: #0f172a; }
+      .sub { font-family: Inter, Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif; font-weight: 500; fill: #475569; }
+      .word { font-family: Inter, Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif; font-weight: 800; fill: #0f172a; }
+      .tag { font-family: Inter, Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif; font-weight: 600; fill: #2563eb; }
+      .mini { font-family: Inter, Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif; font-weight: 700; fill: #0f172a; }
+    </style>
+
+    <symbol id="icon-code-tool" viewBox="0 0 160 160">
+      <rect x="18" y="18" width="124" height="124" rx="34" fill="none" stroke="#dbe7f5" stroke-width="4"/>
+      <path d="M42 58l-20 22 20 22" fill="none" stroke="#2563eb" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M118 58l20 22-20 22" fill="none" stroke="#2563eb" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M64 86h32" fill="none" stroke="#0f172a" stroke-width="12" stroke-linecap="round"/>
+      <circle cx="112" cy="112" r="10" fill="#06b6d4"/>
+      <path d="M104 104l18-18" fill="none" stroke="#06b6d4" stroke-width="8" stroke-linecap="round"/>
+      <path d="M120 88l14-14" fill="none" stroke="#06b6d4" stroke-width="8" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="icon-wud" viewBox="0 0 160 160">
+      <rect x="18" y="18" width="124" height="124" rx="34" fill="none" stroke="#dbe7f5" stroke-width="4"/>
+      <rect x="36" y="38" width="88" height="84" rx="26" fill="#f8fbff" stroke="#2563eb" stroke-width="4"/>
+      <text x="80" y="92" text-anchor="middle" class="title" font-size="32">WUD</text>
+      <rect x="54" y="104" width="52" height="6" rx="3" class="cyan"/>
+    </symbol>
+
+    <symbol id="icon-wd" viewBox="0 0 160 160">
+      <rect x="18" y="18" width="124" height="124" rx="34" fill="none" stroke="#dbe7f5" stroke-width="4"/>
+      <circle cx="80" cy="80" r="42" fill="#0f172a"/>
+      <text x="80" y="92" text-anchor="middle" font-family="Inter, Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="32" font-weight="800" fill="#ffffff" letter-spacing="0.03em">WD</text>
+      <path d="M58 116h44" fill="none" stroke="#06b6d4" stroke-width="6" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="icon-terminal" viewBox="0 0 160 160">
+      <rect x="18" y="18" width="124" height="124" rx="30" fill="#0f172a"/>
+      <rect x="30" y="34" width="100" height="22" rx="11" fill="#111827"/>
+      <circle cx="45" cy="45" r="4.5" fill="#06b6d4"/>
+      <circle cx="60" cy="45" r="4.5" fill="#2563eb"/>
+      <circle cx="75" cy="45" r="4.5" fill="#1d4ed8"/>
+      <path d="M48 82l18-12-18-12" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M73 70h18" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+      <path d="M44 104h72" fill="none" stroke="#2563eb" stroke-width="10" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="icon-prompt" viewBox="0 0 160 160">
+      <rect x="18" y="18" width="124" height="124" rx="30" fill="#f8fbff" stroke="#2563eb" stroke-width="5"/>
+      <path d="M44 70l18 16-18 16" fill="none" stroke="#0f172a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M72 96h30" fill="none" stroke="#06b6d4" stroke-width="10" stroke-linecap="round"/>
+      <path d="M56 112h48" fill="none" stroke="#1d4ed8" stroke-width="8" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="icon-toolbox" viewBox="0 0 160 160">
+      <rect x="20" y="46" width="120" height="80" rx="20" fill="#f8fbff" stroke="#2563eb" stroke-width="5"/>
+      <path d="M58 46c0-11 9-20 22-20s22 9 22 20" fill="none" stroke="#0f172a" stroke-width="6" stroke-linecap="round"/>
+      <rect x="22" y="74" width="116" height="8" rx="4" class="cyan"/>
+      <path d="M53 72h54" fill="none" stroke="#111827" stroke-width="5" stroke-linecap="round"/>
+      <path d="M62 92h12" fill="none" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+      <path d="M86 92h12" fill="none" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="icon-gear-code" viewBox="0 0 160 160">
+      <circle cx="80" cy="80" r="38" fill="#f8fbff" stroke="#2563eb" stroke-width="6"/>
+      <circle cx="80" cy="80" r="20" fill="none" stroke="#0f172a" stroke-width="8"/>
+      <g fill="#2563eb">
+        <rect x="76" y="20" width="8" height="18" rx="4"/>
+        <rect x="76" y="122" width="8" height="18" rx="4"/>
+        <rect x="20" y="76" width="18" height="8" rx="4"/>
+        <rect x="122" y="76" width="18" height="8" rx="4"/>
+        <rect x="36" y="36" width="16" height="8" rx="4" transform="rotate(-45 44 40)"/>
+        <rect x="108" y="116" width="16" height="8" rx="4" transform="rotate(-45 116 120)"/>
+        <rect x="108" y="36" width="16" height="8" rx="4" transform="rotate(45 116 40)"/>
+        <rect x="36" y="116" width="16" height="8" rx="4" transform="rotate(45 44 120)"/>
+      </g>
+      <path d="M52 72l-14 8 14 8" fill="none" stroke="#0f172a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M108 72l14 8-14 8" fill="none" stroke="#0f172a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="icon-bolt-code" viewBox="0 0 160 160">
+      <path d="M58 24l-16 44h24l-12 68 48-54H76l20-58z" fill="#06b6d4"/>
+      <path d="M24 64l18-14" fill="none" stroke="#2563eb" stroke-width="8" stroke-linecap="round"/>
+      <path d="M24 96l18 14" fill="none" stroke="#2563eb" stroke-width="8" stroke-linecap="round"/>
+      <path d="M136 64l-18-14" fill="none" stroke="#2563eb" stroke-width="8" stroke-linecap="round"/>
+      <path d="M136 96l-18 14" fill="none" stroke="#2563eb" stroke-width="8" stroke-linecap="round"/>
+      <path d="M58 80h44" fill="none" stroke="#0f172a" stroke-width="8" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="icon-hex-code" viewBox="0 0 160 160">
+      <path d="M80 22l46 27v42l-46 27-46-27V49z" fill="#f8fbff" stroke="#2563eb" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M52 74l-18 12 18 12" fill="none" stroke="#0f172a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M108 74l18 12-18 12" fill="none" stroke="#0f172a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M72 88h16" fill="none" stroke="#06b6d4" stroke-width="8" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="icon-browser-code" viewBox="0 0 160 160">
+      <rect x="18" y="26" width="124" height="108" rx="22" fill="#f8fbff" stroke="#2563eb" stroke-width="5"/>
+      <rect x="18" y="26" width="124" height="24" rx="22" fill="#0f172a"/>
+      <circle cx="38" cy="38" r="4.5" fill="#06b6d4"/>
+      <circle cx="53" cy="38" r="4.5" fill="#2563eb"/>
+      <circle cx="68" cy="38" r="4.5" fill="#1d4ed8"/>
+      <path d="M58 76l-18 12 18 12" fill="none" stroke="#0f172a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M102 76l18 12-18 12" fill="none" stroke="#0f172a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M78 90h8" fill="none" stroke="#06b6d4" stroke-width="8" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+
+  <g transform="translate(0 0)">
+    <text x="1240" y="96" text-anchor="middle" class="title" font-size="92">Web Utility Desk</text>
+    <text x="1240" y="146" text-anchor="middle" class="sub" font-size="30">Fast Browser Tools for Developers</text>
+    <path d="M1020 172h440" fill="none" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+    <text x="1240" y="214" text-anchor="middle" class="label" font-size="18">10 DISTINCT MINIMAL LOGO DIRECTIONS</text>
+  </g>
+
+  <!-- Card 1 -->
+  <g transform="translate(100 220)">
+    <rect width="1100" height="560" rx="34" fill="none" stroke="#dbe7f5" stroke-width="3"/>
+    <text x="42" y="58" class="label" font-size="18">01</text>
+    <text x="92" y="58" class="word" font-size="30">CODE BRACKETS + UTILITY TOOL</text>
+    <use href="#icon-code-tool" x="42" y="110" width="180" height="180"/>
+    <text x="266" y="174" class="word" font-size="74">Web Utility Desk</text>
+    <text x="266" y="236" class="tag" font-size="28">Fast Browser Tools for Developers</text>
+    <text x="266" y="302" class="sub" font-size="24">Flat browser utility mark with bracket logic and a tool cue.</text>
+    <use href="#icon-code-tool" x="900" y="368" width="128" height="128"/>
+  </g>
+
+  <!-- Card 2 -->
+  <g transform="translate(1380 220)">
+    <rect width="1100" height="560" rx="34" fill="none" stroke="#dbe7f5" stroke-width="3"/>
+    <text x="42" y="58" class="label" font-size="18">02</text>
+    <text x="92" y="58" class="word" font-size="30">WUD MONOGRAM</text>
+    <use href="#icon-wud" x="42" y="110" width="180" height="180"/>
+    <text x="266" y="174" class="word" font-size="74">Web Utility Desk</text>
+    <text x="266" y="236" class="tag" font-size="28">Fast Browser Tools for Developers</text>
+    <text x="266" y="302" class="sub" font-size="24">Geometric monogram with a framed SaaS profile.</text>
+    <use href="#icon-wud" x="900" y="368" width="128" height="128"/>
+  </g>
+
+  <!-- Card 3 -->
+  <g transform="translate(100 820)">
+    <rect width="1100" height="560" rx="34" fill="none" stroke="#dbe7f5" stroke-width="3"/>
+    <text x="42" y="58" class="label" font-size="18">03</text>
+    <text x="92" y="58" class="word" font-size="30">WD MONOGRAM</text>
+    <use href="#icon-wd" x="42" y="110" width="180" height="180"/>
+    <text x="266" y="174" class="word" font-size="74">Web Utility Desk</text>
+    <text x="266" y="236" class="tag" font-size="28">Fast Browser Tools for Developers</text>
+    <text x="266" y="302" class="sub" font-size="24">Compact monogram with a strong favicon silhouette.</text>
+    <use href="#icon-wd" x="900" y="368" width="128" height="128"/>
+  </g>
+
+  <!-- Card 4 -->
+  <g transform="translate(1380 820)">
+    <rect width="1100" height="560" rx="34" fill="none" stroke="#dbe7f5" stroke-width="3"/>
+    <text x="42" y="58" class="label" font-size="18">04</text>
+    <text x="92" y="58" class="word" font-size="30">TERMINAL WINDOW ICON</text>
+    <use href="#icon-terminal" x="42" y="110" width="180" height="180"/>
+    <text x="266" y="174" class="word" font-size="74">Web Utility Desk</text>
+    <text x="266" y="236" class="tag" font-size="28">Fast Browser Tools for Developers</text>
+    <text x="266" y="302" class="sub" font-size="24">Terminal-inspired window icon with command clarity.</text>
+    <use href="#icon-terminal" x="900" y="368" width="128" height="128"/>
+  </g>
+
+  <!-- Card 5 -->
+  <g transform="translate(100 1420)">
+    <rect width="1100" height="560" rx="34" fill="none" stroke="#dbe7f5" stroke-width="3"/>
+    <text x="42" y="58" class="label" font-size="18">05</text>
+    <text x="92" y="58" class="word" font-size="30">COMMAND PROMPT SYMBOL</text>
+    <use href="#icon-prompt" x="42" y="110" width="180" height="180"/>
+    <text x="266" y="174" class="word" font-size="74">Web Utility Desk</text>
+    <text x="266" y="236" class="tag" font-size="28">Fast Browser Tools for Developers</text>
+    <text x="266" y="302" class="sub" font-size="24">Sharp prompt cue for fast developer workflows.</text>
+    <use href="#icon-prompt" x="900" y="368" width="128" height="128"/>
+  </g>
+
+  <!-- Card 6 -->
+  <g transform="translate(1380 1420)">
+    <rect width="1100" height="560" rx="34" fill="none" stroke="#dbe7f5" stroke-width="3"/>
+    <text x="42" y="58" class="label" font-size="18">06</text>
+    <text x="92" y="58" class="word" font-size="30">DEVELOPER TOOLBOX</text>
+    <use href="#icon-toolbox" x="42" y="110" width="180" height="180"/>
+    <text x="266" y="174" class="word" font-size="74">Web Utility Desk</text>
+    <text x="266" y="236" class="tag" font-size="28">Fast Browser Tools for Developers</text>
+    <text x="266" y="302" class="sub" font-size="24">Toolbox framing for a practical utility suite brand.</text>
+    <use href="#icon-toolbox" x="900" y="368" width="128" height="128"/>
+  </g>
+
+  <!-- Card 7 -->
+  <g transform="translate(100 2020)">
+    <rect width="1100" height="560" rx="34" fill="none" stroke="#dbe7f5" stroke-width="3"/>
+    <text x="42" y="58" class="label" font-size="18">07</text>
+    <text x="92" y="58" class="word" font-size="30">GEAR + CODE BRACKETS</text>
+    <use href="#icon-gear-code" x="42" y="110" width="180" height="180"/>
+    <text x="266" y="174" class="word" font-size="74">Web Utility Desk</text>
+    <text x="266" y="236" class="tag" font-size="28">Fast Browser Tools for Developers</text>
+    <text x="266" y="302" class="sub" font-size="24">Configuration and automation cue with a technical core.</text>
+    <use href="#icon-gear-code" x="900" y="368" width="128" height="128"/>
+  </g>
+
+  <!-- Card 8 -->
+  <g transform="translate(1380 2020)">
+    <rect width="1100" height="560" rx="34" fill="none" stroke="#dbe7f5" stroke-width="3"/>
+    <text x="42" y="58" class="label" font-size="18">08</text>
+    <text x="92" y="58" class="word" font-size="30">LIGHTNING + CODE</text>
+    <use href="#icon-bolt-code" x="42" y="110" width="180" height="180"/>
+    <text x="266" y="174" class="word" font-size="74">Web Utility Desk</text>
+    <text x="266" y="236" class="tag" font-size="28">Fast Browser Tools for Developers</text>
+    <text x="266" y="302" class="sub" font-size="24">Speed-forward mark with energetic utility contrast.</text>
+    <use href="#icon-bolt-code" x="900" y="368" width="128" height="128"/>
+  </g>
+
+  <!-- Card 9 -->
+  <g transform="translate(100 2620)">
+    <rect width="1100" height="560" rx="34" fill="none" stroke="#dbe7f5" stroke-width="3"/>
+    <text x="42" y="58" class="label" font-size="18">09</text>
+    <text x="92" y="58" class="word" font-size="30">HEXAGON TECH SYMBOL</text>
+    <use href="#icon-hex-code" x="42" y="110" width="180" height="180"/>
+    <text x="266" y="174" class="word" font-size="74">Web Utility Desk</text>
+    <text x="266" y="236" class="tag" font-size="28">Fast Browser Tools for Developers</text>
+    <text x="266" y="302" class="sub" font-size="24">Memorable hex badge built for small-size recognition.</text>
+    <use href="#icon-hex-code" x="900" y="368" width="128" height="128"/>
+  </g>
+
+  <!-- Card 10 -->
+  <g transform="translate(1380 2620)">
+    <rect width="1100" height="560" rx="34" fill="none" stroke="#dbe7f5" stroke-width="3"/>
+    <text x="42" y="58" class="label" font-size="18">10</text>
+    <text x="92" y="58" class="word" font-size="30">BROWSER WINDOW + CODE</text>
+    <use href="#icon-browser-code" x="42" y="110" width="180" height="180"/>
+    <text x="266" y="174" class="word" font-size="74">Web Utility Desk</text>
+    <text x="266" y="236" class="tag" font-size="28">Fast Browser Tools for Developers</text>
+    <text x="266" y="302" class="sub" font-size="24">Browser-native identity with clean product geometry.</text>
+    <use href="#icon-browser-code" x="900" y="368" width="128" height="128"/>
+  </g>
+</svg>

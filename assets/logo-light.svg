@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="420" viewBox="0 0 1600 420" role="img" aria-labelledby="title desc">
+  <title id="title">Web Utility Desk Light Logo</title>
+  <desc id="desc">Horizontal lockup optimized for light backgrounds.</desc>
+  <g transform="translate(56 46)">
+    <path d="M164 20l138 80v160L164 340 26 260V100z" fill="#2563eb" stroke="#1d4ed8" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M110 92l-42 60 42 60" fill="none" stroke="#ffffff" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M218 92l42 60-42 60" fill="none" stroke="#ffffff" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M144 152h40" fill="none" stroke="#06b6d4" stroke-width="22" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(410 112)">
+    <text x="0" y="0" fill="#0f172a" font-family="Inter, Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="82" font-weight="800" letter-spacing="-0.04em">Web Utility Desk</text>
+    <text x="2" y="56" fill="#475569" font-family="Inter, Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="28" font-weight="600" letter-spacing="0.01em">Fast Browser Tools for Developers</text>
+  </g>
+</svg>

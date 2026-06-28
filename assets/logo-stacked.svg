@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="1120" viewBox="0 0 980 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Web Utility Desk Stacked Logo</title>
+  <desc id="desc">Stacked lockup for Web Utility Desk with transparent background.</desc>
+  <g transform="translate(235 88)">
+    <path d="M255 18l170 98v196l-170 98-170-98V116z" fill="#2563eb" stroke="#1d4ed8" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M188 146l-52 74 52 74" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M322 146l52 74-52 74" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M220 220h70" fill="none" stroke="#06b6d4" stroke-width="26" stroke-linecap="round"/>
+  </g>
+  <text x="490" y="700" text-anchor="middle" fill="#0f172a" font-family="Inter, Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="78" font-weight="800" letter-spacing="-0.04em">Web Utility Desk</text>
+  <text x="490" y="760" text-anchor="middle" fill="#2563eb" font-family="Inter, Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="28" font-weight="600" letter-spacing="0.01em">Fast Browser Tools for Developers</text>
+</svg>

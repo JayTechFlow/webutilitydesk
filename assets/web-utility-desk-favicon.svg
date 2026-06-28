@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Web Utility Desk Favicon</title>
+  <desc id="desc">Minimal hexagon logo with code brackets for Web Utility Desk.</desc>
+  <path d="M32 6l22 13v26L32 58 10 45V19z" fill="#f8fbff" stroke="#2563eb" stroke-width="3.2" stroke-linejoin="round"/>
+  <path d="M22 26l-8 6 8 6" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M42 26l8 6-8 6" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M28.5 34h7" fill="none" stroke="#06b6d4" stroke-width="4" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Web Utility Desk Mark</title>
+  <desc id="desc">Hexagon tech mark for Web Utility Desk.</desc>
+  <path d="M256 46l174 100v200L256 466 82 366V166z" fill="#2563eb" stroke="#1d4ed8" stroke-width="12" stroke-linejoin="round"/>
+  <path d="M188 178l-54 78 54 78" fill="none" stroke="#ffffff" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M324 178l54 78-54 78" fill="none" stroke="#ffffff" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M229 256h54" fill="none" stroke="#06b6d4" stroke-width="28" stroke-linecap="round"/>
+</svg>
